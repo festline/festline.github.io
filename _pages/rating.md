@@ -98,7 +98,7 @@ According to the [final rating](https://drive.google.com/open?id=1LAy1eK8vIONzIW
 1. Dmitrii Vasilev, [GitHub](https://github.com/dmitriykel/), [CV](https://resume.io/r/kOvC2rs9O), [email](mailto:dmitriykehl@gmail.com), [Telegram](https://t.me/dmitriykel)
 1. Vasily Suvorov, [emal](mailto:avalanche.v@gmail.com), [facebook](https://www.facebook.com/vasiliy.suvorov)
 1. Volodymyr Bakhur, [LinkedIn](https://www.linkedin.com/in/vbakhur/), [email](mailto:volodyabakhur@gmail.com)
-1. Ramis Imilbaev, [LinkedIn](www.linkedin.com/in/imilbaev), [email](mailto:fordsmail@ya.ru)
+1. Ramis Imilbaev, [LinkedIn](https://www.linkedin.com/in/imilbaev), [email](mailto:fordsmail@ya.ru)
 1. Denis Finogenov, [GitHub](github.com/denisfin), [email](denis.finogenov.ml@gmail.com)
 1. Bohdan Dolishnii, [GitHub](https://github.com/SENSBoD), [LinkedIn](https://www.linkedin.com/in/bohdan-dolishnii/), [email](dolishniibohdan@gmail.com)
 1. Ekaterina Krivtsova
