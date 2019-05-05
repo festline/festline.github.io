@@ -113,7 +113,7 @@ According to the [final rating](https://drive.google.com/open?id=1LAy1eK8vIONzIW
 1. Omar Idres Gurashi, [LinkedIn](https://www.linkedin.com/in/omar-idres-gurashi-5b45a9144/), [email](mailto:omargurashi1@gmail.com)
 1. Henry Yang, [LinkedIn](https://www.linkedin.com/in/yile-yang/), [email](mailto:yyl.henry@gmail.com)
 1. Maxim Seregin, [email](mailto:horanzon@gmail.com)
-1. Alexander Tretyak
+1. Alexander Tretyak, [Github](https://github.com/thesjanse), [LinkedIn](https://www.linkedin.com/in/alexander-tretyak-04024a46/), [email](mailto:alexander.mejinski@gmail.com)
 
 ## Top-100 performers of the 4-th session of [mlcourse.ai](http://mlcourse.ai) by OpenDataScience, fall 2018
 
