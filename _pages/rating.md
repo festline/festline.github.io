@@ -50,7 +50,7 @@ According to the [final rating](https://drive.google.com/open?id=1LAy1eK8vIONzIW
 1. Dmitry Burdeiny, [email](mailto:dmitry.burdeiny@gmail.com)
 1. Pavel Gusev, [email](mailto:pavelgsv@gmail.com)
 1. Alena Arykina
-1. Evgeniy Chukanov
+1. Evgeniy Chukanov, [Github](https://github.com/chukanov), [email](mailto:chukanov@gmail.com)
 1. Aptha K S, [Github](https://github.com/apthagowda97), [LinkedIn](https://www.linkedin.com/in/apthaks/), [email](mailto:iamuraptha@gmail.com)
 1. Rajasekhar Battula, [GitHub](https://github.com/rjs417), [LinkedIn](https://www.linkedin.com/in/rajasekhar-battula-99673b49/), [email](mailto:rajasekhar.battula@yahoo.in)
 1. Rohit Gupta, [GitHub](https://github.com/rohitgr7/), [LinkedIn](https://www.linkedin.com/in/rohitgr7/), [email](mailto:rohitgr1998@gmail.com), [website](https://rohitgr7.github.io/)
