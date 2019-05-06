@@ -79,7 +79,7 @@ According to the [final rating](https://drive.google.com/open?id=1LAy1eK8vIONzIW
 1. Andres Tiko, [LinkedIn](https://www.linkedin.com/in/tiko)
 1. Artem Ryblov
 1. Viktor Nikolaev, [email](mailto:viktor_andreevich@outlook.com), [LinkedIn](www.linkedin.com/in/ViktorAndreevich)
-1. Alexander Bunyatov
+1. Alexander Bunyatov, [email](mailto:bunalil@mail.ru)
 1. Maxim Yurchenko, [GitHub](https://github.com/mv-yurchenko/), [PersonalSite](https://mv-yurchenko.github.io), [email](mailto:maxonus2@gmail.com)
 1. Irina Telina
 1. Pavel Peskov, [GitHub](http://github.com/pchlq/), [twitter](https://www.twitter.com/Pchlq/), [email](mailto:peskovps@gmail.com), [LinkedIn](https://www.linkedin.com/in/pavel-peskov-8673a76/)
