@@ -2,6 +2,9 @@
 
 **work in progress**
 
+_config.yml - main configs
+
+
 The site is build with [Jekyll][1] using [Skinny Bones][2] by [Michael Rose][3].
 
 
