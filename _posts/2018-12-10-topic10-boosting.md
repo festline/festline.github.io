@@ -1,5 +1,5 @@
 ---
-layout: article
+layout: raw
 title: "Topic 10. Gradient Boosting"
 markdown: "0"
 permalink: test.html
