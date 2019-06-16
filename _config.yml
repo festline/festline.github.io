@@ -18,7 +18,7 @@ comments                : true
 sass:
   sass_dir              : _sass
   style                 : compressed
-permalink               : /:categories/:year/:title/
+permalink               : /:categories/:title/
 markdown                : kramdown
 highlighter             : rouge
 kramdown:
