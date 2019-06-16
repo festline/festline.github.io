@@ -102,3 +102,6 @@ ENV/
 
 # Mac shit
 .DS_Store
+
+# Jekyll stuff
+_site/

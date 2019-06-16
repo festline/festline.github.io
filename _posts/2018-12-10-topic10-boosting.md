@@ -1,8 +1,6 @@
 ---
-layout: raw
-title: "Topic 10. Gradient Boosting"
-markdown: "0"
-permalink: test.html
+layout: Topic10_Gradient_Boosting
+title: "Topic 10. Gradient boosting"
 image:
   teaser: topic10-teaser.jpeg
 ---
