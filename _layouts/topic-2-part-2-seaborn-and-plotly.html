@@ -13103,7 +13103,7 @@ div#notebook {
         // we use CSS to left justify single line equations in code cells.
         displayAlign: 'center',
         "HTML-CSS": {
-            styles: {'.MathJax_Display': {"margin": 0}},
+            styles: {'.MathJax_Display': {"margin": 0} },
             linebreaks: { automatic: true }
         }
     });
@@ -32263,7 +32263,7 @@ z
 <div class="output_html rendered_html output_subarea ">
         <script type="text/javascript">
         window.PlotlyConfig = {MathJaxConfig: 'local'};
-        if (window.MathJax) {MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}
+        if (window.MathJax) {MathJax.Hub.Config({SVG: {font: "STIX-Web"} });}
         if (typeof require !== 'undefined') {
         require.undef("plotly");
         requirejs.config({
@@ -32375,31 +32375,31 @@ z
                     Plotly.newPlot(
                         'a30ca0ba-039e-4c83-ad40-2ac4d5ac15df',
                         [{"name": "Global Sales", "type": "scatter", "uid": "790e2ee5-19ce-4e3d-94bb-13c6f6de53a0", "x": [1985, 1988, 1992, 1994, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016], "y": [0.03, 0.03, 0.03, 1.27, 20.099999999999998, 35.01, 43.18, 51.170000000000016, 81.23999999999995, 253.88000000000008, 288.8399999999994, 255.35000000000028, 321.7799999999992, 334.31999999999914, 416.71999999999906, 456.2299999999996, 489.11999999999904, 459.84999999999974, 412.9600000000002, 383.68999999999915, 291.9299999999998, 267.1699999999998, 192.43, 159.16, 91.56000000000004]}, {"name": "Number of games released", "type": "scatter", "uid": "f788df80-2b50-4460-9cad-06f9eef47595", "x": [1985, 1988, 1992, 1994, 1996, 1997, 1998, 1999, 2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016], "y": [1, 1, 1, 1, 7, 13, 25, 30, 102, 256, 455, 498, 476, 562, 528, 590, 592, 550, 429, 453, 313, 266, 253, 211, 212]}],
-                        {"title": {"text": "Statistics for video games"}},
+                        {"title": {"text": "Statistics for video games"} },
                         {"showLink": false, "linkText": "Export to plot.ly", "plotlyServerURL": "https://plot.ly", "responsive": true}
                     ).then(function(){
                             
 var gd = document.getElementById('a30ca0ba-039e-4c83-ad40-2ac4d5ac15df');
-var x = new MutationObserver(function (mutations, observer) {{
+var x = new MutationObserver(function (mutations, observer) { {
         var display = window.getComputedStyle(gd).display;
-        if (!display || display === 'none') {{
+        if (!display || display === 'none') { {
             console.log([gd, 'removed!']);
             Plotly.purge(gd);
             observer.disconnect();
-        }}
-}});
+        } }
+} });
 
 // Listen for the removal of the full notebook cells
 var notebookContainer = gd.closest('#notebook-container');
-if (notebookContainer) {{
+if (notebookContainer) { {
     x.observe(notebookContainer, {childList: true});
-}}
+} }
 
 // Listen for the clearing of the current output cell
 var outputEl = gd.closest('.output');
-if (outputEl) {{
+if (outputEl) { {
     x.observe(outputEl, {childList: true});
-}}
+} }
 
                         })
                 };
@@ -32517,31 +32517,31 @@ if (outputEl) {{
                     Plotly.newPlot(
                         'f585aada-dd14-4863-bfc4-d325c526f099',
                         [{"name": "Global Sales", "type": "bar", "uid": "2b8d7241-32e4-4100-a6f1-5ff318fb46dd", "x": ["PS2", "X360", "PS3", "Wii", "DS", "PS4", "XB", "PS", "PSP", "PC", "GC", "GBA", "XOne", "3DS", "WiiU", "PSV", "DC"], "y": [945.9699999999991, 853.3000000000002, 784.3000000000008, 658.9800000000001, 382.3299999999998, 243.02999999999994, 212.07000000000045, 206.5500000000002, 187.92000000000021, 187.12000000000089, 159.42000000000056, 131.75000000000017, 129.57000000000002, 123.22999999999993, 66.08, 30.88000000000001, 4.550000000000001]}, {"name": "Number of games released", "type": "bar", "uid": "b57fc21b-7a58-49f7-8c3e-e0ac304844d4", "x": ["PS2", "X360", "PS3", "Wii", "DS", "PS4", "XB", "PS", "PSP", "PC", "GC", "GBA", "XOne", "3DS", "WiiU", "PSV", "DC"], "y": [1140, 858, 769, 479, 464, 239, 565, 150, 390, 651, 348, 237, 159, 155, 89, 118, 14]}],
-                        {"title": {"text": "Market share by gaming platform"}},
+                        {"title": {"text": "Market share by gaming platform"} },
                         {"showLink": false, "linkText": "Export to plot.ly", "plotlyServerURL": "https://plot.ly", "responsive": true}
                     ).then(function(){
                             
 var gd = document.getElementById('f585aada-dd14-4863-bfc4-d325c526f099');
-var x = new MutationObserver(function (mutations, observer) {{
+var x = new MutationObserver(function (mutations, observer) { {
         var display = window.getComputedStyle(gd).display;
-        if (!display || display === 'none') {{
+        if (!display || display === 'none') { {
             console.log([gd, 'removed!']);
             Plotly.purge(gd);
             observer.disconnect();
-        }}
-}});
+        } }
+} });
 
 // Listen for the removal of the full notebook cells
 var notebookContainer = gd.closest('#notebook-container');
-if (notebookContainer) {{
+if (notebookContainer) { {
     x.observe(notebookContainer, {childList: true});
-}}
+} }
 
 // Listen for the clearing of the current output cell
 var outputEl = gd.closest('.output');
-if (outputEl) {{
+if (outputEl) { {
     x.observe(outputEl, {childList: true});
-}}
+} }
 
                         })
                 };
@@ -32614,26 +32614,26 @@ if (outputEl) {{
                     ).then(function(){
                             
 var gd = document.getElementById('1361c3bc-35a3-4224-8c1a-deab80c76ee8');
-var x = new MutationObserver(function (mutations, observer) {{
+var x = new MutationObserver(function (mutations, observer) { {
         var display = window.getComputedStyle(gd).display;
-        if (!display || display === 'none') {{
+        if (!display || display === 'none') { {
             console.log([gd, 'removed!']);
             Plotly.purge(gd);
             observer.disconnect();
-        }}
-}});
+        } }
+} });
 
 // Listen for the removal of the full notebook cells
 var notebookContainer = gd.closest('#notebook-container');
-if (notebookContainer) {{
+if (notebookContainer) { {
     x.observe(notebookContainer, {childList: true});
-}}
+} }
 
 // Listen for the clearing of the current output cell
 var outputEl = gd.closest('.output');
-if (outputEl) {{
+if (outputEl) { {
     x.observe(outputEl, {childList: true});
-}}
+} }
 
                         })
                 };

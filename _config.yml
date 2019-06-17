@@ -18,14 +18,14 @@ comments                : true
 sass:
   sass_dir              : _sass
   style                 : compressed
-permalink               : /:categories/:title/
+permalink               : /:categories/articles/:title/
 markdown                : kramdown
 highlighter             : rouge
 kramdown:
   toc_levels            : 1..2
   mathjax               : true
   input                 : GFM
-gems:
+plugins:
   - jekyll-sitemap
   - jekyll-gist
   - jekyll-feed
