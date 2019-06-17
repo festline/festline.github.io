@@ -13119,6 +13119,7 @@ div#notebook {
 <p><center>
 <img src="https://habrastorage.org/files/fd4/502/43d/fd450243dd604b81b9713213a247aa20.jpg"></p>
 <h2 id="mlcourse.ai-&#8211;-Open-Machine-Learning-Course"><a href="https://mlcourse.ai">mlcourse.ai</a> &#8211; Open Machine Learning Course<a class="anchor-link" href="#mlcourse.ai-&#8211;-Open-Machine-Learning-Course">&#182;</a></h2><p>Authors: <a href="https://www.linkedin.com/in/vitaliyradchenk0/">Vitaliy Radchenko</a> and <a href="https://www.linkedin.com/in/festline/">Yury Kashnitskiy</a>. Translated and edited by <a href="https://www.linkedin.com/in/christinabutsko/">Christina Butsko</a>, <a href="https://www.linkedin.com/in/egor-polusmak/">Egor Polusmak</a>, <a href="https://www.linkedin.com/in/anastasiamanokhina/">Anastasia Manokhina</a>, <a href="http://linkedin.com/in/anna-shirshova-b908458b">Anna Shirshova</a>, and <a href="https://www.linkedin.com/in/yuanyuanpao/">Yuanyuan Pao</a>. This material is subject to the terms and conditions of the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons CC BY-NC-SA 4.0</a>. Free use is permitted for any non-commercial purpose.</p>
+<p><em>This is a static version of a Jupyter notebook. You can also check out the latest version in the <a href="https://github.com/Yorko/mlcourse.ai">course repository</a>, the corresponding interactive web-based <a href="https://www.kaggle.com/kashnitsky/topic-5-ensembles-part-2-random-forest">Kaggle Kernel</a> or a <a href="https://www.youtube.com/watch?v=neXJL-AqI_c">video lecture</a>.</em></p>
 
 </div>
 </div>
@@ -13133,24 +13134,6 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Leo Breiman managed to apply bootstrapping not only in statistics but also in machine learning. He, along with Adel Cutler, extended and improved the random forest algorithm <a href="http://ect.bell-labs.com/who/tkh/publications/papers/odt.pdf">proposed by Tin Kam Ho</a>. They combined the construction of uncorrelated trees using <a href="https://en.wikipedia.org/wiki/Predictive_analytics#Classification_and_regression_trees_.28CART.29">CART</a>, bagging, and the <a href="https://en.wikipedia.org/wiki/Random_subspace_method">random subspace method</a>.</p>
-<p>Decision trees are a good choice for the base classifier in bagging because they are quite sophisticated and can achieve zero classification error on any sample. The random subspace method reduces the correlation between the trees and thus prevents overfitting. With bagging, the base algorithms are trained on different random subsets of the original feature set.</p>
-<p>The following algorithm constructs an ensemble of models using the random subspace method:</p>
-<ol>
-<li>Let the number of instances be equal to $\large \ell$, and the number of feature dimensions be equal to $\large d$.</li>
-<li>Choose $\large L$ as the number of individual models in the ensemble. </li>
-<li>For each model $\large l$, choose the number of features $\large dl &lt; d$. As a rule, the same value of $\large dl$ is used for all the models.</li>
-<li>For each model $\large l$, create a training set by selecting $\large dl$ features at random from the whole set of $\large d$ features.</li>
-<li>Train each model.</li>
-<li>Apply the resulting ensemble model to a new instance by combining the results from all the models in $\large L$. You can use either majority voting or aggregation of the posterior probabilities. </li>
-</ol>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Outline">Outline<a class="anchor-link" href="#Outline">&#182;</a></h2><ol>
 <li><a href="#1.-Algorithm">Algorithm</a></li>
 <li><a href="#2.-Comparison-with-Decision-Trees-and-Bagging">Comparison with Decision Trees and Bagging</a></li>
@@ -13158,10 +13141,11 @@ div#notebook {
 <li><a href="#4.-Variance-and-Decorrelation">Variance and Decorrelation</a></li>
 <li><a href="#5.-Bias">Bias</a></li>
 <li><a href="#6.-Extremely-Randomized-Trees">Extremely Randomized Trees</a></li>
-<li><a href="#7.-Similarities-between-Random-Forest-and-k--Nearest-Neighbors-techniques">Similarities between Random Forest and k-Nearest Neighbors techniques</a></li>
+<li><a href="#7.-Similarities-between-Random-Forest-and-k\-Nearest-Neighbors-techniques">Similarities between Random Forest and k-Nearest Neighbors techniques</a></li>
 <li><a href="#8.-Transformation-of-a-dataset-into-a-high-dimensional-representation">Transformation of a dataset into a high-dimensional representation</a></li>
 <li><a href="#9.-Pros-and-cons-of-random-forests">Pros and cons of random forests</a></li>
-<li><a href="#10.-Useful-resources">Useful resources</a></li>
+<li><a href="#10.-Demo-assignment">Demo assignment</a></li>
+<li><a href="#11.-Useful-resources">Useful resources</a></li>
 </ol>
 <p>$\DeclareMathOperator{\Var}{Var}$
 $\DeclareMathOperator{\Cov}{Cov}$
@@ -13176,7 +13160,18 @@ $\DeclareMathOperator{\E}{\mathbb{E}}$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="1.-Algorithm">1. Algorithm<a class="anchor-link" href="#1.-Algorithm">&#182;</a></h3><p>The algorithm for constructing a random forest of $\large N$ trees goes as follows:</p>
+<h3 id="1.-Algorithm">1. Algorithm<a class="anchor-link" href="#1.-Algorithm">&#182;</a></h3><p>Leo Breiman managed to apply bootstrapping not only in statistics but also in machine learning. He, along with Adel Cutler, extended and improved the random forest algorithm <a href="http://ect.bell-labs.com/who/tkh/publications/papers/odt.pdf">proposed by Tin Kam Ho</a>. They combined the construction of uncorrelated trees using <a href="https://en.wikipedia.org/wiki/Predictive_analytics#Classification_and_regression_trees_.28CART.29">CART</a>, bagging, and the <a href="https://en.wikipedia.org/wiki/Random_subspace_method">random subspace method</a>.</p>
+<p>Decision trees are a good choice for the base classifier in bagging because they are quite sophisticated and can achieve zero classification error on any sample. The random subspace method reduces the correlation between the trees and thus prevents overfitting. With bagging, the base algorithms are trained on different random subsets of the original feature set.</p>
+<p>The following algorithm constructs an ensemble of models using the random subspace method:</p>
+<ol>
+<li>Let the number of instances be equal to $\large \ell$, and the number of feature dimensions be equal to $\large d$.</li>
+<li>Choose $\large L$ as the number of individual models in the ensemble. </li>
+<li>For each model $\large l$, choose the number of features $\large dl &lt; d$. As a rule, the same value of $\large dl$ is used for all the models.</li>
+<li>For each model $\large l$, create a training set by selecting $\large dl$ features at random from the whole set of $\large d$ features.</li>
+<li>Train each model.</li>
+<li>Apply the resulting ensemble model to a new instance by combining the results from all the models in $\large L$. You can use either majority voting or aggregation of the posterior probabilities. </li>
+</ol>
+<p>The algorithm for constructing a random forest of $\large N$ trees goes as follows:</p>
 <ul>
 <li><p>For each $\large k = 1, \dots, N$:</p>
 <ul>
@@ -13214,7 +13209,11 @@ $$\large a(x) = \frac{1}{N}\sum_{k = 1}^N b_k(x)$$</p>
 <span class="kn">from</span> <span class="nn">matplotlib</span> <span class="k">import</span> <span class="n">pyplot</span> <span class="k">as</span> <span class="n">plt</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;ggplot&#39;</span><span class="p">)</span>
 <span class="n">plt</span><span class="o">.</span><span class="n">rcParams</span><span class="p">[</span><span class="s1">&#39;figure.figsize&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="mi">10</span><span class="p">,</span> <span class="mi">6</span>
+<span class="c1"># Graphics in SVG format are more sharp and legible</span>
+<span class="o">%</span><span class="k">config</span> InlineBackend.figure_format = &#39;svg&#39;
 <span class="kn">import</span> <span class="nn">seaborn</span> <span class="k">as</span> <span class="nn">sns</span>
+<span class="n">sns</span><span class="o">.</span><span class="n">set</span><span class="p">()</span>
+
 <span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="k">import</span> <span class="n">RandomForestRegressor</span><span class="p">,</span> <span class="n">RandomForestClassifier</span>
 <span class="kn">from</span> <span class="nn">sklearn.ensemble</span> <span class="k">import</span> <span class="n">BaggingClassifier</span><span class="p">,</span> <span class="n">BaggingRegressor</span>
 <span class="kn">from</span> <span class="nn">sklearn.tree</span> <span class="k">import</span> <span class="n">DecisionTreeRegressor</span><span class="p">,</span> <span class="n">DecisionTreeClassifier</span>
@@ -13616,7 +13615,7 @@ $$\large a(x) = \frac{1}{N}\sum_{k = 1}^N b_k(x)$$</p>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Initialize the validation</span>
@@ -13649,64 +13648,6 @@ $$\large a(x) = \frac{1}{N}\sum_{k = 1}^N b_k(x)$$</p>
 </pre></div>
 
     </div>
-</div>
-</div>
-
-<div class="output_wrapper">
-<div class="output">
-
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stderr output_text">
-<pre>/opt/conda/lib/python3.6/site-packages/sklearn/ensemble/forest.py:458: UserWarning: Some inputs do not have OOB scores. This probably means too few trees were used to compute any reliable oob estimates.
-  warn(&#34;Some inputs do not have OOB scores. &#34;
-/opt/conda/lib/python3.6/site-packages/sklearn/ensemble/forest.py:458: UserWarning: Some inputs do not have OOB scores. This probably means too few trees were used to compute any reliable oob estimates.
-  warn(&#34;Some inputs do not have OOB scores. &#34;
-/opt/conda/lib/python3.6/site-packages/sklearn/ensemble/forest.py:458: UserWarning: Some inputs do not have OOB scores. This probably means too few trees were used to compute any reliable oob estimates.
-  warn(&#34;Some inputs do not have OOB scores. &#34;
-/opt/conda/lib/python3.6/site-packages/sklearn/ensemble/forest.py:458: UserWarning: Some inputs do not have OOB scores. This probably means too few trees were used to compute any reliable oob estimates.
-  warn(&#34;Some inputs do not have OOB scores. &#34;
-/opt/conda/lib/python3.6/site-packages/sklearn/ensemble/forest.py:458: UserWarning: Some inputs do not have OOB scores. This probably means too few trees were used to compute any reliable oob estimates.
-  warn(&#34;Some inputs do not have OOB scores. &#34;
-/opt/conda/lib/python3.6/site-packages/sklearn/ensemble/forest.py:458: UserWarning: Some inputs do not have OOB scores. This probably means too few trees were used to compute any reliable oob estimates.
-  warn(&#34;Some inputs do not have OOB scores. &#34;
-/opt/conda/lib/python3.6/site-packages/sklearn/ensemble/forest.py:458: UserWarning: Some inputs do not have OOB scores. This probably means too few trees were used to compute any reliable oob estimates.
-  warn(&#34;Some inputs do not have OOB scores. &#34;
-/opt/conda/lib/python3.6/site-packages/sklearn/ensemble/forest.py:458: UserWarning: Some inputs do not have OOB scores. This probably means too few trees were used to compute any reliable oob estimates.
-  warn(&#34;Some inputs do not have OOB scores. &#34;
-/opt/conda/lib/python3.6/site-packages/sklearn/ensemble/forest.py:458: UserWarning: Some inputs do not have OOB scores. This probably means too few trees were used to compute any reliable oob estimates.
-  warn(&#34;Some inputs do not have OOB scores. &#34;
-/opt/conda/lib/python3.6/site-packages/sklearn/ensemble/forest.py:458: UserWarning: Some inputs do not have OOB scores. This probably means too few trees were used to compute any reliable oob estimates.
-  warn(&#34;Some inputs do not have OOB scores. &#34;
-/opt/conda/lib/python3.6/site-packages/sklearn/ensemble/forest.py:458: UserWarning: Some inputs do not have OOB scores. This probably means too few trees were used to compute any reliable oob estimates.
-  warn(&#34;Some inputs do not have OOB scores. &#34;
-/opt/conda/lib/python3.6/site-packages/sklearn/ensemble/forest.py:458: UserWarning: Some inputs do not have OOB scores. This probably means too few trees were used to compute any reliable oob estimates.
-  warn(&#34;Some inputs do not have OOB scores. &#34;
-/opt/conda/lib/python3.6/site-packages/sklearn/ensemble/forest.py:458: UserWarning: Some inputs do not have OOB scores. This probably means too few trees were used to compute any reliable oob estimates.
-  warn(&#34;Some inputs do not have OOB scores. &#34;
-/opt/conda/lib/python3.6/site-packages/sklearn/ensemble/forest.py:458: UserWarning: Some inputs do not have OOB scores. This probably means too few trees were used to compute any reliable oob estimates.
-  warn(&#34;Some inputs do not have OOB scores. &#34;
-/opt/conda/lib/python3.6/site-packages/sklearn/ensemble/forest.py:458: UserWarning: Some inputs do not have OOB scores. This probably means too few trees were used to compute any reliable oob estimates.
-  warn(&#34;Some inputs do not have OOB scores. &#34;
-</pre>
-</div>
-</div>
-
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
-<div class="output_subarea output_stream output_stdout output_text">
-<pre>Best accuracy on CV is 92.44% with 50 trees
-</pre>
-</div>
-</div>
-
 </div>
 </div>
 
@@ -14267,8 +14208,19 @@ $$ \large \begin{array}{rcl} a_n(x) &amp;=&amp; \frac{1}{N}\sum_{n=1}^{N}\sum_{i
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="10.-Useful-resources">10. Useful resources<a class="anchor-link" href="#10.-Useful-resources">&#182;</a></h3><ul>
+<h3 id="10.-Demo-assignment">10. Demo assignment<a class="anchor-link" href="#10.-Demo-assignment">&#182;</a></h3><p>To see pros and cons of linear models and Random Forest, you can complete <a href="https://www.kaggle.com/kashnitsky/a5-demo-logit-and-rf-for-credit-scoring">this assignment</a>. The assignment is just for you to practice, and goes with <a href="https://www.kaggle.com/kashnitsky/a5-demo-logit-and-rf-for-credit-scoring-sol">solution</a>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="11.-Useful-resources">11. Useful resources<a class="anchor-link" href="#11.-Useful-resources">&#182;</a></h3><ul>
+<li>The same notebook as an interactive web-based <a href="https://www.kaggle.com/kashnitsky/topic-5-ensembles-part-2-random-forest">Kaggle Kernel</a></li>
 <li>Medium <a href="https://medium.com/open-machine-learning-course/open-machine-learning-course-topic-5-ensembles-of-algorithms-and-random-forest-8e05246cbba7">"story"</a> based on this notebook</li>
+<li>Main course <a href="https://mlcourse.ai">site</a>, <a href="https://github.com/Yorko/mlcourse.ai">course repo</a>, and YouTube <a href="https://www.youtube.com/watch?v=QKTuw4PNOsU&amp;list=PLVlY_7IJCMJeRfZ68eVfEcu-UcN9BbwiX">channel</a></li>
+<li>Course materials as a <a href="https://www.kaggle.com/kashnitsky/mlcourse">Kaggle Dataset</a></li>
 <li>If you read Russian: an <a href="https://habrahabr.ru/company/ods/blog/324402/">article</a> on Habrahabr with ~ the same material. And a <a href="https://youtu.be/G0DmuuFeC30">lecture</a> on YouTube</li>
 <li>Chapter 15 of the book “<a href="https://statweb.stanford.edu/~tibs/ElemStatLearn/">Elements of Statistical Learning</a>” by Jerome H. Friedman, Robert Tibshirani, and Trevor Hastie.</li>
 <li>More about practical applications of random forests and other algorithms can be found in the <a href="http://scikit-learn.org/stable/modules/ensemble.html">official documentation</a> of <code>scikit-learn</code>.</li>

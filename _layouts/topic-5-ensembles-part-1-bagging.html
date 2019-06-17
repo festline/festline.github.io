@@ -13119,6 +13119,7 @@ div#notebook {
 <p><center>
 <img src="https://habrastorage.org/files/fd4/502/43d/fd450243dd604b81b9713213a247aa20.jpg"></p>
 <h2 id="mlcourse.ai-&#8211;-Open-Machine-Learning-Course"><a href="https://mlcourse.ai">mlcourse.ai</a> &#8211; Open Machine Learning Course<a class="anchor-link" href="#mlcourse.ai-&#8211;-Open-Machine-Learning-Course">&#182;</a></h2><p>Authors: <a href="https://www.linkedin.com/in/vitaliyradchenk0/">Vitaliy Radchenko</a> and <a href="https://www.linkedin.com/in/festline/">Yury Kashnitskiy</a>. Translated and edited by <a href="https://www.linkedin.com/in/christinabutsko/">Christina Butsko</a>, <a href="https://www.linkedin.com/in/egor-polusmak/">Egor Polusmak</a>, <a href="https://www.linkedin.com/in/anastasiamanokhina/">Anastasia Manokhina</a>, <a href="http://linkedin.com/in/anna-shirshova-b908458b">Anna Shirshova</a>, and <a href="https://www.linkedin.com/in/yuanyuanpao/">Yuanyuan Pao</a>. This material is subject to the terms and conditions of the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons CC BY-NC-SA 4.0</a>. Free use is permitted for any non-commercial purpose.</p>
+<p><em>This is a static version of a Jupyter notebook. You can also check out the latest version in the <a href="https://github.com/Yorko/mlcourse.ai">course repository</a>, the corresponding interactive web-based <a href="https://www.kaggle.com/kashnitsky/topic-5-ensembles-part-1-bagging">Kaggle Kernel</a> or a <a href="https://www.youtube.com/watch?v=neXJL-AqI_c">video lecture</a>.</em></p>
 
 </div>
 </div>
@@ -13147,14 +13148,16 @@ div#notebook {
 <li><a href="#1.-Ensembles">Ensembles</a></li>
 <li><a href="#2.-Bootstrapping">Bootstrapping</a></li>
 <li><a href="#3.-Bagging">Bagging</a></li>
-<li><a href="#4.-Out-of-bag-error">Out-of-bag error</a>
-$\DeclareMathOperator{\Var}{Var}$
+<li><a href="#4.-Out\-of\-bag\-error">Out-of-bag error</a></li>
+<li><a href="#5.-Demo-assignment">Demo assignment</a></li>
+<li><a href="#6.-Useful-resources">Useful resources</a></li>
+</ol>
+<p>$\DeclareMathOperator{\Var}{Var}$
 $\DeclareMathOperator{\Cov}{Cov}$
 $\DeclareMathOperator{\Corr}{Corr}$
 $\DeclareMathOperator{\Err}{Err}$
 $\DeclareMathOperator{\Bias}{Bias}$
-$\DeclareMathOperator{\E}{\mathbb{E}}$</li>
-</ol>
+$\DeclareMathOperator{\E}{\mathbb{E}}$</p>
 
 </div>
 </div>
@@ -13399,8 +13402,19 @@ $$ \large 0.0196 \, (\Err) = 0.0004 \, (\Bias^2)  + 0.0092 \, (\Var) + 0.0098 \,
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Useful-resources">Useful resources<a class="anchor-link" href="#Useful-resources">&#182;</a></h3><ul>
+<h3 id="5.-Demo-assignment">5. Demo assignment<a class="anchor-link" href="#5.-Demo-assignment">&#182;</a></h3><p>To see pros and cons of linear models and Random Forest, you can complete <a href="https://www.kaggle.com/kashnitsky/a5-demo-logit-and-rf-for-credit-scoring">this assignment</a>. The assignment is just for you to practice, and goes with <a href="https://www.kaggle.com/kashnitsky/a5-demo-logit-and-rf-for-credit-scoring-sol">solution</a>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="6.-Useful-resources">6. Useful resources<a class="anchor-link" href="#6.-Useful-resources">&#182;</a></h3><ul>
+<li>The same notebook as an interactive web-based <a href="https://www.kaggle.com/kashnitsky/topic-5-ensembles-part-1-bagging">Kaggle Kernel</a></li>
 <li>Medium <a href="https://medium.com/open-machine-learning-course/open-machine-learning-course-topic-5-ensembles-of-algorithms-and-random-forest-8e05246cbba7">"story"</a> based on this notebook</li>
+<li>Main course <a href="https://mlcourse.ai">site</a>, <a href="https://github.com/Yorko/mlcourse.ai">course repo</a>, and YouTube <a href="https://www.youtube.com/watch?v=QKTuw4PNOsU&amp;list=PLVlY_7IJCMJeRfZ68eVfEcu-UcN9BbwiX">channel</a></li>
+<li>Course materials as a <a href="https://www.kaggle.com/kashnitsky/mlcourse">Kaggle Dataset</a></li>
 <li>If you read Russian: an <a href="https://habrahabr.ru/company/ods/blog/324402/">article</a> on Habrahabr with ~ the same material. And a <a href="https://youtu.be/G0DmuuFeC30">lecture</a> on YouTube</li>
 <li>Chapter 15 of the book “<a href="https://statweb.stanford.edu/~tibs/ElemStatLearn/">Elements of Statistical Learning</a>” by Jerome H. Friedman, Robert Tibshirani, and Trevor Hastie.</li>
 <li>More about practical applications of random forests and other algorithms can be found in the <a href="http://scikit-learn.org/stable/modules/ensemble.html">official documentation</a> of <code>scikit-learn</code>.</li>
