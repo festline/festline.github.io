@@ -6,7 +6,8 @@ author                  : yorko
 logo                    : ods_logo.png
 teaser                  : ods_logo.png
 locale                  : en
-url                     : https://festline.github.io
+#url                     : https://festline.github.io
+url                     : https://mlcourse.ai
 feed:
   path                  : atom.xml
 encoding                : UTF-8
