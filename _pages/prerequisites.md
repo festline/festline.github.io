@@ -60,7 +60,7 @@ If you meet the following requirements, install [Docker for Windows](https://doc
  - At least 4GB of RAM.
 
 It's not the end of the world if you can't meet these requirements. 
-You can still use [Docker Toolbox]("https://docs.docker.com/toolbox/overview) which is a good official alternative and with less requirements with regard to Windows version. There are slight differences between Docker and Docker Toolbox for the end user, but you can safely use both for now. 
+You can still use [Docker Toolbox](https://docs.docker.com/toolbox/overview) which is a good official alternative and with less requirements with regard to Windows version. There are slight differences between Docker and Docker Toolbox for the end user, but you can safely use both for now. 
 
 When you run the installer, it may offer you to install git along. Mark a checkbox with this option if you don't have git on your system.
 
