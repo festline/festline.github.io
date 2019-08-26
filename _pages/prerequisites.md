@@ -39,7 +39,7 @@ The easiest way to start working with course materials (no local software instal
 Most python packages like `NumPy`, `Pandas` or  `Sklearn` can be installed manually with `pip` – python installer. However, the preferred option is to use Anaconda. Additionally, you'll need `Xgboost`, `Vowpal Wabbit` and (maybe) `LightGBM` and `CatBoost` for competitions. 
 
 ### Docker
-All necessary software is already installed and distributed in a form of a [Docker container](https://hub.docker.com/r/festline/mlcourse_open/). Instructions:
+All necessary software is already installed and distributed in a form of a [Docker container](https://cloud.docker.com/u/festline/repository/docker/festline/mlcourse_ai). Instructions:
 
 #### Docker on Linux and MacOS
  - install [Docker](https://docs.docker.com/engine/installation/)
