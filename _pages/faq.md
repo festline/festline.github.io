@@ -14,6 +14,10 @@ image:
 
 There's no formal registration for the course. Everybody is by default accepted and will be found in the course rating as long as submits web-forms for assignments. But it's easier to keep track of everything if you're in ODS Slack, so you'd better fill in the introductory form mentioned in the main page.
 
+**What is the expected workload in hours per week?**
+
+As usual for a MOOC, the median is around 4-6 hours per week. However, Kaggle and individual projects are addictive and time-consuming so you can end up spending >20 h/week. Those who spent that much time on mlcourse.ai never regretted I guess. 
+
 **How do I join Slack community?**
 
 If you register for the course, you'll be invited prior to the course start. Check carefully your email address.
