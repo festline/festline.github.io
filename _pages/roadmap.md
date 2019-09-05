@@ -10,37 +10,37 @@ image:
 
 <img src='../images/teaser-roadmap.png'>
 
-All activities accounted for in spring 2019 [rating](https://drive.google.com/open?id=1LAy1eK8vIONzIWgcCEaVmhKPSj579zK5lrECf_tQT60). 
+All activities accounted for in fall 2019 [rating](https://docs.google.com/spreadsheets/d/15e1K0tg5ponA5R6YQkZfihrShTDLAKf5qeKaoVCiuhQ/edit?usp=sharing). 
 
 # Plan
 - Calendar and deadlines
 - Assignments
+- Quizzes & Live sessions
 - Kaggle Inclass Competition "Alice"
-- Kaggle Inclass Competition "Medium"
 - Kaggle Inclass Competition “DOTA 2 winner prediction”
-- Tutorials
+- Individual projects
 
 # Calendar and deadlines
 [Google Calendar](https://calendar.google.com/calendar?cid=Z25pZ3EwZGxxb2I5cDZwMWptam5rdmY3NWtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ) with all deadlines.
 
 Current deadlines (see also the [assignments](assignments) page):
- - February 24 - A1
- - March 10 - A2
- - March 17 - uploading solutions to Alice & Medium 
- - Macrh 31 - A3
- - April 7 - A4
- - April 21 - DOTA 2 competition
- - April 23 - uploading solutions to DOTA 2
- - April 24 - publishing tutorials
+ - September 15 - A1
+ - September 27 - Quiz1
+ - October 6 - A2
+ - October 18 - Quiz2
+ - October 27 - A3
+ - November 8 - Quiz3
+ - November 17 - A4 & A5
  
-All deadlines are 20:59 UTC. 
+All deadlines are 20:59 CET (London time). 
 
 # Assignments
-Assignments are announced in the **#mlcourse_ai** channel in [ODS Slack team](https://opendatascience.slack.com/) (pinned items). Also, links to fresh assignments are provided in the Readme file of the [course repository](https://github.com/Yorko/mlcourse.ai) and on [mlcourse.ai/assignments](assignments). Deadlines are typically on Sundays, 20:59 UTC. Apart from that, you can practice with demo [assignments](assignments), don't confuse them with "real" ones. Rough plan for spring 2019 assignments is the following:
- - A1. Pandas and exploratory data analysis
- - A2. Beating baselines in Alice & Medium competitions
- - A3. Decision trees, random forest, and gradient boosting. Beating baseline in  the “flight delays” competition
- - A4. Time series analysis with Python
+Assignments are announced in the **#mlcourse_ai_news** channel in [ODS Slack team](https://opendatascience.slack.com/) (pinned items). Also, links to fresh assignments are provided in the Readme file of the [course repository](https://github.com/Yorko/mlcourse.ai) and on [mlcourse.ai/assignments](assignments). Deadlines are typically on Sundays, 20:59 CET. Apart from that, you can practice with demo [assignments](assignments), don't confuse them with "real" ones. Rough plan for fall 2019 assignments is the following:
+ - A1. Pandas and data analysis
+ - A2. Decision trees, random forest, and gradient boosting. Beating baseline in the “flight delays” competition
+ - A3. Beating baselines in the Alice competition
+ - A4. Beating baselines in one more competition using Vowpal Wabbit
+ - A5. Time series analysis with Python
  
 If stuck with assignments, check course [video lectures](lectures).
 
@@ -70,10 +70,6 @@ In the [1st competition](https://www.kaggle.com/c/catch-me-if-you-can-intruder-d
    - 3 place – 25 credits
    - 4-10 place – 20 credits
 
-# Kaggle Inclass Competition "Medium"
-
-[Kaggle Inclass](https://www.kaggle.com/c/how-good-is-your-medium-article/). Here you are proposed to predict popularity (number of claps) of an article on Medium.com. Rules are the same as for "Alice" competition, only the webform for uploading solutions .py files is [different](https://www.dropbox.com/request/0iLhMirOekk2QV98Mj2B).
-
 # Kaggle Inclass Competition "DOTA 2 winner prediction"
 In the 3rd [competition](https://www.kaggle.com/c/mlcourse-dota2-win-prediction) you are going to utilize all knowledge and skills acquired during the course session. 
 
@@ -91,30 +87,6 @@ In the 3rd [competition](https://www.kaggle.com/c/mlcourse-dota2-win-prediction)
    - 4-10 place – 40 credits
    - top 10% - 30 credits
    - top 20% - 15 credits
-   
-## Other bonuses in the Dota 2 competition
- - 5 most upvoted [Kernels](https://www.kaggle.com/c/mlcourse-dota2-win-prediction/kernels) will be awarded from 10 to 20 credits
- - 5 most active [Discussions](https://www.kaggle.com/c/mlcourse-dota2-win-prediction/discussion) participants will be awarded from 5 to 15 credits, yes, it will be totally subjective
-
-# Tutorials 
-
-We propose to write and publish a tutorial on any ML/DS-related topic which is not fully covered in our course. Some exemplar topics are given in a [template](https://github.com/Yorko/mlcourse.ai/blob/master/jupyter_english/tutorials/tutorial_template.ipynb), but you can choose any new one. 
-
-## Rules:
-- Tutorials must be written in English. As for programming language, only Python is allowed
-- It must be a tutorial (reproducible Jupyter notebook, actually, a Kaggle Kernel, see "how to publish" below), i.e you shall teach some skills, do not just express your ideas on some theoretical concept
-- It is not just a translation of somebody else's material. You can borrow some stuff, but with fair links/citations
-- The prerequisite for reading your tutorial should be basic ML as taught in [mlcourse.ai](https://mlcourse.ai). Do not write in-depth articles about neural nets, probabilistic programming, Bayesian approach, reinforcement learning etc. - topics like these need a thorough approach. That is, sure, you can write articles like that, but not in the format of [mlcourse.ai](https://mlcourse.ai) tutorials. On the other hand, it's hardly worth making a tutorial too simple (e.g., to pick some library and demonstrate only a couple of methods from it)
-- A typical tutorial shall be 30-60 minutes to read and digest (however, here exceptions are possible) 
-- Check out these lists of published tutorials from previous runs of this course: [English](tutorials), [Russian](https://github.com/Yorko/mlcourse.ai/wiki/Individual-projects-and-tutorials-(in-Russian)) . Yes, the second list is in Russian but still Google Translate can kind of give you an insight into the topics that are already covered. For those who already passed the course: definitely, translating somebody else's (or your own) tutorial into English is not going to work
-- Tutorial submission is due on 2019 April 24
-
-## How to publish a tutorial
-
-1. First of all, choose a unique topic and registered it in the [Google doc](https://docs.google.com/spreadsheets/d/1oURFd4G--FyCP-mj8Dc5y0jAo_uJ3d3f5ljjcQDLZsc/edit?usp=sharing)
-2. Create a Kaggle Kernel with your tutorial [here](https://inclass.kaggle.com/kashnitsky/mlcourse/kernels) (and of course do upvote all kernels that you find useful)
-3. Make sure your Kernel runs normally and produces no errors
-4. Then share the link to your Kernel in the #mlcourse_ai Slack channel with a short description of the tutorial. You also need to add the *#tutorial* tag, It's obligatory, otherwise, the tutorial will be ignored.
 
 For discussions, please stick to [ODS Slack](https://opendatascience.slack.com), channel #mlcourse_ai, pinned thread **#tutorial.**
 
