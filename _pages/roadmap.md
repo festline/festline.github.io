@@ -70,3 +70,5 @@ In this [competition](https://www.kaggle.com/c/mlcourse-dota2-win-prediction) yo
    - 4-10 place – 30 credits
    - top 10% - 20 credits
    - top 20% - 10 credits
+
+*to be extended.*
