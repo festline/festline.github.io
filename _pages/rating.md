@@ -10,6 +10,10 @@ image:
 
 <img src='../images/teaser-rating.jpg'>
 
+## Current rating (Fall 2019)
+
+[Rating](https://docs.google.com/spreadsheets/d/15e1K0tg5ponA5R6YQkZfihrShTDLAKf5qeKaoVCiuhQ)
+
 ## Top-100 performers of the 5-th session of [mlcourse.ai](http://mlcourse.ai) by OpenDataScience, spring 2019
 
 According to the [final rating](https://drive.google.com/open?id=1LAy1eK8vIONzIWgcCEaVmhKPSj579zK5lrECf_tQT60). The session took place from February 6 till April 26, 2019, there were about 1600 participants.

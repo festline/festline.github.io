@@ -10,7 +10,7 @@ image:
 
 <img src='../images/teaser-tutorial.jpg'>
 
-One of the assignments in the course is to write a tutorial on almost any ML/DS-related topic. Here's the result. Slack nicks of authors are given with @'s. 
+One of the assignments in the course was to write a tutorial on almost any ML/DS-related topic. Here's the result. Slack nicks of authors are given with @'s. 
 
 **Spring 2019 session**
 
