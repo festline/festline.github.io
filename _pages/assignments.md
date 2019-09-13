@@ -11,7 +11,14 @@ image:
 <img src='../images/teaser-assignments.jpg'>
 
 ### Fall 2019 assignments
-1. Exploratory data analysis of Olympic games with Pandas, [nbviewer](https://nbviewer.jupyter.org/github/Yorko/mlcourse.ai/blob/master/jupyter_english/assignments_fall2019/assignment1_pandas_olympic.ipynb). Deadline: **September 15, 20:59 GMT** 
+
+All deadlines are 20:59 CET (London time), check out also [this Google calendar](https://calendar.google.com/calendar?cid=Z25pZ3EwZGxxb2I5cDZwMWptam5rdmY3NWtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ)
+
+1. Exploratory data analysis of Olympic games with Pandas, [nbviewer](https://nbviewer.jupyter.org/github/Yorko/mlcourse.ai/blob/master/jupyter_english/assignments_fall2019/assignment1_pandas_olympic.ipynb). Deadline: September 15
+2. Trees, forests and boosting
+  - Quiz 1. Trees and forests, [nbviewer](https://bit.ly/2lLu3Qo). Deadline: September 27
+  - Part 1. Classification and regression trees, [nbviewer](https://bit.ly/2m5hwHY). Deadline: October 6
+  - Part 2. Beating a baseline in a Kaggle competition, [CatBoost starter](https://www.kaggle.com/kashnitsky/mlcourse-ai-fall-2019-catboost-starter). Deadline: October 6
 
 ### Demo assignments, just for practice
 1. Exploratory data analysis with Pandas, [nbviewer](https://nbviewer.jupyter.org/github/Yorko/mlcourse.ai/blob/master/jupyter_english/assignments_demo/assignment01_pandas_uci_adult.ipynb?flush_cache=true), [Kaggle Kernel](https://www.kaggle.com/kashnitsky/assignment-1-pandas-and-uci-adult-dataset), [solution](https://www.kaggle.com/kashnitsky/a1-demo-pandas-and-uci-adult-dataset-solution)
@@ -23,4 +30,3 @@ image:
 7. Unsupervised learning, [nbviewer](https://nbviewer.jupyter.org/github/Yorko/mlcourse.ai/blob/master/jupyter_english/assignments_demo/assignment07_unsupervised_learning.ipynb?flush_cache=true), [Kaggle Kernel](https://www.kaggle.com/kashnitsky/assignment-7-unupervised-learning), [solution](https://www.kaggle.com/kashnitsky/a7-demo-unsupervised-learning-solution)
 8. Implementing online regressor, [nbviewer](https://nbviewer.jupyter.org/github/Yorko/mlcourse.ai/blob/master/jupyter_english/assignments_demo/assignment08_implement_sgd_regressor.ipynb?flush_cache=true), [Kaggle Kernel](https://www.kaggle.com/kashnitsky/assignment-8-implementing-online-regressor), [solution](https://www.kaggle.com/kashnitsky/a8-demo-implementing-online-regressor-solution)
 9. Time series analysis, [nbviewer](https://nbviewer.jupyter.org/github/Yorko/mlcourse.ai/blob/master/jupyter_english/assignments_demo/assignment09_time_series.ipynb?flush_cache=true), [Kaggle Kernel](https://www.kaggle.com/kashnitsky/assignment-9-time-series-analysis), [solution](https://www.kaggle.com/kashnitsky/a9-demo-time-series-analysis-solution)
-10. Beating baseline in a competition, [Kaggle kernel](https://www.kaggle.com/kashnitsky/assignment-10-gradient-boosting-and-flight-delays)
