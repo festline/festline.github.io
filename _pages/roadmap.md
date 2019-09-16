@@ -54,7 +54,7 @@ Quizzes are intended to check your understanding of theory behind the applied ap
 Deadline for each quiz is Friday, each quiz is followed by a live session on 3 Saturday mornings. During live session we go through quiz questions and have agile debates.  
 
 # Kaggle Inclass Competition "DotA 2 winner prediction"
-In this [competition](https://www.kaggle.com/c/mlcourse-dota2-win-prediction) you are going to utilize all knowledge and skills acquired during the course session. 
+In this [competition](https://www.kaggle.com/c/mlcourse-dota2-win-prediction) you are going to utilize all knowledge and skills acquired during the course session. Discussions are held on Kaggle itself, here is an [introductory thread](https://www.kaggle.com/c/mlcourse-dota2-win-prediction/discussion/109081).
 
 ## Rules:
  - Deadline for submissions: **2019 November 18, 20:59 CET**
