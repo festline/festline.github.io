@@ -14224,7 +14224,7 @@ $$ \large \begin{array}{rcl} a_n(x) &amp;=&amp; \frac{1}{N}\sum_{n=1}^{N}\sum_{i
 <li>Unlike linear regression, Random Forest is unable to extrapolate. But, this can be also regarded as an advantage because outliers do not cause extreme values in Random Forests.</li>
 <li>Prone to overfitting in some problems, especially, when dealing with noisy data.</li>
 <li>In the case of categorical variables with varying level numbers, random forests favor variables with a greater number of levels. The tree will fit more towards a feature with many levels because this gains greater accuracy.</li>
-<li>If a dataset contains groups of correlated features with similar importance for predicted classes, then the preference will be given to smaller groups.</li>
+<li>If a dataset contains groups of correlated features, preference might be given to groups of smaller size. See <a href="http://rnowling.github.io/machine/learning/2015/08/11/random-forest-correlation-bias.html">this work</a>.</li>
 <li>The resulting model is large and requires a lot of RAM.</li>
 </ul>
 
