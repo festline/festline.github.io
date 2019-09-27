@@ -13103,7 +13103,7 @@ div#notebook {
         // we use CSS to left justify single line equations in code cells.
         displayAlign: 'center',
         "HTML-CSS": {
-            styles: {'.MathJax_Display': {"margin": 0} },
+            styles: {'.MathJax_Display': {"margin": 0}},
             linebreaks: { automatic: true }
         }
     });
@@ -13162,7 +13162,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Permutation-importance">Permutation importance<a class="anchor-link" href="#Permutation-importance">&#182;</a></h3><p>The average reduction in accuracy caused by a variable is determined during the calculation of the out-of-bag error. The greater the reduction in accuracy due to an exclusion or permutation of the variable, the higher its <em>importance score</em>. For this reason, variables with a greater average reduction in accuracy are generally more significant for classification.</p>
+<h3 id="Permutation-importance">Permutation importance<a class="anchor-link" href="#Permutation-importance">&#182;</a></h3><p>Inspired by <a href="https://www.researchgate.net/publication/5231126_Conditional_Variable_Importance_for_Random_Forests">this</a> article.
+The average reduction in accuracy caused by a variable is determined during the calculation of the out-of-bag error. The greater the reduction in accuracy due to an exclusion or permutation of the variable, the higher its <em>importance score</em>. For this reason, variables with a greater average reduction in accuracy are generally more significant for classification.</p>
 <p>The rationale for calculating permutation importance is the following: By randomly permuting the predictor variable $X_j$, its original association with the response $Y$ is broken. When the permuted variable $X_j$, together with all the others non-permuted variables, is used the response for the out-of-bag observations, the prediction <em>accuracy</em> decreases substantially if the original $X_j$ was associated with response. Thus, as a measure of variable importance, the difference in prediction accuracy before and after permuting is used.</p>
 
 </div>
@@ -13171,8 +13172,8 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>More formally: denote $\overline{\mathfrak{B} }^{(t)}$ as the out-of-bag sample for a tree $t$, for $t\in\{1, ..., N\}$ where $N$ is the number of trees in ensemble. Then the permutation importance of variable $X_j$ in tree $t$ is</p>
-$${PI}^{(t)}\left(X_j\right)=\frac{\sum_{i\in\overline{\mathfrak{B} }^{(t)} }I\left(y_i=\hat{y}_i^{(t)}\right)}{\left|\overline{\mathfrak{B} }^{(t)}\right|}-\frac{\sum_{i\in\overline{\mathfrak{B} }^{(t)} }I\left(y_i=\hat{y}_{i,\pi_j}^{(t)}\right)}{\left|\overline{\mathfrak{B} }^{(t)}\right|}$$<p></p>
+<p>More formally: denote $\overline{\mathfrak{B}}^{(t)}$ as the out-of-bag sample for a tree $t$, for $t\in\{1, ..., N\}$ where $N$ is the number of trees in ensemble. Then the permutation importance of variable $X_j$ in tree $t$ is</p>
+$${PI}^{(t)}\left(X_j\right)=\frac{\sum_{i\in\overline{\mathfrak{B}}^{(t)}}I\left(y_i=\hat{y}_i^{(t)}\right)}{\left|\overline{\mathfrak{B}}^{(t)}\right|}-\frac{\sum_{i\in\overline{\mathfrak{B}}^{(t)}}I\left(y_i=\hat{y}_{i,\pi_j}^{(t)}\right)}{\left|\overline{\mathfrak{B}}^{(t)}\right|}$$<p></p>
 <p>where $\hat{y}_i^{(t)}=f^{(t)}(\mathbf{x}_i)$ is the predicted class for observation $i$ before and $\hat{y}_{i, \pi_j}^{(t)}=f^{(t)}(\mathbf{x}_{i,\pi_j})$ is the predicted class for observation $i$ after permuting $X_j$, $\mathbf{x}_{i,\pi_j}=\left(x_{i,1}, ..., x_{i,j-1},x_{\pi_j(i),j},x_{i,j+1},...,x_{i,p}\right)$</p>
 <p>Note that by definition ${PI}^{(t)}=0$, if variable $X_j$ isn't in tree $t$.</p>
 <p>Now, we can give the feature importance calculation for ensembles:</p>
@@ -13180,7 +13181,7 @@ $${PI}^{(t)}\left(X_j\right)=\frac{\sum_{i\in\overline{\mathfrak{B} }^{(t)} }I\l
 <li>not normalized:
 $${PI}\left(X_j\right)=\frac{\sum_{t=1}^N {PI}^{(t)}(X_j)}{N}$$</li>
 <li>normalized by the standard deviation of the differences:
-$$z_j=\frac{ {PI}\left(X_j\right)}{\frac{\hat{\sigma} }{\sqrt{N} }}$$</li>
+$$z_j=\frac{ {PI}\left(X_j\right)}{\frac{\hat{\sigma}}{\sqrt{N}}}$$</li>
 </ul>
 
 </div>
@@ -13194,7 +13195,7 @@ $$\begin{array}{c|c|c|c|c|c|c|c|c|c}
   \text{Instances}, i &amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7 &amp; 8 &amp; 9 &amp; 10 &amp; \\ 
   \hline
   y_i &amp; N &amp; P &amp; P &amp; N &amp; N &amp; P &amp; N &amp; N &amp; N &amp; P \\
- \end{array}$$<p>We build an ensemble of 5 trees $t$, for $t\in\{1, ..., 5\}$. For each tree we get out-of-bag sample (denoted $\overline{\mathfrak{B} }^{(t)}$ above). For example for the first tree out-of-bag sample consists of instances # 2, 4, 5, and 6.</p>
+ \end{array}$$<p>We build an ensemble of 5 trees $t$, for $t\in\{1, ..., 5\}$. For each tree we get out-of-bag sample (denoted $\overline{\mathfrak{B}}^{(t)}$ above). For example for the first tree out-of-bag sample consists of instances # 2, 4, 5, and 6.</p>
 $$\begin{array}{c|c|c|c|c|c|c|c|c|c}
   \text{Tree 1} &amp; \text{Bootstrap-sample 1} &amp; 10 &amp; 9 &amp; 7 &amp; 8 &amp; 1 &amp; 3 &amp; 9 &amp; 10 &amp; 10 &amp; 7\\
   \hline
@@ -13207,7 +13208,7 @@ $$\begin{array}{c|c|c|c|c|c|c|c|c|c}
   \text{Tree 5} &amp; \text{Bootstrap-sample 5} &amp; 5 &amp; 8 &amp; 1 &amp; 8 &amp; 5 &amp; 7 &amp; 10 &amp; 1 &amp; 10 &amp; 9\\
  \end{array}$$<p>Thus, out-of-bag samples for each tree $t$ are</p>
 $$\begin{array}{c|cccc}
-  \text{Tree}, t &amp; \overline{\mathfrak{B} }^{(t)} \\
+  \text{Tree}, t &amp; \overline{\mathfrak{B}}^{(t)} \\
   \hline
   \text{Tree 1} &amp; 2 &amp; 4 &amp; 5 &amp; 6\\
   \hline
@@ -13227,7 +13228,7 @@ $$\begin{array}{c|cccc}
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Suppose that we have four features $X_j$, $j\in\{1, 2, 3, 4\}$ and we's like to compute <em>permutation importance</em> for $X_2$. First, for each out-of-bag sample we compute <em>accuracy</em> of the model before and after permutation of the values of $X_2$.</p>
-<p>For instance, before permutation for $\overline{\mathfrak{B} }^{(1)}$ we have</p>
+<p>For instance, before permutation for $\overline{\mathfrak{B}}^{(1)}$ we have</p>
 $$\begin{array}{c|cccc|cc|c}
    &amp; X_1 &amp; \color{red}{X_2} &amp; X_3 &amp; X_4 &amp; y_i &amp; \hat{y}_i &amp; I\left(y_i=\hat{y}_i\right)\\
   \hline
@@ -13239,7 +13240,7 @@ $$\begin{array}{c|cccc|cc|c}
   \hline
       \textbf{6} &amp; 4 &amp; \color{red}7 &amp; 14 &amp; 104 &amp; \textbf{P} &amp; \textbf{P} &amp; 1\\
  \end{array}$$<p>Thus, the accuracy before permutation is $3/4=0.75$.</p>
-<p>After permutation for $\overline{\mathfrak{B} }^{(1)}$ we have</p>
+<p>After permutation for $\overline{\mathfrak{B}}^{(1)}$ we have</p>
 $$\begin{array}{c|cccc|cc|c}
    &amp; X_1 &amp; \color{red}{X_2} &amp; X_3 &amp; X_4 &amp; y_i &amp; \hat{y}_i &amp; I\left(y_i=\hat{y}_i\right)\\
   \hline
@@ -13252,7 +13253,7 @@ $$\begin{array}{c|cccc|cc|c}
       \textbf{6} &amp; 4 &amp; \color{red}3 &amp; 14 &amp; 104 &amp; \textbf{P} &amp; \textbf{P} &amp; 1\\
  \end{array}$$<p>The accuracy after permutation is $2/4=0.50$.</p>
 <p>Then the difference between accuracies is computed.</p>
-<p>The abovementioned steps are to be done for each out-of-bag sample $\overline{\mathfrak{B} }^{(t)}$. To get not normalized <em>permutation importance</em> we sum all computed differences and divide by the number of trees. Normalization is done by dividing <em>not normalized permutation importance</em> by standard error.</p>
+<p>The abovementioned steps are to be done for each out-of-bag sample $\overline{\mathfrak{B}}^{(t)}$. To get not normalized <em>permutation importance</em> we sum all computed differences and divide by the number of trees. Normalization is done by dividing <em>not normalized permutation importance</em> by standard error.</p>
 
 </div>
 </div>
@@ -13260,7 +13261,8 @@ $$\begin{array}{c|cccc|cc|c}
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="3.-Sklearn-Random-Forest-Feature-Importance">3. Sklearn Random Forest Feature Importance<a class="anchor-link" href="#3.-Sklearn-Random-Forest-Feature-Importance">&#182;</a></h2><p>Sklearn library uses another approach to determine feature importance. The rationale for that method is that the more gain in information the node (with splitting feature $X_j$) provides, the higher its importance.</p>
+<h2 id="3.-Sklearn-Random-Forest-Feature-Importance">3. Sklearn Random Forest Feature Importance<a class="anchor-link" href="#3.-Sklearn-Random-Forest-Feature-Importance">&#182;</a></h2><p>Inspired by <a href="https://medium.com/@srnghn/the-mathematics-of-decision-trees-random-forest-and-feature-importance-in-scikit-learn-and-spark-f2861df67e3">this</a> article.
+Sklearn library uses another approach to determine feature importance. The rationale for that method is that the more gain in information the node (with splitting feature $X_j$) provides, the higher its importance.</p>
 <p>The average reduction in the Gini impurity – or MSE for regression – represents the contribution of each feature to the homogeneity of nodes and leaves in the resulting Random Forest model. Each time a selected feature is used for splitting, the Gini impurity of the child nodes is calculated and compared with that of the original node.</p>
 <p>Gini impurity is a score of homogenity with the range from  0  (homogeneous) to  1  (heterogeneous). The changes in the value of the splitting criterion are accumulated for each feature and normalized at the end of the calculation. A higher reduction in the Gini impurity signals that splitting results by this feature results in nodes with higher purity.</p>
 <p>The algorithm of obtaining feature importance may be represented with the following sequence of steps:</p>
@@ -13274,11 +13276,11 @@ $$\begin{array}{c|cccc|cc|c}
 <p>1.2.  for each feature $j$ calculate its importance in that particular tree as</p>
 </li>
 </ol>
-$${FI}_j^{(t)}=\frac{\sum_{i:\text{node }i\text{ splits on feature } j}{RI}_i^{(t)} }{\sum_{i\in\text{all nodes} }{RI}_i^{(t)} }$$<p>That means that in numerator we sum the reduction in impurity only in those nodes where feature $j$ is situated.</p>
+$${FI}_j^{(t)}=\frac{\sum_{i:\text{node }i\text{ splits on feature } j}{RI}_i^{(t)}}{\sum_{i\in\text{all nodes}}{RI}_i^{(t)}}$$<p>That means that in numerator we sum the reduction in impurity only in those nodes where feature $j$ is situated.</p>
 <ol>
 <li>Calculate the average feature importances over all trees in ensemble:</li>
 </ol>
-$${FI}_j=\frac{\sum_{t=1}^N {FI}_j^{(t)} }{N}$$
+$${FI}_j=\frac{\sum_{t=1}^N {FI}_j^{(t)}}{N}$$
 </div>
 </div>
 </div>
