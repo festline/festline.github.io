@@ -48,10 +48,10 @@ If stuck with assignments, check course [video lectures](lectures).
 Quizzes are intended to check your understanding of theory behind the applied approaches. Will be announced in the **#mlcourse_ai_news** channel as well. 
 
  - Q1. Decision trees, random forest, and gradient boosting. From Sept 9 to Sept 27 
- - Q2. Linear models. From Oct 7 to Oct 18
- - Q3. Time  series, unsupervised learning. From Oct 28 to Nov 8
+ - Q2. Linear models. From Oct 7 to Oct 25
+ - Q3. Time  series, unsupervised learning. From Oct 28 to Nov 15
  
-Deadline for each quiz is Friday, each quiz is followed by a live session on 3 Saturday mornings. During live session we go through quiz questions and have agile debates.  
+Deadline for each quiz is Friday, each quiz is followed by a live session on a Saturday morning. During live session we go through quiz questions and have agile debates.  
 
 # Kaggle Inclass Competition "DotA 2 winner prediction"
 In this [competition](https://www.kaggle.com/c/mlcourse-dota2-win-prediction) you are going to utilize all knowledge and skills acquired during the course session. Discussions are held on Kaggle itself, here is an [introductory thread](https://www.kaggle.com/c/mlcourse-dota2-win-prediction/discussion/109081).
