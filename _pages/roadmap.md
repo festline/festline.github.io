@@ -25,9 +25,9 @@ Current deadlines (see also the [assignments](assignments) page):
  - September 15 - A1
  - September 27 - Quiz1
  - October 6 - A2
- - October 18 - Quiz2
+ - October 25 - Quiz2
  - October 27 - A3
- - November 8 - Quiz3
+ - November 15 - Quiz3
  - November 17 - A4 & A5
  - November 18 - DotA submissions
  - November 20 - DotA solutions
