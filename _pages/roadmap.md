@@ -26,13 +26,14 @@ Current deadlines (see also the [assignments](assignments) page):
  - September 27 - Quiz1
  - October 6 - A2
  - October 25 - Quiz2
- - October 27 - A3
+ - October 27 - A3 & Alice
+ - October 30 - Alice solutions
  - November 15 - Quiz3
  - November 17 - A4 & A5
  - November 18 - DotA submissions
  - November 20 - DotA solutions
  
-All deadlines are 20:59 CET (London time). 
+All deadlines are 20:59 GMT+1 (London time). 
 
 # Assignments
 Assignments are announced in the **#mlcourse_ai_news** channel in [ODS Slack team](https://opendatascience.slack.com/) (pinned items). Also, links to fresh assignments are provided in the Readme file of the [course repository](https://github.com/Yorko/mlcourse.ai) and on [mlcourse.ai/assignments](assignments). Deadlines are typically on Sundays, 20:59 CET. Apart from that, you can practice with demo [assignments](assignments), don't confuse them with "real" ones. Rough plan for fall 2019 assignments is the following:
