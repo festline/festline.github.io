@@ -16,6 +16,7 @@ All activities accounted for in fall 2019 [rating](https://docs.google.com/sprea
 - Calendar and deadlines
 - Assignments
 - Quizzes & Live sessions
+- Kaggle Inclass Competition "Alice"
 - Kaggle Inclass Competition “DOTA 2 winner prediction”
 
 # Calendar and deadlines
@@ -65,12 +66,15 @@ Rules:
 - if you overfitted and dropped several paces down on private LB, no offense, it's life, only private LB is used to calculate credits
 - Up to October 30, those who managed to beat all benchmarks should upload their reproducible solutions in the .py format (python script) [here](https://www.dropbox.com/request/GG5MUBGgJZrYHjCoZl9c)
 
-Scoring rules for this competition:
-1. Necessary conditions:
+## Rules
+Necessary conditions to get credits:
+   - You need to stick to [competition rules](https://www.kaggle.com/c/catch-me-if-you-can-intruder-detection-through-webpage-session-tracking2/rules)
    - Beat all Yorko's baselines on private LB
    - A reproducible solution should be submitted in a specified period
    - Team name exactly corresponding to some entry in the course rating 
-2. - 1 place – 40 points
+   
+## Credits
+   - 1 place – 40 points
    - 2 place – 30 points
    - 3 place – 25 points
    - 4-10 place – 20 points
@@ -78,7 +82,7 @@ Scoring rules for this competition:
 # Kaggle Inclass Competition "DotA 2 winner prediction"
 In this [competition](https://www.kaggle.com/c/mlcourse-dota2-win-prediction) you are going to utilize all knowledge and skills acquired during the course session. Discussions are held on Kaggle itself, here is an [introductory thread](https://www.kaggle.com/c/mlcourse-dota2-win-prediction/discussion/109081).
 
-## Rules:
+## Rules
  - Deadline for submissions: **2019 November 18, 20:59 CET**
  - Teams up to 4 people are allowed.
  - Instructions on team naming and uploading your solutions will be given (similar to [this post](https://www.kaggle.com/c/mlcourse-dota2-win-prediction/discussion/89707) on Kaggle)
