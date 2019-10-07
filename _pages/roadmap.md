@@ -74,10 +74,10 @@ Necessary conditions to get credits:
    - Team name exactly corresponding to some entry in the course rating 
    
 ## Credits
-   - 1 place – 40 points
-   - 2 place – 30 points
-   - 3 place – 25 points
-   - 4-10 place – 20 points
+   - 1 place – 40 credits
+   - 2 place – 30 credits
+   - 3 place – 25 credits
+   - 4-10 place – 20 credits
    
 # Kaggle Inclass Competition "DotA 2 winner prediction"
 In this [competition](https://www.kaggle.com/c/mlcourse-dota2-win-prediction) you are going to utilize all knowledge and skills acquired during the course session. Discussions are held on Kaggle itself, here is an [introductory thread](https://www.kaggle.com/c/mlcourse-dota2-win-prediction/discussion/109081).
