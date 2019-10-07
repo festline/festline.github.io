@@ -54,6 +54,27 @@ Quizzes are intended to check your understanding of theory behind the applied ap
  
 Deadline for each quiz is Friday, each quiz is followed by a live session on a Saturday morning. During live session we go through quiz questions and have agile debates.  
 
+# Kaggle Inclass Competition "Alice"
+
+In this [competition](https://www.kaggle.com/c/catch-me-if-you-can-intruder-detection-through-webpage-session-tracking2), you'll be solving the task of user identification tracking his/her sequence of visited websites. Lets call it "Alice", because we'll be classifying whether a person is some Alice or somebody else. The competition is held together with Yandex and MIPT specialization (so please don't spoil the competition by sharing high-performing Kaggle Notebooks).
+
+Rules:
+- Deadline is October 27, 2019
+- You can make maximum 5 submissions a day, and the competition is individual (that is, 1 person per team, team mergers are not allowed)
+- In case you want to get credits, you need to rename your [team](https://www.kaggle.com/c/catch-me-if-you-can-intruder-detection-through-webpage-session-tracking2/team) (of 1 person) in full accordance with your name in course [rating](https://bit.ly/2mbv5FF)
+- if you overfitted and dropped several paces down on private LB, no offense, it's life, only private LB is used to calculate credits
+- Up to October 30, those who managed to beat all benchmarks should upload their reproducible solutions in the .py format (python script) [here](https://www.dropbox.com/request/GG5MUBGgJZrYHjCoZl9c)
+
+Scoring rules for this competition:
+1. Necessary conditions:
+   - Beat all Yorko's baselines on private LB
+   - A reproducible solution should be submitted in a specified period
+   - Team name exactly corresponding to some entry in the course rating 
+2. - 1 place – 40 points
+   - 2 place – 30 points
+   - 3 place – 25 points
+   - 4-10 place – 20 points
+   
 # Kaggle Inclass Competition "DotA 2 winner prediction"
 In this [competition](https://www.kaggle.com/c/mlcourse-dota2-win-prediction) you are going to utilize all knowledge and skills acquired during the course session. Discussions are held on Kaggle itself, here is an [introductory thread](https://www.kaggle.com/c/mlcourse-dota2-win-prediction/discussion/109081).
 
