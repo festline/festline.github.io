@@ -30,7 +30,7 @@ Current deadlines (see also the [assignments](assignments) page):
  - October 27 - A3 & Alice
  - October 30 - Alice solutions
  - November 15 - Quiz3
- - November 17 - A4 & A5
+ - November 17 - A4
  - November 18 - DotA submissions
  - November 20 - DotA solutions
  
@@ -39,10 +39,9 @@ All deadlines are 20:59 GMT+1 (London time).
 # Assignments
 Assignments are announced in the **#mlcourse_ai_news** channel in [ODS Slack team](https://opendatascience.slack.com/) (pinned items). Also, links to fresh assignments are provided in the Readme file of the [course repository](https://github.com/Yorko/mlcourse.ai) and on [mlcourse.ai/assignments](assignments). Deadlines are typically on Sundays, 20:59 GMT+1 (London time). Apart from that, you can practice with demo [assignments](assignments), don't confuse them with "real" ones. Rough plan for fall 2019 assignments is the following:
  - A1. Pandas and data analysis
- - A2. Decision trees, random forest, and gradient boosting. Beating a baseline in a competition (gradient boosting)
- - A3. Beating baselines in a competition (linear models)
- - A4. Beating baselines in one more competition using Vowpal Wabbit
- - A5. Time series analysis with Python
+ - A2. 2 parts. Decision trees, random forest, and gradient boosting. Beating a baseline in a competition (gradient boosting)
+ - A3. 2 parts: Beating baselines in a competition (linear models). Logistic regression vs. Random Forest
+ - A4. Time series analysis with Python
  
 If stuck with assignments, check course [video lectures](lectures).
 
