@@ -13119,7 +13119,7 @@ div#notebook {
 <p><center>
 <img src="https://habrastorage.org/webt/ia/m9/zk/iam9zkyzqebnf_okxipihkgjwnw.jpeg" /></p>
 <h2 id="mlcourse.ai-&#8211;-Open-Machine-Learning-Course"><a href="https://mlcourse.ai">mlcourse.ai</a> &#8211; Open Machine Learning Course<a class="anchor-link" href="#mlcourse.ai-&#8211;-Open-Machine-Learning-Course">&#182;</a></h2><p>Authors: <a href="https://www.linkedin.com/in/vitaliyradchenk0/">Vitaliy Radchenko</a>, and <a href="https://yorko.github.io">Yury Kashnitsky</a>. Translated and edited by <a href="https://www.linkedin.com/in/christinabutsko/">Christina Butsko</a>, <a href="https://www.linkedin.com/in/egor-polusmak/">Egor Polusmak</a>, <a href="https://www.linkedin.com/in/anastasiamanokhina/">Anastasia Manokhina</a>, <a href="http://linkedin.com/in/anna-shirshova-b908458b">Anna Shirshova</a>, and <a href="https://www.linkedin.com/in/yuanyuanpao/">Yuanyuan Pao</a>. This material is subject to the terms and conditions of the <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/">Creative Commons CC BY-NC-SA 4.0</a> license. Free use is permitted for any non-commercial purpose.</p>
-<p><em>This is a static version of a Jupyter notebook. You can also check out the latest version in the <a href="https://github.com/Yorko/mlcourse.ai">course repository</a>, the corresponding interactive web-based <a href="https://www.kaggle.com/kashnitsky/topic-5-ensembles-part-2-random-forest">Kaggle Kernel</a> or a <a href="https://www.youtube.com/watch?v=neXJL-AqI_c">video lecture</a>.</em></p>
+<p><em>This is a static version of a Jupyter notebook. You can also check out the latest version in the <a href="https://github.com/Yorko/mlcourse.ai">course repository</a>, the corresponding interactive web-based <a href="https://www.kaggle.com/kashnitsky/topic-5-ensembles-part-2-random-forest">Kaggle Notebook</a> or a <a href="https://www.youtube.com/watch?v=neXJL-AqI_c">video lecture</a>.</em></p>
 
 </div>
 </div>
@@ -13134,7 +13134,7 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="Outline">Outline<a class="anchor-link" href="#Outline">&#182;</a></h2><ol>
+<h2 id="Article-outline">Article outline<a class="anchor-link" href="#Article-outline">&#182;</a></h2><ol>
 <li><a href="#1.-Algorithm">Algorithm</a></li>
 <li><a href="#2.-Comparison-with-Decision-Trees-and-Bagging">Comparison with Decision Trees and Bagging</a></li>
 <li><a href="#3.-Parameters">Parameters</a></li>
@@ -13491,7 +13491,7 @@ height=265
 <div class="text_cell_render border-box-sizing rendered_html">
 <ul>
 <li><code>n_estimators</code> — the number of trees in the forest (default = 10)</li>
-<li><code>criterion</code> — the function used to measure the quality of a split. Supported criteria are “mse” for the mean squared error, which is equal to variance reduction as feature selection criterion, and “mae” for the mean absolute error (default = "mse")</li>
+<li><code>criterion</code> — the function used to measure the quality of a split. Supported criteria are "mse" for the mean squared error, which is equal to variance reduction as feature selection criterion, and "mae" for the mean absolute error (default = "mse")</li>
 <li><code>max_features</code> — the number of features to consider when looking for the best split. You can specify the number or percentage of features, or choose from the available values: "auto" (all features), "sqrt", "log2". (default = "auto")</li>
 <li><code>max_depth</code> — the maximum depth of the tree (default means that nodes are expanded until all leaves are pure or until all leaves contain less than min_samples_split samples)</li>
 <li><code>min_samples_split</code> — the minimum number of samples required to split an internal node. Can be specified as the number or as a percentage of a total number of samples (default = 2)</li>
@@ -13515,8 +13515,8 @@ height=265
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>In case of classification, parameters are mostly the same. Only the following differ for <code>RandomForestClassifier</code> as compared to <code>RandomForestRegressor</code>:</p>
 <ul>
-<li><code>criterion</code> — the function used to measure the quality of a split. Supported criteria are “gini” for the Gini impurity and “entropy” for the information gain. Note: this parameter is tree-specific (default = "gini")</li>
-<li><code>class_weight</code> — the weight of each class (by default all weights equal to 1, but you can create a dictionary with weights or specify it as "balanced" - uses the values of classes to automatically adjust weights inversely proportional to class frequencies in the input data or as "balanced_subsample" - the same as “balanced” except that weights are computed based on the bootstrap sample for every tree grown)</li>
+<li><code>criterion</code> — the function used to measure the quality of a split. Supported criteria are "gini" for the Gini impurity and "entropy" for the information gain. Note: this parameter is tree-specific (default = "gini")</li>
+<li><code>class_weight</code> — the weight of each class (by default all weights equal to 1, but you can create a dictionary with weights or specify it as "balanced" - uses the values of classes to automatically adjust weights inversely proportional to class frequencies in the input data or as "balanced_subsample" - the same as "balanced" except that weights are computed based on the bootstrap sample for every tree grown)</li>
 </ul>
 
 </div>
@@ -13599,7 +13599,7 @@ height=265
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>We have accuracy equal to 91.18%. Now, let's try to impove this result, and take a look at the behaviour of the learning curves when we change the basic parameters.</p>
+<p>We have accuracy equal to 91.18%. Now, let's try to improve this result, and take a look at the behavior of the learning curves when we change the basic parameters.</p>
 <p>Let's start with the number of trees:</p>
 
 </div>
@@ -14144,7 +14144,7 @@ $$\large \Var f(x) = \rho(x)\sigma^2(x)$$$$\large \rho(x) = \Corr\left[T(x_1,\Th
 $$\large \sigma^2(x) = \Var\left[T(x,\Theta(X))\right]$$<p>It is easy to confuse $\large \rho(x)$ with the average correlation between the trained trees in a given random forest when we consider trees as N-vectors and calculate the average pairwise correlation between them. But this is not the case.</p>
 <p>In fact, this conditional correlation is not directly related to the averaging process, and the dependence of $\large \rho(x)$ on $\large x$ warns us of this difference. $\large \rho(x)$ is the theoretical correlation between a pair of random trees estimated on the input $\large x$. Its value comes from the repeated sampling of the training set from the population $\large Z$ and the subsequent random choice of a pair of trees. In statistics jargon, this is the correlation caused by the sampling distribution of $\large Z$ and $\large \Theta$.</p>
 <p>The conditional covariance of any pair of trees is equal to 0 because bootstrapping and feature selection are independent and identically distributed.</p>
-<p>If we consider the variance of a single tree, it barely depends on the parameters of the splitting ($\large m$). But they are crucial for ensembles. The variance of a tree is much higher than the one of an ensemble. The book <em>The Elements of Statistical Learning (Trevor Hastie, Robert Tibshirani и Jerome Friedman)</em> has a great example that demostrates this fact:</p>
+<p>If we consider the variance of a single tree, it barely depends on the parameters of the splitting ($\large m$). But they are crucial for ensembles. The variance of a tree is much higher than the one of an ensemble. The book <em>The Elements of Statistical Learning (Trevor Hastie, Robert Tibshirani and Jerome Friedman)</em> has a great example that demonstrates this fact:</p>
 <p><img src="https://habrastorage.org/webt/ee/3a/6v/ee3a6vx_gvop_wibdscz38qazba.png" alt="image"></p>
 
 </div>
@@ -14206,14 +14206,14 @@ $$ \large \begin{array}{rcl} a_n(x) &amp;=&amp; \frac{1}{N}\sum_{n=1}^{N}\sum_{i
 <li>High prediction accuracy; will perform better than linear algorithms in most problems; the accuracy is comparable with that of boosting.</li>
 <li>Robust to outliers, thanks to random sampling.</li>
 <li>Insensitive to the scaling of features as well as any other monotonic transformations due to the random subspace selection.</li>
-<li>Doesn't require fine-grained parameter tuning, works quite well out-of-the-box. With tuning, it is possible to achieve a 0.5–3% gain in accuracy, depending on the problem setting and data.</li>
+<li>Doesn't require fine-grained parameter tuning, works quite well out-of-the-box. With tuning, it is possible to achieve a 0.5-3% gain in accuracy, depending on the problem setting and data.</li>
 <li>Efficient for datasets with a large number of features and classes.</li>
 <li>Handles both continuous and discrete variables equally well.</li>
 <li>Rarely overfits. In practice, an increase in the tree number almost always improves the composition. But, after reaching a certain number of trees, the learning curve is very close to the asymptote.</li>
 <li>There are developed methods to estimate feature importance.</li>
 <li>Works well with missing data and maintains good accuracy even when a large part of data is missing.</li>
 <li>Provides means to weight classes on the whole dataset as well as for each tree sample.</li>
-<li>Under the hood, calculates proximities between pairs of examples that can subsequantly be used in clustering, outlier detection, or interesting data representations.</li>
+<li>Under the hood, calculates proximities between pairs of examples that can subsequently be used in clustering, outlier detection, or interesting data representations.</li>
 <li>The above functionality and properties may be extended to unlabeled data to enable unsupervised clustering, data visualization, and outlier detection.</li>
 <li>Easily parallelized and highly scalable.</li>
 </ul>
@@ -14241,7 +14241,7 @@ $$ \large \begin{array}{rcl} a_n(x) &amp;=&amp; \frac{1}{N}\sum_{n=1}^{N}\sum_{i
 <li>Medium <a href="https://medium.com/open-machine-learning-course/open-machine-learning-course-topic-5-ensembles-of-algorithms-and-random-forest-8e05246cbba7">"story"</a> based on this notebook</li>
 <li>Course materials as a <a href="https://www.kaggle.com/kashnitsky/mlcourse">Kaggle Dataset</a></li>
 <li>If you read Russian: an <a href="https://habrahabr.ru/company/ods/blog/324402/">article</a> on Habrahabr with ~ the same material. And a <a href="https://youtu.be/G0DmuuFeC30">lecture</a> on YouTube</li>
-<li>Chapter 15 of the book “<a href="https://statweb.stanford.edu/~tibs/ElemStatLearn/">Elements of Statistical Learning</a>” by Jerome H. Friedman, Robert Tibshirani, and Trevor Hastie.</li>
+<li>Chapter 15 of the book "<a href="https://statweb.stanford.edu/~tibs/ElemStatLearn/">Elements of Statistical Learning</a>" by Jerome H. Friedman, Robert Tibshirani, and Trevor Hastie.</li>
 <li>More about practical applications of random forests and other algorithms can be found in the <a href="http://scikit-learn.org/stable/modules/ensemble.html">official documentation</a> of <code>scikit-learn</code>.</li>
 <li>For a more in-depth discussion of variance and decorrelation of random forests, see the <a href="https://www.stat.berkeley.edu/~breiman/randomforest2001.pdf">original paper</a>.</li>
 </ul>
