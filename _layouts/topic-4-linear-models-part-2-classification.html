@@ -13263,7 +13263,7 @@ $$\Large p_+ = P\left(y_i = 1 \mid \textbf{x}_\text{i}, \textbf{w}\right) $$</p>
 <p><strong>Step 1.</strong> Calculate $w_{0}+w_{1}x_1 + w_{2}x_2 + ... = \textbf{w}^\text{T}\textbf{x}$. (Equation $\textbf{w}^\text{T}\textbf{x} = 0$ defines a hyperplane separating the examples into two classes);</p>
 <p><strong>Step 2.</strong> Compute the log odds ratio: $ \log(OR_{+}) = \textbf{w}^\text{T}\textbf{x}$.</p>
 <p><strong>Step 3.</strong> Now that we have the chance of assigning an example to the class of "+" - $OR_{+}$, calculate $p_{+}$ using the simple relationship:</p>
-$$\large p_{+} = \frac{OR_{+} }{1 + OR_{+} } = \frac{\exp^{\textbf{w}^\text{T}\textbf{x} } }{1 + \exp^{\textbf{w}^\text{T}\textbf{x} } } = \frac{1}{1 + \exp^{-\textbf{w}^\text{T}\textbf{x} } } = \sigma(\textbf{w}^\text{T}\textbf{x})$$<p>On the right side, you can see that we have the sigmoid function.</p>
+$$\large p_{+} = \frac{OR_{+} }{1 + OR_{+} } = \frac{\exp^{\textbf{w}^\text{T}\textbf{x} }}{1 + \exp^{\textbf{w}^\text{T}\textbf{x} }} = \frac{1}{1 + \exp^{-\textbf{w}^\text{T}\textbf{x} }} = \sigma(\textbf{w}^\text{T}\textbf{x})$$<p>On the right side, you can see that we have the sigmoid function.</p>
 <p>So, logistic regression predicts the probability of assigning an example to the "+" class (assuming that we know the features and weights of the model) as a sigmoid transformation of a linear combination of the weight vector and the feature vector:</p>
 $$\large p_+(\textbf{x}_\text{i}) = P\left(y_i = 1 \mid \textbf{x}_\text{i}, \textbf{w}\right) = \sigma(\textbf{w}^\text{T}\textbf{x}_\text{i}). $$<p>Next, we will see how the model is trained. We will again rely on maximum likelihood estimation.</p>
 
@@ -13332,7 +13332,7 @@ $$\rho(\textbf{x}_A, \textbf{w}^\text{T}\textbf{x} = 0) = \frac{\textbf{w}^\text
 <p>Let's now compute the likelihood of the data set i.e. the probability of observing the given vector $\textbf{y}$ from data set $X$. We'll make a strong assumption: objects come independently from one distribution (<em>i.i.d.</em>). Then, we can write</p>
 $$\large P\left(\textbf{y} \mid \textbf{X}, \textbf{w}\right) = \prod_{i=1}^{\ell} P\left(y = y_i \mid \textbf{x}_\text{i}, \textbf{w}\right),$$<p>where $\ell$ is the length of data set $\textbf{X}$ (number of rows).</p>
 <p>As usual, let's take the logarithm of this expression because a sum is much easier to optimize than the product:</p>
-$$\large \log P\left(\textbf{y} \mid \textbf{X}, \textbf{w}\right) = \log \prod_{i=1}^{\ell} P\left(y = y_i \mid \textbf{x}_\text{i}, \textbf{w}\right) = \log \prod_{i=1}^{\ell} \sigma(y_i\textbf{w}^\text{T}\textbf{x}_\text{i})   = $$$$\large  = \sum_{i=1}^{\ell} \log \sigma(y_i\textbf{w}^\text{T}\textbf{x}_\text{i}) = \sum_{i=1}^{\ell} \log \frac{1}{1 + \exp^{-y_i\textbf{w}^\text{T}\textbf{x}_\text{i} } } = $$$$\large - \sum_{i=1}^{\ell} \log (1 + \exp^{-y_i\textbf{w}^\text{T}\textbf{x}_\text{i} })$$
+$$\large \log P\left(\textbf{y} \mid \textbf{X}, \textbf{w}\right) = \log \prod_{i=1}^{\ell} P\left(y = y_i \mid \textbf{x}_\text{i}, \textbf{w}\right) = \log \prod_{i=1}^{\ell} \sigma(y_i\textbf{w}^\text{T}\textbf{x}_\text{i})   = $$$$\large  = \sum_{i=1}^{\ell} \log \sigma(y_i\textbf{w}^\text{T}\textbf{x}_\text{i}) = \sum_{i=1}^{\ell} \log \frac{1}{1 + \exp^{-y_i\textbf{w}^\text{T}\textbf{x}_\text{i} }} = $$$$\large - \sum_{i=1}^{\ell} \log (1 + \exp^{-y_i\textbf{w}^\text{T}\textbf{x}_\text{i} })$$
 </div>
 </div>
 </div>
@@ -13398,10 +13398,16 @@ $$\Large \widehat{\textbf w}  = \arg \min_{\textbf{w} } \mathcal{J}(\textbf X, \
 You can make a monthly (Patreon) or one-time (Ko-Fi) donation ↓
 
 <br>
+<br>
 
-[<img src="https://habrastorage.org/webt/zc/11/0y/zc110yh0u3kgnlmay1gwbekk0ys.png" width=20% >](https://www.patreon.com/ods_mlcourse)
+<a href="https://www.patreon.com/ods_mlcourse">
+<img src="https://habrastorage.org/webt/zc/11/0y/zc110yh0u3kgnlmay1gwbekk0ys.png" width=20% />
 
-[<img src="https://habrastorage.org/webt/8r/ml/xf/8rmlxfpdzukegpxa62cxlfvgkqe.png" width=20%>](https://ko-fi.com/mlcourse_ai)
+<br>
+
+<a href="https://ko-fi.com/mlcourse_ai">
+<img src="https://habrastorage.org/webt/8r/ml/xf/8rmlxfpdzukegpxa62cxlfvgkqe.png" width=20% />
+
 </center>
 </div>
 </div>
