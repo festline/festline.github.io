@@ -13103,7 +13103,7 @@ div#notebook {
         // we use CSS to left justify single line equations in code cells.
         displayAlign: 'center',
         "HTML-CSS": {
-            styles: {'.MathJax_Display': {"margin": 0}},
+            styles: {'.MathJax_Display': {"margin": 0} },
             linebreaks: { automatic: true }
         }
     });
@@ -13162,17 +13162,17 @@ $$\Large \begin{array}{rcl}\mathcal{L}\left(\textbf X, \textbf{y}, \textbf{w} \r
 \end{array}$$<p>To solve this optimization problem, we need to calculate derivatives with respect to the model parameters. We set them to zero and solve the resulting equation for $\textbf w$ (matrix differentiation may seem difficult; try to do it in terms of sums to be sure of the answer):</p>
 <p>Small CheatSheet on matrix derivatives:</p>
 $$\large \begin{array}{rcl} 
-\frac{\partial}{\partial \textbf{X}} \textbf{X}^{\text{T}} \textbf{A} &amp;=&amp; \textbf{A} \\
-\frac{\partial}{\partial \textbf{X}} \textbf{X}^{\text{T}} \textbf{A} \textbf{X} &amp;=&amp; \left(\textbf{A} + \textbf{A}^{\text{T}}\right)\textbf{X} \\
-\frac{\partial}{\partial \textbf{A}} \textbf{X}^{\text{T}} \textbf{A} \textbf{y} &amp;=&amp;  \textbf{X}^{\text{T}} \textbf{y}\\
-\frac{\partial}{\partial \textbf{X}} \textbf{A}^{-1} &amp;=&amp; -\textbf{A}^{-1} \frac{\partial \textbf{A}}{\partial \textbf{X}} \textbf{A}^{-1} 
+\frac{\partial}{\partial \textbf{X} } \textbf{X}^{\text{T} } \textbf{A} &amp;=&amp; \textbf{A} \\
+\frac{\partial}{\partial \textbf{X} } \textbf{X}^{\text{T} } \textbf{A} \textbf{X} &amp;=&amp; \left(\textbf{A} + \textbf{A}^{\text{T} }\right)\textbf{X} \\
+\frac{\partial}{\partial \textbf{A} } \textbf{X}^{\text{T} } \textbf{A} \textbf{y} &amp;=&amp;  \textbf{X}^{\text{T} } \textbf{y}\\
+\frac{\partial}{\partial \textbf{X} } \textbf{A}^{-1} &amp;=&amp; -\textbf{A}^{-1} \frac{\partial \textbf{A} }{\partial \textbf{X} } \textbf{A}^{-1} 
 \end{array}$$<p>Let's go on:</p>
-$$\Large \begin{array}{rcl} \frac{\partial \mathcal{L}}{\partial \textbf{w}} &amp;=&amp; \frac{\partial}{\partial \textbf{w}} \frac{1}{2n} \left( \textbf{y}^{\text{T}} \textbf{y} -2\textbf{y}^{\text{T}} \textbf{X} \textbf{w} + \textbf{w}^{\text{T}} \textbf{X}^{\text{T}} \textbf{X} \textbf{w}\right) \\
-&amp;=&amp; \frac{1}{2n} \left(-2 \textbf{X}^{\text{T}} \textbf{y} + 2\textbf{X}^{\text{T}} \textbf{X} \textbf{w}\right)
-\end{array}$$$$\Large \begin{array}{rcl} \frac{\partial \mathcal{L}}{\partial \textbf{w}} = 0 &amp;\Leftrightarrow&amp; \frac{1}{2n} \left(-2 \textbf{X}^{\text{T}} \textbf{y} + 2\textbf{X}^{\text{T}} \textbf{X} \textbf{w}\right) = 0 \\
-&amp;\Leftrightarrow&amp; -\textbf{X}^{\text{T}} \textbf{y} + \textbf{X}^{\text{T}} \textbf{X} \textbf{w} = 0 \\
-&amp;\Leftrightarrow&amp; \textbf{X}^{\text{T}} \textbf{X} \textbf{w} = \textbf{X}^{\text{T}} \textbf{y} \\
-&amp;\Leftrightarrow&amp; \textbf{w} = \left(\textbf{X}^{\text{T}} \textbf{X}\right)^{-1} \textbf{X}^{\text{T}} \textbf{y}
+$$\Large \begin{array}{rcl} \frac{\partial \mathcal{L} }{\partial \textbf{w} } &amp;=&amp; \frac{\partial}{\partial \textbf{w} } \frac{1}{2n} \left( \textbf{y}^{\text{T} } \textbf{y} -2\textbf{y}^{\text{T} } \textbf{X} \textbf{w} + \textbf{w}^{\text{T} } \textbf{X}^{\text{T} } \textbf{X} \textbf{w}\right) \\
+&amp;=&amp; \frac{1}{2n} \left(-2 \textbf{X}^{\text{T} } \textbf{y} + 2\textbf{X}^{\text{T} } \textbf{X} \textbf{w}\right)
+\end{array}$$$$\Large \begin{array}{rcl} \frac{\partial \mathcal{L} }{\partial \textbf{w} } = 0 &amp;\Leftrightarrow&amp; \frac{1}{2n} \left(-2 \textbf{X}^{\text{T} } \textbf{y} + 2\textbf{X}^{\text{T} } \textbf{X} \textbf{w}\right) = 0 \\
+&amp;\Leftrightarrow&amp; -\textbf{X}^{\text{T} } \textbf{y} + \textbf{X}^{\text{T} } \textbf{X} \textbf{w} = 0 \\
+&amp;\Leftrightarrow&amp; \textbf{X}^{\text{T} } \textbf{X} \textbf{w} = \textbf{X}^{\text{T} } \textbf{y} \\
+&amp;\Leftrightarrow&amp; \textbf{w} = \left(\textbf{X}^{\text{T} } \textbf{X}\right)^{-1} \textbf{X}^{\text{T} } \textbf{y}
 \end{array}$$<p>Bearing in mind all the definitions and conditions described above, we can say that, based on <a href="https://en.wikipedia.org/wiki/Gauss–Markov_theorem">Gauss–Markov theorem</a>, OLS estimators of the model parameters are optimal among all linear and unbiased estimators, i.e. they give the lowest variance.</p>
 
 </div>
@@ -13199,11 +13199,11 @@ $$\Large \begin{array}{rcl}
 \log p\left(\textbf{y}\mid \textbf X; \textbf{w}\right) &amp;=&amp; \log \prod_{i=1}^n \mathcal{N}\left(\sum_{j=1}^m w_j X_{ij}, \sigma^2\right) \\
 &amp;=&amp; \sum_{i=1}^n \log \mathcal{N}\left(\sum_{j=1}^m w_j X_{ij}, \sigma^2\right) \\
 &amp;=&amp; -\frac{n}{2}\log 2\pi\sigma^2 -\frac{1}{2\sigma^2} \sum_{i=1}^n \left(y_i - \textbf{w}^\text{T} \textbf{x}_i\right)^2
-\end{array}$$<p>We want to find the maximum likelihood hypothesis i.e. we need to maximize the expression $p\left(\textbf{y} \mid \textbf X; \textbf{w}\right)$ to get $\textbf{w}_{\text{ML}}$, which is the same as maximizing its logarithm. Note that, while maximizing the function over some parameter, you can throw away all the members that do not depend on this parameter:</p>
+\end{array}$$<p>We want to find the maximum likelihood hypothesis i.e. we need to maximize the expression $p\left(\textbf{y} \mid \textbf X; \textbf{w}\right)$ to get $\textbf{w}_{\text{ML} }$, which is the same as maximizing its logarithm. Note that, while maximizing the function over some parameter, you can throw away all the members that do not depend on this parameter:</p>
 $$\Large \begin{array}{rcl} 
-\textbf{w}_{\text{ML}} &amp;=&amp; \arg \max_{\textbf w} p\left(\textbf{y}\mid \textbf X; \textbf{w}\right) = \arg \max_{\textbf w} \log p\left(\textbf{y}\mid \textbf X; \textbf{w}\right)\\
-&amp;=&amp; \arg \max_{\textbf w} -\frac{n}{2}\log 2\pi\sigma^2 -\frac{1}{2\sigma^2} \sum_{i=1}^n \left(y_i - \textbf{w}^{\text{T}} \textbf{x}_i\right)^2 \\
-&amp;=&amp; \arg \max_{\textbf w} -\frac{1}{2\sigma^2} \sum_{i=1}^n \left(y_i - \textbf{w}^{\text{T}} \textbf{x}_i\right)^2 \\
+\textbf{w}_{\text{ML} } &amp;=&amp; \arg \max_{\textbf w} p\left(\textbf{y}\mid \textbf X; \textbf{w}\right) = \arg \max_{\textbf w} \log p\left(\textbf{y}\mid \textbf X; \textbf{w}\right)\\
+&amp;=&amp; \arg \max_{\textbf w} -\frac{n}{2}\log 2\pi\sigma^2 -\frac{1}{2\sigma^2} \sum_{i=1}^n \left(y_i - \textbf{w}^{\text{T} } \textbf{x}_i\right)^2 \\
+&amp;=&amp; \arg \max_{\textbf w} -\frac{1}{2\sigma^2} \sum_{i=1}^n \left(y_i - \textbf{w}^{\text{T} } \textbf{x}_i\right)^2 \\
 &amp;=&amp;  \arg \min_{\textbf w} \mathcal{L}\left(\textbf X, \textbf{y}, \textbf{w} \right)
 \end{array}$$<p>Thus, we have seen that the maximization of the likelihood of data is the same as the minimization of the mean squared error (given the above assumptions). It turns out that such a cost function is a consequence of the fact that the errors are distributed normally.</p>
 
@@ -13270,7 +13270,7 @@ $$\Large \begin{array}{rcl}
 \mathcal{L}\left(\textbf{X}, \textbf{y}, \textbf{w} \right) &amp;=&amp; \frac{1}{2n} \left\| \textbf{y} - \textbf{X} \textbf{w} \right\|_2^2 + \left\| \Gamma \textbf{w}\right\|^2\\
 \end{array}$$<p>The Tikhonov matrix is often expressed as the product of a number by the identity matrix: $\Gamma = \frac{\lambda}{2} E$. In this case, the problem of minimizing the mean squared error becomes a problem with a restriction on the $L_2$ norm. If we differentiate the new cost function with respect to the model parameters, set the resulting function to zero, and rearrange for  $\textbf{w}$, we get the exact solution of the problem.</p>
 $$\Large \begin{array}{rcl} 
-\textbf{w} &amp;=&amp; \left(\textbf{X}^{\text{T}} \textbf{X} + \lambda \textbf{E}\right)^{-1} \textbf{X}^{\text{T}} \textbf{y}
+\textbf{w} &amp;=&amp; \left(\textbf{X}^{\text{T} } \textbf{X} + \lambda \textbf{E}\right)^{-1} \textbf{X}^{\text{T} } \textbf{y}
 \end{array}$$<p>This type of regression is called ridge regression. The ridge is the diagonal matrix that we add to the $\textbf{X}^\text{T} \textbf{X}$ matrix to ensure that we get a regular matrix as a result.</p>
 <p><img src="https://habrastorage.org/files/452/f36/c79/452f36c79d7843109993de219dde7cd5.png"></p>
 <p>Such a solution reduces dispersion but becomes biased because the norm of the vector of parameters is also minimized, which makes the solution shift towards zero. On the figure below, the OLS solution is at the intersection of the white dotted lines. Blue dots represent different solutions of ridge regression. It can be seen that by increasing the regularization parameter $\lambda$, we shift the solution towards zero.</p>

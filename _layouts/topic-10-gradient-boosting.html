@@ -11763,7 +11763,7 @@ div#notebook {
         // we use CSS to left justify single line equations in code cells.
         displayAlign: 'center',
         "HTML-CSS": {
-            styles: {'.MathJax_Display': {"margin": 0}},
+            styles: {'.MathJax_Display': {"margin": 0} },
             linebreaks: { automatic: true }
         }
     });
@@ -11881,7 +11881,7 @@ Many machine learning courses study AdaBoost - the ancestor of GBM (Gradient Boo
 <li>Train base algo $\Large b_t$, let $\epsilon_t$ be it's training error.</li>
 <li>$\Large \alpha_t = \frac{1}{2}ln\frac{1 - \epsilon_t}{\epsilon_t}$.</li>
 <li>Update sample weights: $\Large w_i^{(t)} = w_i^{(t-1)} e^{-\alpha_t y_i b_t(x_i)}, i = 1, \dots, l$.</li>
-<li>Normalize sample weights: $\Large w_0^{(t)} = \sum_{j = 1}^k w_j^{(t)}, w_i^{(t)} = \frac{w_i^{(t)}}{w_0^{(t)}}, i = 1, \dots, l$.</li>
+<li>Normalize sample weights: $\Large w_0^{(t)} = \sum_{j = 1}^k w_j^{(t)}, w_i^{(t)} = \frac{w_i^{(t)} }{w_0^{(t)} }, i = 1, \dots, l$.</li>
 </ul>
 </li>
 <li>Return $\sum_t^{T}\alpha_tb_t$</li>
@@ -11942,7 +11942,7 @@ $ \large \hat{\theta} = \sum_{i = 1}^M \hat{\theta_i}, \\
 <li>Define the initial approximation of the parameters $\large \hat{\theta} = \hat{\theta_0}$</li>
 <li>For every iteration $\large t = 1, \dots, M$ repeat steps 3-7:</li>
 <li>Calculate the gradient of the loss function $\large \nabla L_{\theta}(\hat{\theta})$ for the current approximation $\large \hat{\theta}$
-$\large \nabla L_{\theta}(\hat{\theta}) = \left[\frac{\partial L(y, f(x, \theta))}{\partial \theta}\right]_{\theta = \hat{\theta}}$</li>
+$\large \nabla L_{\theta}(\hat{\theta}) = \left[\frac{\partial L(y, f(x, \theta))}{\partial \theta}\right]_{\theta = \hat{\theta} }$</li>
 <li>Set the current iterative approximation $\large \hat{\theta_t}$ based on the calculated gradient
 $\large \hat{\theta_t} \leftarrow −\nabla L_{\theta}(\hat{\theta})$</li>
 <li>Update the approximation of the parameters $\large \hat{\theta}$:
@@ -12050,7 +12050,7 @@ $\large \hat{f}(x) = \sum_{i = 0}^M \hat{f_i}(x) $</li>
 <ul>
 <li>$\large L(y, f) = (y - f)^2$ a.k.a. $\large L_2$ loss or Gaussian loss. It is the classical conditional mean, which is the simplest and most common case. If we do not have any additional information or requirements for a model to be robust, we can use the Gaussian loss.</li>
 <li>$\large L(y, f) = |y - f|$ a.k.a. $\large L_1$ loss or Laplacian loss. At the first glance, this function does not seem to be differentiable, but it actually defines the conditional median. Median, as we know, is robust to outliers, which is why this loss function is better in some cases. The penalty for big variations is not as heavy as it is in $\large L_2$.</li>
-<li>$ \large \begin{equation}  L(y, f) =\left\{   \begin{array}{@{}ll@{}}     (1 - \alpha) \cdot |y - f|, & \text{if}\ y-f \leq 0 \\     \alpha \cdot |y - f|, & \text{if}\ y-f >0  \end{array}\right. \end{equation}, \alpha \in (0,1)
+<li>$ \large \begin{equation}  L(y, f) =\left\{   \begin{array}{@{}ll@{} }     (1 - \alpha) \cdot |y - f|, & \text{if}\ y-f \leq 0 \\     \alpha \cdot |y - f|, & \text{if}\ y-f >0  \end{array}\right. \end{equation}, \alpha \in (0,1)
 $ a.k.a. $\large L_q$ loss or Quantile loss.  Instead of median, it uses quantiles. For example, $\large \alpha = 0.75$ corresponds to the 75%-quantile. We can see that this function is asymmetric and penalizes the observations which are on the right side of the defined quantile.</li>
 </ul>
 <p><img src='https://habrastorage.org/web/6d5/e3a/09c/6d5e3a09c703491b947fde851e412ac0.png' width=50%></p>
@@ -12059,7 +12059,7 @@ $ a.k.a. $\large L_q$ loss or Quantile loss.  Instead of median, it uses quantil
 <li>Toy data $\large \left\{ (x_i, y_i) \right\}_{i=1, \ldots,300}$ ✓</li>
 <li>A number of iterations $\large M = 3$ ✓;</li>
 <li>Loss function for quantiles $ \large \begin{equation}   L_{0.75}(y, f) =\left\{
-\begin{array}{@{}ll@{}}    0.25 \cdot |y - f|, & \text{if}\ y-f \leq 0 \\     0.75 \cdot |y - f|, & \text{if}\ y-f >0   \end{array}\right. \end{equation} $ ✓;</li>
+\begin{array}{@{}ll@{} }    0.25 \cdot |y - f|, & \text{if}\ y-f \leq 0 \\     0.75 \cdot |y - f|, & \text{if}\ y-f >0   \end{array}\right. \end{equation} $ ✓;</li>
 <li>Gradient $\large L_{0.75}(y, f)$ - function weighted by $\large \alpha = 0.75$. We are going to train tree-based model for classification:
 $\large r_{i} = -\left[\frac{\partial L(y_i, f(x_i))}{\partial f(x_i)}\right]_{f(x)=\hat{f}(x)} = $
 $\large = \alpha I(y_i > \hat{f}(x_i) ) - (1 - \alpha)I(y_i \leq \hat{f}(x_i) ), \quad \mbox{for } i=1,\ldots,300$ ✓;</li>
@@ -12136,7 +12136,7 @@ $$ \large L_{w}(y,f) = w \cdot L(y,f), \\
 \large r_{it} =   - w_i \cdot \left[\frac{\partial L(y_i, f(x_i))}{\partial f(x_i)}\right]_{f(x)=\hat{f}(x)}, \quad \mbox{for } i=1,\ldots,n$$</p>
 <p>It is clear that, for arbitrary weights, we do not know the statistical properties of our model. Often, linking the weights to the values $\large y$ can be too complicated. For example, the usage of weights proportional to $\large |y|$ in $\large L_1$ loss function is not equivalent to $\large L_2$ loss because the gradient will not take into account the values of the predictions themselves: $\large \hat{f}(x)$.</p>
 <p>We mention all of this so that we can understand our possibilities better. Let's create some very exotic weights for our toy data. We will define a strongly asymmetric weight function as follows:
-$$ \large \begin{equation} w(x) =\left\{   \begin{array}{@{}ll@{}}     0.1, & \text{if}\ x \leq 0 \\     0.1 + |cos(x)|, & \text{if}\ x >0 \end{array}\right. \end{equation} $$</p>
+$$ \large \begin{equation} w(x) =\left\{   \begin{array}{@{}ll@{} }     0.1, & \text{if}\ x \leq 0 \\     0.1 + |cos(x)|, & \text{if}\ x >0 \end{array}\right. \end{equation} $$</p>
 <p><img src='https://habrastorage.org/web/8c2/1b1/aa4/8c21b1aa47134f7aa46b15ef910369b2.png'   align='center'></p>
 <p>With these weights, we expect to get two properties: less detailing for negative values of $\large x$ and the form of the function, similar to the initial cosine. We take the other GBM's tunings from our previous example with classification including the line search for optimal coefficients. Let's look what we've got:</p>
 <p><img src='https://habrastorage.org/web/afc/cca/72a/afccca72a0774990b685de37b0fe9d9f.png'   align='center'></p>

@@ -13103,7 +13103,7 @@ div#notebook {
         // we use CSS to left justify single line equations in code cells.
         displayAlign: 'center',
         "HTML-CSS": {
-            styles: {'.MathJax_Display': {"margin": 0}},
+            styles: {'.MathJax_Display': {"margin": 0} },
             linebreaks: { automatic: true }
         }
     });
@@ -13171,8 +13171,8 @@ The average reduction in accuracy caused by a variable is determined during the 
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>More formally: denote $\overline{\mathfrak{B}}^{(t)}$ as the out-of-bag sample for a tree $t$, for $t\in\{1, ..., N\}$ where $N$ is the number of trees in ensemble. Then the permutation importance of variable $X_j$ in tree $t$ is</p>
-$${PI}^{(t)}\left(X_j\right)=\frac{\sum_{i\in\overline{\mathfrak{B}}^{(t)}}I\left(y_i=\hat{y}_i^{(t)}\right)}{\left|\overline{\mathfrak{B}}^{(t)}\right|}-\frac{\sum_{i\in\overline{\mathfrak{B}}^{(t)}}I\left(y_i=\hat{y}_{i,\pi_j}^{(t)}\right)}{\left|\overline{\mathfrak{B}}^{(t)}\right|}$$<p></p>
+<p>More formally: denote $\overline{\mathfrak{B} }^{(t)}$ as the out-of-bag sample for a tree $t$, for $t\in\{1, ..., N\}$ where $N$ is the number of trees in ensemble. Then the permutation importance of variable $X_j$ in tree $t$ is</p>
+$${PI}^{(t)}\left(X_j\right)=\frac{\sum_{i\in\overline{\mathfrak{B} }^{(t)} }I\left(y_i=\hat{y}_i^{(t)}\right)}{\left|\overline{\mathfrak{B} }^{(t)}\right|}-\frac{\sum_{i\in\overline{\mathfrak{B} }^{(t)} }I\left(y_i=\hat{y}_{i,\pi_j}^{(t)}\right)}{\left|\overline{\mathfrak{B} }^{(t)}\right|}$$<p></p>
 <p>where $\hat{y}_i^{(t)}=f^{(t)}(\mathbf{x}_i)$ is the predicted class for observation $i$ before and $\hat{y}_{i, \pi_j}^{(t)}=f^{(t)}(\mathbf{x}_{i,\pi_j})$ is the predicted class for observation $i$ after permuting $X_j$, $\mathbf{x}_{i,\pi_j}=\left(x_{i,1}, ..., x_{i,j-1},x_{\pi_j(i),j},x_{i,j+1},...,x_{i,p}\right)$</p>
 <p>Note that by definition ${PI}^{(t)}=0$, if variable $X_j$ isn't in tree $t$.</p>
 <p>Now, we can give the feature importance calculation for ensembles:</p>
@@ -13180,7 +13180,7 @@ $${PI}^{(t)}\left(X_j\right)=\frac{\sum_{i\in\overline{\mathfrak{B}}^{(t)}}I\lef
 <li>not normalized:
 $${PI}\left(X_j\right)=\frac{\sum_{t=1}^N {PI}^{(t)}(X_j)}{N}$$</li>
 <li>normalized by the standard deviation of the differences:
-$$z_j=\frac{{PI}\left(X_j\right)}{\frac{\hat{\sigma}}{\sqrt{N}}}$$</li>
+$$z_j=\frac{ {PI}\left(X_j\right)}{\frac{\hat{\sigma} }{\sqrt{N} } }$$</li>
 </ul>
 
 </div>
@@ -13194,7 +13194,7 @@ $$\begin{array}{c|c|c|c|c|c|c|c|c|c}
   \text{Instances}, i &amp; 1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 &amp; 6 &amp; 7 &amp; 8 &amp; 9 &amp; 10 &amp; \\ 
   \hline
   y_i &amp; N &amp; P &amp; P &amp; N &amp; N &amp; P &amp; N &amp; N &amp; N &amp; P \\
- \end{array}$$<p>We build an ensemble of 5 trees $t$, for $t\in\{1, ..., 5\}$. For each tree we get out-of-bag sample (denoted $\overline{\mathfrak{B}}^{(t)}$ above). For example for the first tree out-of-bag sample consists of instances # 2, 4, 5, and 6.</p>
+ \end{array}$$<p>We build an ensemble of 5 trees $t$, for $t\in\{1, ..., 5\}$. For each tree we get out-of-bag sample (denoted $\overline{\mathfrak{B} }^{(t)}$ above). For example for the first tree out-of-bag sample consists of instances # 2, 4, 5, and 6.</p>
 $$\begin{array}{c|c|c|c|c|c|c|c|c|c}
   \text{Tree 1} &amp; \text{Bootstrap-sample 1} &amp; 10 &amp; 9 &amp; 7 &amp; 8 &amp; 1 &amp; 3 &amp; 9 &amp; 10 &amp; 10 &amp; 7\\
   \hline
@@ -13207,7 +13207,7 @@ $$\begin{array}{c|c|c|c|c|c|c|c|c|c}
   \text{Tree 5} &amp; \text{Bootstrap-sample 5} &amp; 5 &amp; 8 &amp; 1 &amp; 8 &amp; 5 &amp; 7 &amp; 10 &amp; 1 &amp; 10 &amp; 9\\
  \end{array}$$<p>Thus, out-of-bag samples for each tree $t$ are</p>
 $$\begin{array}{c|cccc}
-  \text{Tree}, t &amp; \overline{\mathfrak{B}}^{(t)} \\
+  \text{Tree}, t &amp; \overline{\mathfrak{B} }^{(t)} \\
   \hline
   \text{Tree 1} &amp; 2 &amp; 4 &amp; 5 &amp; 6\\
   \hline
@@ -13227,7 +13227,7 @@ $$\begin{array}{c|cccc}
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Suppose that we have four features $X_j$, $j\in\{1, 2, 3, 4\}$ and we'd like to compute <em>permutation importance</em> for $X_2$. First, for each out-of-bag sample we compute <em>accuracy</em> of the model before and after permutation of the values of $X_2$.</p>
-<p>For instance, before permutation for $\overline{\mathfrak{B}}^{(1)}$ we have</p>
+<p>For instance, before permutation for $\overline{\mathfrak{B} }^{(1)}$ we have</p>
 $$\begin{array}{c|cccc|cc|c}
    &amp; X_1 &amp; \color{red}{X_2} &amp; X_3 &amp; X_4 &amp; y_i &amp; \hat{y}_i &amp; I\left(y_i=\hat{y}_i\right)\\
   \hline
@@ -13239,7 +13239,7 @@ $$\begin{array}{c|cccc|cc|c}
   \hline
       \textbf{6} &amp; 4 &amp; \color{red}7 &amp; 14 &amp; 104 &amp; \textbf{P} &amp; \textbf{P} &amp; 1\\
  \end{array}$$<p>Thus, the accuracy before permutation is $3/4=0.75$.</p>
-<p>After permutation for $\overline{\mathfrak{B}}^{(1)}$ we have</p>
+<p>After permutation for $\overline{\mathfrak{B} }^{(1)}$ we have</p>
 $$\begin{array}{c|cccc|cc|c}
    &amp; X_1 &amp; \color{red}{X_2} &amp; X_3 &amp; X_4 &amp; y_i &amp; \hat{y}_i &amp; I\left(y_i=\hat{y}_i\right)\\
   \hline
@@ -13252,7 +13252,7 @@ $$\begin{array}{c|cccc|cc|c}
       \textbf{6} &amp; 4 &amp; \color{red}3 &amp; 14 &amp; 104 &amp; \textbf{P} &amp; \textbf{P} &amp; 1\\
  \end{array}$$<p>The accuracy after permutation is $2/4=0.50$.</p>
 <p>Then the difference between accuracies is computed.</p>
-<p>The above mentioned steps are to be done for each out-of-bag sample $\overline{\mathfrak{B}}^{(t)}$. To get not normalized <em>permutation importance</em> we sum all computed differences and divide by the number of trees. Normalization is done by dividing <em>not normalized permutation importance</em> by standard error.</p>
+<p>The above mentioned steps are to be done for each out-of-bag sample $\overline{\mathfrak{B} }^{(t)}$. To get not normalized <em>permutation importance</em> we sum all computed differences and divide by the number of trees. Normalization is done by dividing <em>not normalized permutation importance</em> by standard error.</p>
 
 </div>
 </div>
@@ -13275,11 +13275,11 @@ Sklearn library uses another approach to determine feature importance. The ratio
 <p>1.2.  for each feature $j$ calculate its importance in that particular tree as</p>
 </li>
 </ol>
-$${FI}_j^{(t)}=\frac{\sum_{i:\text{node }i\text{ splits on feature } j}{RI}_i^{(t)}}{\sum_{i\in\text{all nodes}}{RI}_i^{(t)}}$$<p>That means that in numerator we sum the reduction in impurity only in those nodes where feature $j$ is situated.</p>
+$${FI}_j^{(t)}=\frac{\sum_{i:\text{node }i\text{ splits on feature } j}{RI}_i^{(t)} }{\sum_{i\in\text{all nodes} }{RI}_i^{(t)} }$$<p>That means that in numerator we sum the reduction in impurity only in those nodes where feature $j$ is situated.</p>
 <ol>
 <li>Calculate the average feature importances over all trees in ensemble:</li>
 </ol>
-$${FI}_j=\frac{\sum_{t=1}^N {FI}_j^{(t)}}{N}$$
+$${FI}_j=\frac{\sum_{t=1}^N {FI}_j^{(t)} }{N}$$
 </div>
 </div>
 </div>
@@ -13597,9 +13597,9 @@ $${FI}_j=\frac{\sum_{t=1}^N {FI}_j^{(t)}}{N}$$
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Let's start from the first tree and <code>Sepal length (cm)</code> feature. This feature is located in two nodes: the root (#0) and the rightmost node (#4). The reduction in impurity for these nodes are:</p>
-$${RI}_{{SL}_1}^{(1)}=\frac{150}{150}\cdot 0.482578 - \frac{63}{150}\cdot 0.061476 - \frac{87}{150}\cdot 0.436517 = 0.203578$$$${RI}_{{SL}_2}^{(1)}=\frac{56}{150}\cdot 0.035077 - \frac{7}{150}\cdot 0.244898 - \frac{49}{150}\cdot 0 = 0.001667$$<p>Note: The impurity for each node was recalculated to gain more accuracy than given in the picture.</p>
+$${RI}_{ {SL}_1}^{(1)}=\frac{150}{150}\cdot 0.482578 - \frac{63}{150}\cdot 0.061476 - \frac{87}{150}\cdot 0.436517 = 0.203578$$$${RI}_{ {SL}_2}^{(1)}=\frac{56}{150}\cdot 0.035077 - \frac{7}{150}\cdot 0.244898 - \frac{49}{150}\cdot 0 = 0.001667$$<p>Note: The impurity for each node was recalculated to gain more accuracy than given in the picture.</p>
 <p>By doing the same calculations we get the following reduction in impurity for <code>Petal width (cm)</code>, and <code>Petal width (cm)</code> features:</p>
-$${RI}_{PL}^{(1)}=0.035785$$$${RI}_{{PW}_1}^{(1)}=0.025820$$$${RI}_{{PW}_2}^{(1)}=0.193633$$<p>Summarizing all numbers in table</p>
+$${RI}_{PL}^{(1)}=0.035785$$$${RI}_{ {PW}_1}^{(1)}=0.025820$$$${RI}_{ {PW}_2}^{(1)}=0.193633$$<p>Summarizing all numbers in table</p>
 $$\begin{array}{c|cc}
   \text{Feature}, j &amp; \text{Total }RI_j^{(1)} &amp; {FI}_j^{(1)}\\ 
   \hline

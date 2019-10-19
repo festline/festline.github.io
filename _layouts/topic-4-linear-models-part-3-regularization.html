@@ -13103,7 +13103,7 @@ div#notebook {
         // we use CSS to left justify single line equations in code cells.
         displayAlign: 'center',
         "HTML-CSS": {
-            styles: {'.MathJax_Display': {"margin": 0}},
+            styles: {'.MathJax_Display': {"margin": 0} },
             linebreaks: { automatic: true }
         }
     });
@@ -13513,7 +13513,7 @@ height=277
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>We define the following polynomial features of degree $d$ for two variables $x_1$ and $x_2$:</p>
-$$\large \{x_1^d, x_1^{d-1}x_2, \ldots x_2^d\} =  \{x_1^ix_2^j\}_{i+j=d, i,j \in \mathbb{N}}$$<p>For example, for $d=3$, this will be the following features:</p>
+$$\large \{x_1^d, x_1^{d-1}x_2, \ldots x_2^d\} =  \{x_1^ix_2^j\}_{i+j=d, i,j \in \mathbb{N} }$$<p>For example, for $d=3$, this will be the following features:</p>
 $$\large 1, x_1, x_2,  x_1^2, x_1x_2, x_2^2, x_1^3, x_1^2x_2, x_1x_2^2, x_2^3$$<p>Drawing a Pythagorean Triangle would show how many of these features there will be for $d=4,5...$ and so on.
 The number of such features is exponentially large, and it can be costly to build polynomial features of large degree (e.g $d=10$) for 100 variables. More importantly, it's not needed.</p>
 

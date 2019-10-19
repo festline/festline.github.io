@@ -13103,7 +13103,7 @@ div#notebook {
         // we use CSS to left justify single line equations in code cells.
         displayAlign: 'center',
         "HTML-CSS": {
-            styles: {'.MathJax_Display': {"margin": 0}},
+            styles: {'.MathJax_Display': {"margin": 0} },
             linebreaks: { automatic: true }
         }
     });
@@ -13180,7 +13180,7 @@ $$\Large p_+ = P\left(y_i = 1 \mid \textbf{x}_\text{i}, \textbf{w}\right) $$</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>To predict the probability $p_+ \in [0,1]$, we can start by constructing a linear prediction using OLS: $b(\textbf{x}) = \textbf{w}^\text{T} \textbf{x} \in \mathbb{R}$. But converting the resulting value to the probability within in the [0, 1] range requires some function $f: \mathbb{R} \rightarrow [0,1].$. Logistic regression uses a specific function for this: $\sigma(z) = \frac{1}{1 + \exp^{-z}}$. Now let's understand what the prerequisites are.</p>
+<p>To predict the probability $p_+ \in [0,1]$, we can start by constructing a linear prediction using OLS: $b(\textbf{x}) = \textbf{w}^\text{T} \textbf{x} \in \mathbb{R}$. But converting the resulting value to the probability within in the [0, 1] range requires some function $f: \mathbb{R} \rightarrow [0,1].$. Logistic regression uses a specific function for this: $\sigma(z) = \frac{1}{1 + \exp^{-z} }$. Now let's understand what the prerequisites are.</p>
 
 </div>
 </div>
@@ -13263,7 +13263,7 @@ $$\Large p_+ = P\left(y_i = 1 \mid \textbf{x}_\text{i}, \textbf{w}\right) $$</p>
 <p><strong>Step 1.</strong> Calculate $w_{0}+w_{1}x_1 + w_{2}x_2 + ... = \textbf{w}^\text{T}\textbf{x}$. (Equation $\textbf{w}^\text{T}\textbf{x} = 0$ defines a hyperplane separating the examples into two classes);</p>
 <p><strong>Step 2.</strong> Compute the log odds ratio: $ \log(OR_{+}) = \textbf{w}^\text{T}\textbf{x}$.</p>
 <p><strong>Step 3.</strong> Now that we have the chance of assigning an example to the class of "+" - $OR_{+}$, calculate $p_{+}$ using the simple relationship:</p>
-$$\large p_{+} = \frac{OR_{+}}{1 + OR_{+}} = \frac{\exp^{\textbf{w}^\text{T}\textbf{x}}}{1 + \exp^{\textbf{w}^\text{T}\textbf{x}}} = \frac{1}{1 + \exp^{-\textbf{w}^\text{T}\textbf{x}}} = \sigma(\textbf{w}^\text{T}\textbf{x})$$<p>On the right side, you can see that we have the sigmoid function.</p>
+$$\large p_{+} = \frac{OR_{+} }{1 + OR_{+} } = \frac{\exp^{\textbf{w}^\text{T}\textbf{x} }}{1 + \exp^{\textbf{w}^\text{T}\textbf{x} }} = \frac{1}{1 + \exp^{-\textbf{w}^\text{T}\textbf{x} }} = \sigma(\textbf{w}^\text{T}\textbf{x})$$<p>On the right side, you can see that we have the sigmoid function.</p>
 <p>So, logistic regression predicts the probability of assigning an example to the "+" class (assuming that we know the features and weights of the model) as a sigmoid transformation of a linear combination of the weight vector and the feature vector:</p>
 $$\large p_+(\textbf{x}_\text{i}) = P\left(y_i = 1 \mid \textbf{x}_\text{i}, \textbf{w}\right) = \sigma(\textbf{w}^\text{T}\textbf{x}_\text{i}). $$<p>Next, we will see how the model is trained. We will again rely on maximum likelihood estimation.</p>
 
@@ -13332,7 +13332,7 @@ $$\rho(\textbf{x}_A, \textbf{w}^\text{T}\textbf{x} = 0) = \frac{\textbf{w}^\text
 <p>Let's now compute the likelihood of the data set i.e. the probability of observing the given vector $\textbf{y}$ from data set $X$. We'll make a strong assumption: objects come independently from one distribution (<em>i.i.d.</em>). Then, we can write</p>
 $$\large P\left(\textbf{y} \mid \textbf{X}, \textbf{w}\right) = \prod_{i=1}^{\ell} P\left(y = y_i \mid \textbf{x}_\text{i}, \textbf{w}\right),$$<p>where $\ell$ is the length of data set $\textbf{X}$ (number of rows).</p>
 <p>As usual, let's take the logarithm of this expression because a sum is much easier to optimize than the product:</p>
-$$\large \log P\left(\textbf{y} \mid \textbf{X}, \textbf{w}\right) = \log \prod_{i=1}^{\ell} P\left(y = y_i \mid \textbf{x}_\text{i}, \textbf{w}\right) = \log \prod_{i=1}^{\ell} \sigma(y_i\textbf{w}^\text{T}\textbf{x}_\text{i})   = $$$$\large  = \sum_{i=1}^{\ell} \log \sigma(y_i\textbf{w}^\text{T}\textbf{x}_\text{i}) = \sum_{i=1}^{\ell} \log \frac{1}{1 + \exp^{-y_i\textbf{w}^\text{T}\textbf{x}_\text{i}}} = $$$$\large - \sum_{i=1}^{\ell} \log (1 + \exp^{-y_i\textbf{w}^\text{T}\textbf{x}_\text{i}})$$
+$$\large \log P\left(\textbf{y} \mid \textbf{X}, \textbf{w}\right) = \log \prod_{i=1}^{\ell} P\left(y = y_i \mid \textbf{x}_\text{i}, \textbf{w}\right) = \log \prod_{i=1}^{\ell} \sigma(y_i\textbf{w}^\text{T}\textbf{x}_\text{i})   = $$$$\large  = \sum_{i=1}^{\ell} \log \sigma(y_i\textbf{w}^\text{T}\textbf{x}_\text{i}) = \sum_{i=1}^{\ell} \log \frac{1}{1 + \exp^{-y_i\textbf{w}^\text{T}\textbf{x}_\text{i} }} = $$$$\large - \sum_{i=1}^{\ell} \log (1 + \exp^{-y_i\textbf{w}^\text{T}\textbf{x}_\text{i} })$$
 </div>
 </div>
 </div>
@@ -13340,7 +13340,7 @@ $$\large \log P\left(\textbf{y} \mid \textbf{X}, \textbf{w}\right) = \log \prod_
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Maximizing the likelihood is equivalent to minimizing the expression:</p>
-$$\Large \mathcal{L_{\log}} (\textbf X, \textbf{y}, \textbf{w}) = \sum_{i=1}^{\ell} \log (1 + \exp^{-y_i\textbf{w}^\text{T}\textbf{x}_\text{i}}).$$<p>This is <em>logistic</em> loss function that is summed over all objects in the training set.</p>
+$$\Large \mathcal{L_{\log} } (\textbf X, \textbf{y}, \textbf{w}) = \sum_{i=1}^{\ell} \log (1 + \exp^{-y_i\textbf{w}^\text{T}\textbf{x}_\text{i} }).$$<p>This is <em>logistic</em> loss function that is summed over all objects in the training set.</p>
 <p>Let's look at the new function as a function of margin $L(M) = \log (1 + \exp^{-M})$ and plot it along with <em>zero-one loss</em> graph, which simply penalizes the model for error on each object by 1 (negative margin): $L_{1/0}(M) = [M &lt; 0]$.</p>
 
 </div>
@@ -13358,11 +13358,11 @@ $$\Large \mathcal{L_{\log}} (\textbf X, \textbf{y}, \textbf{w}) = \sum_{i=1}^{\e
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>The picture reflects the idea that, if we are not able to directly minimize the number of errors in the classification problem (at least not by gradient methods - derivative of the zero-one loss function at zero turns to infinity), we can minimize its upper bounds. For the logistic loss function (where the logarithm is binary, but this does not matter), the following is valid:</p>
-$$\Large \mathcal{L_{1/0}} (\textbf X, \textbf{y}, \textbf{w}) = \sum_{i=1}^{\ell} [M(\textbf{x}_\text{i}) &lt; 0] \leq \sum_{i=1}^{\ell} \log (1 + \exp^{-y_i\textbf{w}^\text{T}\textbf{x}_\text{i}}) = \mathcal{L_{\log}} (\textbf X, \textbf{y}, \textbf{w}), $$<p>where $\mathcal{L_{1/0}} (\textbf X, \textbf{y})$ is simply the number of errors of logistic regression with weights $\textbf{w}$ on a data set $(\textbf X, \textbf{y})$.</p>
-<p>Thus, by reducing the upper bound of $\mathcal{L_{log}}$ by the number of classification errors, we hope to reduce the number of errors itself.</p>
-<h2 id="4.--$L_2$-Regularization-of-Logistic-Loss">4.  $L_2$-Regularization of Logistic Loss<a class="anchor-link" href="#4.--$L_2$-Regularization-of-Logistic-Loss">&#182;</a></h2><p>$L_2$-regularization of logistic regression is almost the same as in the case of ridge regression. Instead of minimizing the function $\mathcal{L_{\log}} (\textbf X, \textbf{y}, \textbf{w})$ we minimize the following:</p>
-$$\Large \mathcal{J}(\textbf X, \textbf{y}, \textbf{w}) = \mathcal{L_{\log}} (\textbf X, \textbf{y}, \textbf{w}) + \lambda |\textbf{w}|^2$$<p>In the case of logistic regression, a reverse regularization coefficient $C = \frac{1}{\lambda}$ is typically introduced. Then the solution to the problem would be:</p>
-$$\Large \widehat{\textbf w}  = \arg \min_{\textbf{w}} \mathcal{J}(\textbf X, \textbf{y}, \textbf{w}) =  \arg \min_{\textbf{w}}\ (C\sum_{i=1}^{\ell} \log (1 + \exp^{-y_i\textbf{w}^\text{T}\textbf{x}_\text{i}})+ |\textbf{w}|^2)$$<p></p>
+$$\Large \mathcal{L_{1/0} } (\textbf X, \textbf{y}, \textbf{w}) = \sum_{i=1}^{\ell} [M(\textbf{x}_\text{i}) &lt; 0] \leq \sum_{i=1}^{\ell} \log (1 + \exp^{-y_i\textbf{w}^\text{T}\textbf{x}_\text{i} }) = \mathcal{L_{\log} } (\textbf X, \textbf{y}, \textbf{w}), $$<p>where $\mathcal{L_{1/0} } (\textbf X, \textbf{y})$ is simply the number of errors of logistic regression with weights $\textbf{w}$ on a data set $(\textbf X, \textbf{y})$.</p>
+<p>Thus, by reducing the upper bound of $\mathcal{L_{log} }$ by the number of classification errors, we hope to reduce the number of errors itself.</p>
+<h2 id="4.--$L_2$-Regularization-of-Logistic-Loss">4.  $L_2$-Regularization of Logistic Loss<a class="anchor-link" href="#4.--$L_2$-Regularization-of-Logistic-Loss">&#182;</a></h2><p>$L_2$-regularization of logistic regression is almost the same as in the case of ridge regression. Instead of minimizing the function $\mathcal{L_{\log} } (\textbf X, \textbf{y}, \textbf{w})$ we minimize the following:</p>
+$$\Large \mathcal{J}(\textbf X, \textbf{y}, \textbf{w}) = \mathcal{L_{\log} } (\textbf X, \textbf{y}, \textbf{w}) + \lambda |\textbf{w}|^2$$<p>In the case of logistic regression, a reverse regularization coefficient $C = \frac{1}{\lambda}$ is typically introduced. Then the solution to the problem would be:</p>
+$$\Large \widehat{\textbf w}  = \arg \min_{\textbf{w} } \mathcal{J}(\textbf X, \textbf{y}, \textbf{w}) =  \arg \min_{\textbf{w} }\ (C\sum_{i=1}^{\ell} \log (1 + \exp^{-y_i\textbf{w}^\text{T}\textbf{x}_\text{i} })+ |\textbf{w}|^2)$$<p></p>
 <p>Next, we'll look at an example that allows us to intuitively understand one of the interpretations of regularization.</p>
 
 </div>
