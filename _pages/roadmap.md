@@ -62,7 +62,7 @@ Rules:
 - Deadline is October 27, 2019
 - You can make maximum 5 submissions a day, and the competition is individual (that is, 1 person per team, team mergers are not allowed)
 - In case you want to get credits, you need to rename your [team](https://www.kaggle.com/c/catch-me-if-you-can-intruder-detection-through-webpage-session-tracking2/team) (of 1 person) in full accordance with your name in course [rating](https://bit.ly/2mbv5FF)
-- if you overfitted and dropped several paces down on private LB, no offense, it's life, only private LB is used to calculate credits
+- if you overfitted and dropped several paces down on private LB, no offense, it's life, only private LB is used to calculate credits for top-10 (this is not the case for A3 - there you have to beat baselines w.r.t. Public LB, it’s easier)
 - Up to October 30, those who managed to beat all benchmarks should upload their reproducible solutions in the .py format (python script) [here](https://www.dropbox.com/request/GG5MUBGgJZrYHjCoZl9c)
 
 ## Rules
