@@ -13103,7 +13103,7 @@ div#notebook {
         // we use CSS to left justify single line equations in code cells.
         displayAlign: 'center',
         "HTML-CSS": {
-            styles: {'.MathJax_Display': {"margin": 0} },
+            styles: {'.MathJax_Display': {"margin": 0}},
             linebreaks: { automatic: true }
         }
     });
@@ -13137,43 +13137,57 @@ div#notebook {
 <li><a href="#5.-Demo-assignment">Demo assignment</a></li>
 <li><a href="#6.-Useful-resources">Useful resources</a></li>
 </ol>
-<h2 id="1.-Introduction">1. Introduction<a class="anchor-link" href="#1.-Introduction">&#182;</a></h2><p>We will start studying linear models with linear regression. First of all, you must specify a model that relates the dependent variable $y$ to the explanatory factors (or features); for linear models, the dependency function will take the following form: $y = w_0 + \sum_{i=1}^m w_i x_i$. If we add a fictitious dimension $x_0 = 1$ (i.e. bias) for each observation, then the linear form can be rewritten in a slightly more compact way by pulling the absolute term $w_0$ into the sum: $y = \sum_{i=0}^m w_i x_i = \textbf{w}^\text{T} \textbf{x}$. If we have a matrix of feature observations, where the rows are observations from a data set, we need to add a single column on the left. We define the model as follows:</p>
+<h2 id="1.-Introduction">1. Introduction<a class="anchor-link" href="#1.-Introduction">&#182;</a></h2><p>We will start studying linear models with linear regression. First of all, you must specify a model that relates the dependent variable $y$ to the explanatory factors (or features); for linear models, the dependency function will take the following form: $\large y = w_0 + \sum_{i=1}^m w_i x_i$, where $m$ is the number of features. If we add a fictitious dimension $x_0 = 1$ (called <em>bias</em> or <em>intercept</em> term) for each observation, then the linear form can be rewritten in a slightly more compact way by pulling the absolute term $w_0$ into the sum: $\large y = \sum_{i=0}^m w_i x_i = \textbf{w}^\text{T} \textbf{x}$. If we have a matrix of $n$ observations, where the rows are observations from a data set, we need to add a single column of ones on the left. We define the model as follows:</p>
 $$\large \textbf y = \textbf X \textbf w + \epsilon,$$<p>where</p>
 <ul>
-<li>$\textbf y \in \mathbb{R}^n$ – is the dependent (or target) variable;</li>
-<li>$w$ – is the vector of the model parameters (in machine learning, these parameters are often referred to as weights);</li>
-<li>$\textbf X$ – is a matrix of observations and their features, sized  $n $ rows by $m + 1 $ columns (including the fictitious column on the left) with full rank by columns:  $\text{rank}\left(\textbf X\right) = m + 1 $;</li>
-<li>$\epsilon $ – a variable corresponding to the random, unpredictable model error.</li>
+<li>$\textbf w \in \mathbb{R}^{m+1}$ – is a $(m+1) \times 1$ column-vector of the model parameters (in machine learning, these parameters are often referred to as <em>weights</em>);</li>
+<li>$\textbf X \in \mathbb{R}^{n \times (m+1)}$ – is a $n \times (m+1)$ matrix of observations and their features, (including the fictitious column on the left) with full column <a href="https://en.wikipedia.org/wiki/Rank_(linear_algebra">rank</a>):  $\text{rank}\left(\textbf X\right) = m + 1 $;</li>
+<li>$\epsilon \in \mathbb{R}^n$ – is a $n \times 1$ random column-vector, referred to as <em>error</em> or <em>noise</em>;</li>
+<li>$\textbf y \in \mathbb{R}^n$ – is a $n \times 1$ column-vector - the dependent (or <em>target</em>) variable.</li>
 </ul>
 <p>We can also write this expression out for each observation</p>
-$$\large y_i = \sum_{j=0}^m w_j X_{ij} + \epsilon_i$$<p>The following restrictions are also applied to the model (otherwise, it will be another sort of regression besides linear):</p>
+$$\large y_i = \sum_{j=0}^m w_j X_{ij} + \epsilon_i$$<p>Will apply the following restrictions to the set of random errors $\epsilon_i$ (see <a href="https://en.wikipedia.org/wiki/Gauss%E2%80%93Markov_theorem">Gauss-Markov</a> theorem for deeper statistical motivation):</p>
 <ul>
-<li>expectation of random errors is zero:  $\forall i: \mathbb{E}\left[\epsilon_i\right] = 0 $;</li>
-<li>the random error has the same finite variance, this property is called <a href="https://en.wikipedia.org/wiki/Homoscedasticity">homoscedasticity</a>:  $\forall i: \text{Var}\left(\epsilon_i\right) = \sigma^2 &lt; \infty $;</li>
+<li>expectation of all random errors is zero:  $\forall i: \mathbb{E}\left[\epsilon_i\right] = 0 $;</li>
+<li>all random errors have the same finite variance, this property is called <a href="https://en.wikipedia.org/wiki/Homoscedasticity">homoscedasticity</a>:  $\forall i: \text{Var}\left(\epsilon_i\right) = \sigma^2 &lt; \infty $;</li>
 <li>random errors are uncorrelated:  $\forall i \neq j: \text{Cov}\left(\epsilon_i, \epsilon_j\right) = 0 $.</li>
 </ul>
-<p>Est.  $\widehat{w}_i $ of weights  $w_i $ is called linear if</p>
+<p><a href="https://en.wikipedia.org/wiki/Estimator">Estimator</a>  $\widehat{w}_i $ of weights  $w_i $ is called <em>linear</em> if</p>
 $$\large \widehat{w}_i = \omega_{1i}y_1 + \omega_{2i}y_2 + \cdots + \omega_{ni}y_n,$$<p>where  $\forall\ k\ $, $\omega_{ki} $
-depends only on the samples from $X $ and almost certainly in a nonlinear way. Since the solution for finding the optimal weights is a linear estimate, the model is called <em>linear regression</em>. Let's introduce one more definition. Estimate $\widehat{w}_i $ is called unbiased when its expectation is equal to the real but unknown value of estimated parameter:</p>
+depend only on the samples from $\textbf X$, but not on $\textbf w$ - we don't know the true coefficients $w_i$ (that's why we try to estimate them with the given data). Since the solution for finding the optimal weights is a linear estimator, the model is called <em>linear regression</em>.</p>
+<p><strong>Disclaimer:</strong> at this point, it's time to say that we don't plan to squeeze a whole statistics course into one article, so we try to provide the general idea of the math behind OLS.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
+</div><div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Let's introduce one more definition. Estimator $\widehat{w}_i $ is called <em>unbiased</em> when its expectation is equal to the real but unknown value of the estimated parameter:</p>
 $$\Large \mathbb{E}\left[\widehat{w}_i\right] = w_i$$<p>One of the ways to calculate those weights is with the ordinary least squares method (OLS), which minimizes the mean squared error between the actual value of the dependent variable and the predicted value given by the model:</p>
 $$\Large \begin{array}{rcl}\mathcal{L}\left(\textbf X, \textbf{y}, \textbf{w} \right) &amp;=&amp; \frac{1}{2n} \sum_{i=1}^n \left(y_i - \textbf{w}^\text{T} \textbf{x}_i\right)^2 \\
 &amp;=&amp; \frac{1}{2n} \left\| \textbf{y} - \textbf X \textbf{w} \right\|_2^2 \\
 &amp;=&amp; \frac{1}{2n} \left(\textbf{y} - \textbf X \textbf{w}\right)^\text{T} \left(\textbf{y} - \textbf X \textbf{w}\right)
-\end{array}$$<p>To solve this optimization problem, we need to calculate derivatives with respect to the model parameters. We set them to zero and solve the resulting equation for $\textbf w$ (matrix differentiation may seem difficult; try to do it in terms of sums to be sure of the answer):</p>
-<p>Small CheatSheet on matrix derivatives:</p>
+\end{array}$$<p>To solve this optimization problem, we need to calculate derivatives with respect to the model parameters. We set them to zero and solve the resulting equation for $\textbf w$ (matrix differentiation may seem difficult; try to do it in terms of sums to be sure of the answer).</p>
+<p><br></p>
+<details>
+<summary>Small CheatSheet on matrix derivatives (click the triangle to extend)</summary>
+<p>
 $$\large \begin{array}{rcl} 
-\frac{\partial}{\partial \textbf{X} } \textbf{X}^{\text{T} } \textbf{A} &amp;=&amp; \textbf{A} \\
-\frac{\partial}{\partial \textbf{X} } \textbf{X}^{\text{T} } \textbf{A} \textbf{X} &amp;=&amp; \left(\textbf{A} + \textbf{A}^{\text{T} }\right)\textbf{X} \\
-\frac{\partial}{\partial \textbf{A} } \textbf{X}^{\text{T} } \textbf{A} \textbf{y} &amp;=&amp;  \textbf{X}^{\text{T} } \textbf{y}\\
-\frac{\partial}{\partial \textbf{X} } \textbf{A}^{-1} &amp;=&amp; -\textbf{A}^{-1} \frac{\partial \textbf{A} }{\partial \textbf{X} } \textbf{A}^{-1} 
-\end{array}$$<p>Let's go on:</p>
-$$\Large \begin{array}{rcl} \frac{\partial \mathcal{L} }{\partial \textbf{w} } &amp;=&amp; \frac{\partial}{\partial \textbf{w} } \frac{1}{2n} \left( \textbf{y}^{\text{T} } \textbf{y} -2\textbf{y}^{\text{T} } \textbf{X} \textbf{w} + \textbf{w}^{\text{T} } \textbf{X}^{\text{T} } \textbf{X} \textbf{w}\right) \\
-&amp;=&amp; \frac{1}{2n} \left(-2 \textbf{X}^{\text{T} } \textbf{y} + 2\textbf{X}^{\text{T} } \textbf{X} \textbf{w}\right)
-\end{array}$$$$\Large \begin{array}{rcl} \frac{\partial \mathcal{L} }{\partial \textbf{w} } = 0 &amp;\Leftrightarrow&amp; \frac{1}{2n} \left(-2 \textbf{X}^{\text{T} } \textbf{y} + 2\textbf{X}^{\text{T} } \textbf{X} \textbf{w}\right) = 0 \\
-&amp;\Leftrightarrow&amp; -\textbf{X}^{\text{T} } \textbf{y} + \textbf{X}^{\text{T} } \textbf{X} \textbf{w} = 0 \\
-&amp;\Leftrightarrow&amp; \textbf{X}^{\text{T} } \textbf{X} \textbf{w} = \textbf{X}^{\text{T} } \textbf{y} \\
-&amp;\Leftrightarrow&amp; \textbf{w} = \left(\textbf{X}^{\text{T} } \textbf{X}\right)^{-1} \textbf{X}^{\text{T} } \textbf{y}
-\end{array}$$<p>Bearing in mind all the definitions and conditions described above, we can say that, based on <a href="https://en.wikipedia.org/wiki/Gauss–Markov_theorem">Gauss–Markov theorem</a>, OLS estimators of the model parameters are optimal among all linear and unbiased estimators, i.e. they give the lowest variance.</p>
+\frac{\partial}{\partial \textbf{X}} \textbf{X}^{\text{T}} \textbf{A} &=& \textbf{A} \\
+\frac{\partial}{\partial \textbf{X}} \textbf{X}^{\text{T}} \textbf{A} \textbf{X} &=& \left(\textbf{A} + \textbf{A}^{\text{T}}\right)\textbf{X} \\
+\frac{\partial}{\partial \textbf{A}} \textbf{X}^{\text{T}} \textbf{A} \textbf{y} &=&  \textbf{X}^{\text{T}} \textbf{y}\\
+\frac{\partial}{\partial \textbf{X}} \textbf{A}^{-1} &=& -\textbf{A}^{-1} \frac{\partial \textbf{A}}{\partial \textbf{X}} \textbf{A}^{-1} 
+\end{array}$$
+</p>
+</details><p>What we get is:</p>
+$$\Large \begin{array}{rcl} \frac{\partial \mathcal{L}}{\partial \textbf{w}} &amp;=&amp; \frac{\partial}{\partial \textbf{w}} \frac{1}{2n} \left( \textbf{y}^{\text{T}} \textbf{y} -2\textbf{y}^{\text{T}} \textbf{X} \textbf{w} + \textbf{w}^{\text{T}} \textbf{X}^{\text{T}} \textbf{X} \textbf{w}\right) \\
+&amp;=&amp; \frac{1}{2n} \left(-2 \textbf{X}^{\text{T}} \textbf{y} + 2\textbf{X}^{\text{T}} \textbf{X} \textbf{w}\right)
+\end{array}$$$$\Large \begin{array}{rcl} \frac{\partial \mathcal{L}}{\partial \textbf{w}} = 0 &amp;\Leftrightarrow&amp; \frac{1}{2n} \left(-2 \textbf{X}^{\text{T}} \textbf{y} + 2\textbf{X}^{\text{T}} \textbf{X} \textbf{w}\right) = 0 \\
+&amp;\Leftrightarrow&amp; -\textbf{X}^{\text{T}} \textbf{y} + \textbf{X}^{\text{T}} \textbf{X} \textbf{w} = 0 \\
+&amp;\Leftrightarrow&amp; \textbf{X}^{\text{T}} \textbf{X} \textbf{w} = \textbf{X}^{\text{T}} \textbf{y} \\
+&amp;\Leftrightarrow&amp; \textbf{w} = \left(\textbf{X}^{\text{T}} \textbf{X}\right)^{-1} \textbf{X}^{\text{T}} \textbf{y}
+\end{array}$$<p>Bearing in mind all the definitions and conditions described above, we can say that, based on the <a href="https://en.wikipedia.org/wiki/Gauss–Markov_theorem">Gauss–Markov theorem</a>, OLS estimators of the model parameters are optimal among all linear and unbiased estimators, i.e. they give the lowest variance.</p>
 
 </div>
 </div>
@@ -13187,8 +13201,8 @@ $$\Large \begin{array}{rcl} \frac{\partial \mathcal{L} }{\partial \textbf{w} } &
 $$\Large p\left(\theta, x\right) = \theta^x \left(1 - \theta\right)^\left(1 - x\right), x \in \left\{0, 1\right\}$$<p>This distribution is exactly what we need, and the distribution parameter $\theta$ is the estimate of the probability that a person knows the formula of methyl alcohol. In our $400$ <em>independent</em> experiments, let's denote their outcomes as $\textbf{x} = \left(x_1, x_2, \ldots, x_{400}\right)$. Let's write down the likelihood of our data (observations), i.e. the probability of observing exactly these 117 realizations of the random variable $x = 1$ and 283 realizations of $x = 0$:</p>
 $$\Large p(\textbf{x}; \theta) = \prod_{i=1}^{400} \theta^{x_i} \left(1 - \theta\right)^{\left(1 - x_i\right)} = \theta^{117} \left(1 - \theta\right)^{283}$$<p>Next, we will maximize the expression with respect to $\theta$. Most often this is not done with the likelihood $p(\textbf{x}; \theta)$ but with its logarithm (the monotonic transformation does not change the solution but simplifies calculation greatly):</p>
 $$\Large \log p(\textbf{x}; \theta) = \log \prod_{i=1}^{400} \theta^{x_i} \left(1 - \theta\right)^{\left(1 - x_i\right)} = $$$$ \large = \log \theta^{117} \left(1 - \theta\right)^{283} =  117 \log \theta + 283 \log \left(1 - \theta\right)$$<p>Now, we want to find such a value of $\theta$ that will maximize the likelihood. For this purpose, we'll take the derivative with respect to $\theta$, set it to zero, and solve the resulting equation:</p>
-$$\large  \frac{\partial \log p(\textbf{x}; \theta)}{\partial \theta} = \frac{\partial}{\partial \theta} \left(117 \log \theta + 283 \log \left(1 - \theta\right)\right) = \frac{117}{\theta} - \frac{283}{1 - \theta};$$<p>It turns out that our intuitive assessment is exactly the maximum likelihood estimate. Now let us apply the same reasoning to the linear regression problem and try to find out what lies beyond the mean squared error. To do this, we'll need to look at linear regression from a probabilistic perspective. Our model naturally remains the same:</p>
-$$\Large \textbf y = \textbf X \textbf w + \epsilon,$$<p>but let us now assume that the random errors follow a centered <a href="https://en.wikipedia.org/wiki/Normal_distribution">Normal distribution</a>:</p>
+$$\Large  \frac{\partial \log p(\textbf{x}; \theta)}{\partial \theta} = \frac{\partial}{\partial \theta} \left(117 \log \theta + 283 \log \left(1 - \theta\right)\right) = \frac{117}{\theta} - \frac{283}{1 - \theta};$$<p>It turns out that our intuitive assessment is exactly the maximum likelihood estimate. Now let us apply the same reasoning to the linear regression problem and try to find out what lies beyond the mean squared error. To do this, we'll need to look at linear regression from a probabilistic perspective. Our model naturally remains the same:</p>
+$$\Large \textbf y = \textbf X \textbf w + \epsilon,$$<p>but let us now assume that the random errors follow a centered <a href="https://en.wikipedia.org/wiki/Normal_distribution">Normal distribution</a> (beware, it's an additional assumption, it's not a prerequisite of a Gauss-Markov theorem):</p>
 $$\Large \epsilon_i \sim \mathcal{N}\left(0, \sigma^2\right)$$<p>Let's rewrite the model from a new perspective:</p>
 $$\Large \begin{array}{rcl} 
 y_i &amp;=&amp; \sum_{j=1}^m w_j X_{ij} + \epsilon_i \\
@@ -13199,11 +13213,11 @@ $$\Large \begin{array}{rcl}
 \log p\left(\textbf{y}\mid \textbf X; \textbf{w}\right) &amp;=&amp; \log \prod_{i=1}^n \mathcal{N}\left(\sum_{j=1}^m w_j X_{ij}, \sigma^2\right) \\
 &amp;=&amp; \sum_{i=1}^n \log \mathcal{N}\left(\sum_{j=1}^m w_j X_{ij}, \sigma^2\right) \\
 &amp;=&amp; -\frac{n}{2}\log 2\pi\sigma^2 -\frac{1}{2\sigma^2} \sum_{i=1}^n \left(y_i - \textbf{w}^\text{T} \textbf{x}_i\right)^2
-\end{array}$$<p>We want to find the maximum likelihood hypothesis i.e. we need to maximize the expression $p\left(\textbf{y} \mid \textbf X; \textbf{w}\right)$ to get $\textbf{w}_{\text{ML} }$, which is the same as maximizing its logarithm. Note that, while maximizing the function over some parameter, you can throw away all the members that do not depend on this parameter:</p>
+\end{array}$$<p>We want to find the maximum likelihood hypothesis i.e. we need to maximize the expression $p\left(\textbf{y} \mid \textbf X; \textbf{w}\right)$ to get $\textbf{w}_{\text{ML}}$, which is the same as maximizing its logarithm. Note that, while maximizing the function over some parameter, you can throw away all the members that do not depend on this parameter:</p>
 $$\Large \begin{array}{rcl} 
-\textbf{w}_{\text{ML} } &amp;=&amp; \arg \max_{\textbf w} p\left(\textbf{y}\mid \textbf X; \textbf{w}\right) = \arg \max_{\textbf w} \log p\left(\textbf{y}\mid \textbf X; \textbf{w}\right)\\
-&amp;=&amp; \arg \max_{\textbf w} -\frac{n}{2}\log 2\pi\sigma^2 -\frac{1}{2\sigma^2} \sum_{i=1}^n \left(y_i - \textbf{w}^{\text{T} } \textbf{x}_i\right)^2 \\
-&amp;=&amp; \arg \max_{\textbf w} -\frac{1}{2\sigma^2} \sum_{i=1}^n \left(y_i - \textbf{w}^{\text{T} } \textbf{x}_i\right)^2 \\
+\textbf{w}_{\text{ML}} &amp;=&amp; \arg \max_{\textbf w} p\left(\textbf{y}\mid \textbf X; \textbf{w}\right) = \arg \max_{\textbf w} \log p\left(\textbf{y}\mid \textbf X; \textbf{w}\right)\\
+&amp;=&amp; \arg \max_{\textbf w} -\frac{n}{2}\log 2\pi\sigma^2 -\frac{1}{2\sigma^2} \sum_{i=1}^n \left(y_i - \textbf{w}^{\text{T}} \textbf{x}_i\right)^2 \\
+&amp;=&amp; \arg \max_{\textbf w} -\frac{1}{2\sigma^2} \sum_{i=1}^n \left(y_i - \textbf{w}^{\text{T}} \textbf{x}_i\right)^2 \\
 &amp;=&amp;  \arg \min_{\textbf w} \mathcal{L}\left(\textbf X, \textbf{y}, \textbf{w} \right)
 \end{array}$$<p>Thus, we have seen that the maximization of the likelihood of data is the same as the minimization of the mean squared error (given the above assumptions). It turns out that such a cost function is a consequence of the fact that the errors are distributed normally.</p>
 
@@ -13264,13 +13278,13 @@ $$\Large \begin{array}{rcl}
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="4.-Regularization-of-Linear-Regression">4. Regularization of Linear Regression<a class="anchor-link" href="#4.-Regularization-of-Linear-Regression">&#182;</a></h2><p>There are situations where we might intentionally increase the bias of the model for the sake of stability i.e. to reduce the variance of the model $\text{Var}\left(\widehat{f}\right)$. One of the conditions of the Gauss-Markov theorem is the full column rank of matrix $\textbf{X}$. Otherwise, the OLS solution $\textbf{w} = \left(\textbf{X}^\text{T} \textbf{X}\right)^{-1} \textbf{X}^\text{T} \textbf{y}$ does not exist since the inverse matrix $\left(\textbf{X}^\text{T} \textbf{X}\right)^{-1}$ does not exist. In other words, matrix $\textbf{X}^\text{T} \textbf{X}$ will be singular or degenerate. This problem is called an <a href="https://en.wikipedia.org/wiki/Well-posed_problem"> ill-posed problem</a>. Problems like this must be corrected, namely, matrix $\textbf{X}^\text{T} \textbf{X}$ needs to become non-degenerate, or regular (which is why this process is called regularization). Often we observe the so-called multicollinearity in the data: when two or more features are strongly correlated, it is manifested in the matrix $\textbf{X}$ in the form of "almost" linear dependence between the columns. For example, in the problem of predicting house prices by their parameters, attributes "area with balcony" and "area without balcony" will have an "almost" linear relationship. Formally, matrix $\textbf{X}^\text{T} \textbf{X}$ for such data is reversible, but, due to multicollinearity, some of its eigenvalues will be close to zero. In the inverse matrix $\left(\textbf{X}^\text{T} \textbf{X}\right)^{-1}$, some extremely large eigenvalues will appear, as eigenvalues of the inverse matrix are $\frac{1}{\lambda_i}$. The result of this vacillation of eigenvalues is an unstable estimate of model parameters, i.e. adding a new set of observations to the training data will lead to a completely different solution. 
+<h2 id="4.-Regularization-of-Linear-Regression">4. Regularization of Linear Regression<a class="anchor-link" href="#4.-Regularization-of-Linear-Regression">&#182;</a></h2><p>There are situations where we might intentionally increase the bias of the model for the sake of stability i.e. to reduce the variance of the model $\text{Var}\left(\widehat{f}\right)$. One of the conditions of the Gauss-Markov theorem is the full column rank of matrix $\textbf{X}$. Otherwise, the OLS solution $\textbf{w} = \left(\textbf{X}^\text{T} \textbf{X}\right)^{-1} \textbf{X}^\text{T} \textbf{y}$ does not exist since the inverse matrix $\left(\textbf{X}^\text{T} \textbf{X}\right)^{-1}$ does not exist. In other words, matrix $\textbf{X}^\text{T} \textbf{X}$ will be singular or degenerate. This problem is called an <a href="https://en.wikipedia.org/wiki/Well-posed_problem"> ill-posed problem</a>. Problems like this must be corrected, namely, matrix $\textbf{X}^\text{T} \textbf{X}$ needs to become non-degenerate, or regular (which is why this process is called regularization). Often we observe the so-called multicollinearity in the data: when two or more features are strongly correlated, it is manifested in the matrix $\textbf{X}$ in the form of "almost" linear dependence between the columns. For example, in the problem of predicting house prices by their parameters, attributes "area with balcony" and "area without balcony" will have an "almost" linear relationship. Formally, matrix $\textbf{X}^\text{T} \textbf{X}$ for such data is reversible, but, due to multicollinearity, some of its eigenvalues will be close to zero. In the inverse matrix $\textbf{X}^\text{T} \textbf{X}$, some extremely large eigenvalues will appear, as eigenvalues of the inverse matrix are $\frac{1}{\lambda_i}$. The result of this vacillation of eigenvalues is an unstable estimate of model parameters, i.e. adding a new set of observations to the training data will lead to a completely different solution. 
 One method of regularization is <a href="https://en.wikipedia.org/wiki/Tikhonov_regularization">Tikhonov regularization</a>, which generally looks like the addition of a new member to the mean squared error:</p>
 $$\Large \begin{array}{rcl} 
 \mathcal{L}\left(\textbf{X}, \textbf{y}, \textbf{w} \right) &amp;=&amp; \frac{1}{2n} \left\| \textbf{y} - \textbf{X} \textbf{w} \right\|_2^2 + \left\| \Gamma \textbf{w}\right\|^2\\
 \end{array}$$<p>The Tikhonov matrix is often expressed as the product of a number by the identity matrix: $\Gamma = \frac{\lambda}{2} E$. In this case, the problem of minimizing the mean squared error becomes a problem with a restriction on the $L_2$ norm. If we differentiate the new cost function with respect to the model parameters, set the resulting function to zero, and rearrange for  $\textbf{w}$, we get the exact solution of the problem.</p>
 $$\Large \begin{array}{rcl} 
-\textbf{w} &amp;=&amp; \left(\textbf{X}^{\text{T} } \textbf{X} + \lambda \textbf{E}\right)^{-1} \textbf{X}^{\text{T} } \textbf{y}
+\textbf{w} &amp;=&amp; \left(\textbf{X}^{\text{T}} \textbf{X} + \lambda \textbf{E}\right)^{-1} \textbf{X}^{\text{T}} \textbf{y}
 \end{array}$$<p>This type of regression is called ridge regression. The ridge is the diagonal matrix that we add to the $\textbf{X}^\text{T} \textbf{X}$ matrix to ensure that we get a regular matrix as a result.</p>
 <p><img src="https://habrastorage.org/files/452/f36/c79/452f36c79d7843109993de219dde7cd5.png"></p>
 <p>Such a solution reduces dispersion but becomes biased because the norm of the vector of parameters is also minimized, which makes the solution shift towards zero. On the figure below, the OLS solution is at the intersection of the white dotted lines. Blue dots represent different solutions of ridge regression. It can be seen that by increasing the regularization parameter $\lambda$, we shift the solution towards zero.</p>
@@ -13282,14 +13296,7 @@ $$\Large \begin{array}{rcl}
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h2 id="5.-Demo-assignment">5. Demo assignment<a class="anchor-link" href="#5.-Demo-assignment">&#182;</a></h2><p>To practice with linear models, you can complete <a href="https://www.kaggle.com/kashnitsky/a4-demo-sarcasm-detection-with-logit">this assignment</a> where you'll build a sarcasm detection model. The assignment is just for you to practice, and goes with <a href="https://www.kaggle.com/kashnitsky/a4-demo-sarcasm-detection-with-logit-solution">solution</a>.</p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="5.-Demo-assignment">5. Demo assignment<a class="anchor-link" href="#5.-Demo-assignment">&#182;</a></h2><p>To practice with linear models, you can complete <a href="https://www.kaggle.com/kashnitsky/a4-demo-sarcasm-detection-with-logit">this assignment</a> where you'll build a sarcasm detection model. The assignment is just for you to practice, and goes with a <a href="https://www.kaggle.com/kashnitsky/a4-demo-sarcasm-detection-with-logit-solution">solution</a>.</p>
 <h2 id="6.-Useful-resources">6. Useful resources<a class="anchor-link" href="#6.-Useful-resources">&#182;</a></h2><ul>
 <li>Medium <a href="https://medium.com/open-machine-learning-course/open-machine-learning-course-topic-4-linear-classification-and-regression-44a41b9b5220">"story"</a> based on this notebook</li>
 <li>Main course <a href="https://mlcourse.ai">site</a>, <a href="https://github.com/Yorko/mlcourse.ai">course repo</a>, and YouTube <a href="https://www.youtube.com/watch?v=QKTuw4PNOsU&amp;list=PLVlY_7IJCMJeRfZ68eVfEcu-UcN9BbwiX">channel</a></li>
@@ -13304,22 +13311,7 @@ $$\Large \begin{array}{rcl}
 <li>One more <a href="https://github.com/diefimov/MTH594_MachineLearning">ML course</a> with very good materials.</li>
 <li><a href="https://github.com/rushter/MLAlgorithms">Implementations</a> of many ML algorithms. Search for linear regression and logistic regression.</li>
 </ul>
-<h2 id="Support-course-creators">Support course creators<a class="anchor-link" href="#Support-course-creators">&#182;</a></h2><p><br></p>
-<center>
-You can make a monthly (Patreon) or one-time (Ko-Fi) donation ↓
 
-<br>
-<br>
-
-<a href="https://www.patreon.com/ods_mlcourse">
-<img src="https://habrastorage.org/webt/zc/11/0y/zc110yh0u3kgnlmay1gwbekk0ys.png" width=20% />
-
-<br>
-
-<a href="https://ko-fi.com/mlcourse_ai">
-<img src="https://habrastorage.org/webt/8r/ml/xf/8rmlxfpdzukegpxa62cxlfvgkqe.png" width=20% />
-
-</center>
 </div>
 </div>
 </div>
