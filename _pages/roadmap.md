@@ -34,10 +34,10 @@ Current deadlines (see also the [assignments](assignments) page):
  - November 18 - DotA submissions
  - November 20 - DotA solutions
  
-All deadlines are 20:59 GMT+1 (London time). 
+All deadlines are 20:59 GMT (London time). 
 
 # Assignments
-Assignments are announced in the **#mlcourse_ai_news** channel in [ODS Slack team](https://opendatascience.slack.com/) (pinned items). Also, links to fresh assignments are provided in the Readme file of the [course repository](https://github.com/Yorko/mlcourse.ai) and on [mlcourse.ai/assignments](assignments). Deadlines are typically on Sundays, 20:59 GMT+1 (London time). Apart from that, you can practice with demo [assignments](assignments), don't confuse them with "real" ones. Rough plan for fall 2019 assignments is the following:
+Assignments are announced in the **#mlcourse_ai_news** channel in [ODS Slack team](https://opendatascience.slack.com/) (pinned items). Also, links to fresh assignments are provided in the Readme file of the [course repository](https://github.com/Yorko/mlcourse.ai) and on [mlcourse.ai/assignments](assignments). Apart from that, you can practice with demo [assignments](assignments), don't confuse them with "real" ones. Rough plan for fall 2019 assignments is the following:
  - A1. Pandas and data analysis
  - A2. 2 parts. Decision trees, random forest, and gradient boosting. Beating a baseline in a competition (gradient boosting)
  - A3. 2 parts: Beating baselines in a competition (linear models). Logistic regression vs. Random Forest
@@ -82,7 +82,7 @@ Necessary conditions to get credits:
 In this [competition](https://www.kaggle.com/c/mlcourse-dota2-win-prediction) you are going to utilize all knowledge and skills acquired during the course session. Discussions are held on Kaggle itself, here is an [introductory thread](https://www.kaggle.com/c/mlcourse-dota2-win-prediction/discussion/109081).
 
 ## Rules
- - Deadline for submissions: **2019 November 18, 20:59 CET**
+ - Deadline for submissions: **2019 November 18, 20:59 GMT**
  - Teams up to 4 people are allowed.
  - Instructions on team naming and uploading your solutions will be given (similar to [this post](https://www.kaggle.com/c/mlcourse-dota2-win-prediction/discussion/89707) on Kaggle)
  - The results of the competition and the final course rating will be published on 2019 November 22.
