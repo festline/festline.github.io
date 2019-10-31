@@ -83,7 +83,7 @@ In this [competition](https://www.kaggle.com/c/mlcourse-dota2-win-prediction) yo
 
 ## Rules
  - Deadline for submissions: **2019 November 18, 20:59 GMT**
- - Teams up to 4 people are allowed. You need to name your team like **"mlcourse_ai_fall2019_team_\<id1\>_...\<id4\>"**, where ids are positions of team members in the course [rating](https://bit.ly/2mbv5FF) as of November 18th 
+ - Teams up to 4 people are allowed. You need to name your team like **"mlcourse\_ai\_fall2019\_team\_\<id1\>\_...\<id4\>"**, where ids are positions of team members in the course [rating](https://bit.ly/2mbv5FF) as of November 18th 
  - Till November 20, you have time to upload your team's reproducible solution [here](https://www.dropbox.com/request/9CkAPWd4iX8oWFpS8n4S)
  - The results of the competition and the final course rating will be published on 2019 November 22.
  
@@ -95,5 +95,3 @@ In this [competition](https://www.kaggle.com/c/mlcourse-dota2-win-prediction) yo
    - 4-10 place – 30 credits
    - top 10% - 20 credits
    - top 20% - 10 credits
-
-*to be extended.*
