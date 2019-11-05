@@ -12,7 +12,7 @@ image:
 
 ### Fall 2019 assignments
 
-All deadlines are 20:59 GMT+1 (London time), check out also [this Google calendar](https://calendar.google.com/calendar?cid=Z25pZ3EwZGxxb2I5cDZwMWptam5rdmY3NWtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ)
+All deadlines are 20:59 GMT (London time), check out also [this Google calendar](https://calendar.google.com/calendar?cid=Z25pZ3EwZGxxb2I5cDZwMWptam5rdmY3NWtAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ)
 
 1. Exploratory data analysis of Olympic games with Pandas, [nbviewer](https://nbviewer.jupyter.org/github/Yorko/mlcourse.ai/blob/master/jupyter_english/assignments_fall2019/assignment1_pandas_olympic.ipynb). Deadline: September 15
 2. Trees, forests and boosting
@@ -23,7 +23,11 @@ All deadlines are 20:59 GMT+1 (London time), check out also [this Google calenda
   - Quiz 2. Math behind linear models, [nbviewer](https://bit.ly/33cC9C3). Deadline: October 25
   - Part 1. User Identification with Logistic Regression, [nbviewer](https://nbviewer.jupyter.org/github/Yorko/mlcourse.ai/blob/master/jupyter_english/assignments_fall2019/assignment3_part1_alice_logistic_regression.ipynb?flush_cache=true). Deadline: October 27
   - Part 2. Random Forest and Logistic Regression in credit scoring and movie reviews classification, [nbviewer](https://nbviewer.jupyter.org/github/Yorko/mlcourse.ai/blob/master/jupyter_english/assignments_fall2019/assignment3_part2_rf_logit_scoring_texts.ipynb?flush_cache=true). Deadline: October 27
-
+4. Unsupervised learning and time series
+ - Quiz 3. Unsupervised learning and time series, [nbviewer](https://bit.ly/2q1MTFq). Deadline: November 15
+ - Assignment 4. Time series analysis, [nbviewer](https://bit.ly/36a4XgY). Deadline: November 17
+ - Dota 2 winner prediction [competition](https://www.kaggle.com/c/mlcourse-dota2-win-prediction). Deadline for submissions: November 18
+ 
 ### Demo assignments, just for practice
 1. Exploratory data analysis with Pandas, [nbviewer](https://nbviewer.jupyter.org/github/Yorko/mlcourse.ai/blob/master/jupyter_english/assignments_demo/assignment01_pandas_uci_adult.ipynb?flush_cache=true), [Kaggle Kernel](https://www.kaggle.com/kashnitsky/assignment-1-pandas-and-uci-adult-dataset), [solution](https://www.kaggle.com/kashnitsky/a1-demo-pandas-and-uci-adult-dataset-solution)
 2. Analyzing cardiovascular disease data, [nbviewer](https://nbviewer.jupyter.org/github/Yorko/mlcourse.ai/blob/master/jupyter_english/assignments_demo/assignment02_analyzing_cardiovascular_desease_data.ipynb?flush_cache=true), [Kaggle Kernel](https://www.kaggle.com/kashnitsky/assignment-2-analyzing-cardiovascular-data), [solution](https://www.kaggle.com/kashnitsky/a2-demo-analyzing-cardiovascular-data-solution)
