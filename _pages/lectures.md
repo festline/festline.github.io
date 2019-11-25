@@ -10,7 +10,7 @@ image:
 
 <img src='../images/teaser-video.jpg'>
 
-This [YouTube playlist](https://bit.ly/2zY6Xe2) contains fall 2018 video lectures. A couple more recordings will be added in fall 2019 session. 
+[YouTube playlist](https://bit.ly/2zY6Xe2)
 
 **Introduction** - [video](https://youtu.be/QKTuw4PNOsU), [slides](https://bit.ly/2NuadRV)
 
@@ -26,3 +26,5 @@ This [YouTube playlist](https://bit.ly/2zY6Xe2) contains fall 2018 video lecture
 10. Gradient boosting: basic ideas - [part 1](https://youtu.be/g0ZOtzZqdqk), key ideas behind major implementations: Xgboost, LightGBM, and CatBoost + practice - [part 2](https://youtu.be/V5158Oug4W8)
 
 **Outroduction** - [video](https://youtu.be/FrIW8ixKakw), [slides](https://bit.ly/2s0sjD7)
+
+"Jump into Data Science"  - [this video](https://youtu.be/FGuGg9F2VUs) will walk you through the preparation process for your first DS position once basic ML and Python are covered.  [Slides](https://www.slideshare.net/festline/how-to-jump-into-data-science)

@@ -6,8 +6,8 @@
   url: /lectures
 - title: "PREREQUISITES"
   url: /prerequisites
-- title: "ROADMAP"
-  url: /roadmap
+#- title: "ROADMAP"
+#  url: /roadmap
 - title: "ASSIGNMENTS"
   url: /assignments
 - title: "TUTORIALS"
