@@ -50,8 +50,8 @@ According to the [final rating](https://bit.ly/2mbv5FF). The session took place 
 1. Vasily Zernin, [email](mailto:zerninvasilii@yandex.ru), [GitHub](https://github.com/zerninv)
 1. Anuj Singh, [GitHub](https://github.com/x5or6), [LinkedIn](https://www.linkedin.com/in/x5or6/), [email](mailto:anuj699@gmail.com)
 1. Alex Shtepa [LinkedIn](https://www.linkedin.com/in/alexander-shtepa-92037b4a/), [email](mailto:alexs.another.email@gmail.com)
-1. Artem Kolmykov, [LinkedIn][(https://www.linkedin.com/in/artem-kolmykov-58281219/), [email](mailto:akolmykov@gmail.com)
-1. Maxim Dergunov, [LinkedIn][(https://www.linkedin.com/in/maxim-dergunov/), [email](mailto:maxim_dergunov@inbox.ru)
+1. Artem Kolmykov, [LinkedIn](https://www.linkedin.com/in/artem-kolmykov-58281219/), [email](mailto:akolmykov@gmail.com)
+1. Maxim Dergunov, [LinkedIn](https://www.linkedin.com/in/maxim-dergunov/), [email](mailto:maxim_dergunov@inbox.ru)
 1. Nikita Kuzmin [GitHub](http://github.com/paniquex/), [LinkedIn](https://www.linkedin.com/in/paniquex/), [email](mailto:paniquexx@gmail.com), [Kaggle](https://kaggle.com/paniquex/)
 1. Polina Karpikova, [Github](https://github.com/poliik)
 1. Michael Feldman, [email](michael.george.feldman@gmail.com),
@@ -130,7 +130,7 @@ According to the [final rating](https://bit.ly/2mbv5FF). The session took place 
 1. Vladislav Gogolin, [GitHub](https://github.com/DDarean), [LinkedIn](www.linkedin.com/in/vladislav-gogolin), [email](mailto:ddarean@gmail.com) <br>
 1. Alexander Karamyshev, [LinkedIn](https://www.linkedin.com/in/karamyshev/), [email](mailto:a.karamyshev@gmail.com) <br>
 1. Kirill Krolik, [Github](https://github.com/avant1), [email](mailto:yoursuffer@gmail.com)<br>
-1. Mikhail Chernomazov
+1. Mikhail Chernomazov (#100-103 share the same place)
 
 ## Top-100 performers of the 5-th session of [mlcourse.ai](http://mlcourse.ai) by ods.ai, spring 2019
 
