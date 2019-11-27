@@ -96,8 +96,8 @@ According to the [final rating](https://bit.ly/2mbv5FF). The session took place 
 1. Roman Ishchenko, [LinkedIn](https://www.linkedin.com/in/roman-ishchenko/), [email](mailto:firstdrizzzle@gmail.com)
 1. Abdikozha Abdikalykov,
 [email](mailto:adiko2008@gmail.com)
-1. Anton Nikulov [email](mailto:favor86@gmail.com)
-1. Nadezda Zabkova
+1. Anton Nikulov, [email](mailto:favor86@gmail.com)
+1. Nadezda Zabkova, [email](mailto:zabkovan@gmail.com)
 1. Vladimir Fedchun, [email](mailto:fedchunvv@gmail.com), [LinkedIn](linkedin.com/in/vladimir-fedchun)
 1. Angelina Kovalenko
 1. Satu Inkinen
@@ -123,7 +123,7 @@ According to the [final rating](https://bit.ly/2mbv5FF). The session took place 
 1. Konstantin Sukharev, [GitHub](https://github.com/k-sukharev), [LinkedIn](https://www.linkedin.com/in/sukharev/)
 1. Quan Dai
 1. Ashot Martirosyan, [email](mailto:martiroshot@mail.ru)
-1. Yury Mikhno [GitHub](https://github.com/Duneholy), [LinkedIn](www.linkedin.com/in/yury-mikhno), [email](mailto:dalekrotovsky@gmail.com)
+1. Yury Mikhno, [GitHub](https://github.com/Duneholy), [LinkedIn](www.linkedin.com/in/yury-mikhno), [email](mailto:dalekrotovsky@gmail.com)
 1. Arthur Asylgareev,
 [email](mailto:arthur@asylgareev.ru)
 [GitHub](https://github.com/stardreamer)
