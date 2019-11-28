@@ -57,7 +57,7 @@ According to the [final rating](https://bit.ly/2mbv5FF). The session took place 
 1. Michael Feldman, [email](michael.george.feldman@gmail.com),
 [GitHub](https://github.com/michaelgfeldman),
 [LinkedIn](https://www.linkedin.com/in/michael--feldman/)
-1. Artur Zavaliienko 
+1. Artur Zavaliienko, [Telegram](https://t.me/iGero), [email](mailto:scentofdark@gmail.com)
 1. Vadim Nesterov, [LinkedIn](https://www.linkedin.com/in/alanok13/), [email](mailto:alan@xaker.ru)
 1.  Stepan Martyugin, [email](mailto:MartyuginStepan@yandex.ru), [LinkedIn](https://www.linkedin.com/in/stepan-martyugin-a06710198)    [GitHub](https://github.com/stmyst)
 1. Dzhal Antonov, [email](mailto:dzhal.antonov@gmail.com), [LinkedIn](linkedin.com/in/dzhal-antonov-111588193 ), [GitHub](https://github.com/chejuro)
