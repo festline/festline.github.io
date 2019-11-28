@@ -53,7 +53,7 @@ According to the [final rating](https://bit.ly/2mbv5FF). The session took place 
 1. Artem Kolmykov, [LinkedIn](https://www.linkedin.com/in/artem-kolmykov-58281219/), [email](mailto:akolmykov@gmail.com)
 1. Maxim Dergunov, [LinkedIn](https://www.linkedin.com/in/maxim-dergunov/), [email](mailto:maxim_dergunov@inbox.ru)
 1. Nikita Kuzmin [GitHub](http://github.com/paniquex/), [LinkedIn](https://www.linkedin.com/in/paniquex/), [email](mailto:paniquexx@gmail.com), [Kaggle](https://kaggle.com/paniquex/)
-1. Polina Karpikova, [Github](https://github.com/poliik)
+1. Polina Karpikova, [Github](https://github.com/poliik), [email](mailto:poliikwork@gmail.com)
 1. Michael Feldman, [email](michael.george.feldman@gmail.com),
 [GitHub](https://github.com/michaelgfeldman),
 [LinkedIn](https://www.linkedin.com/in/michael--feldman/)
