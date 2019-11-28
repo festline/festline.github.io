@@ -64,12 +64,12 @@ According to the [final rating](https://bit.ly/2mbv5FF). The session took place 
 1. Max Shkuratov, [email](mailto:sosontref@gmail.com), 
 [GitHub](https://github.com/sontref)
 1. Dmitry Filin, [LinkedIn](https://www.linkedin.com/in/dmitry-filin/), [email](mailto:dmifilin@gmail.com)
-1. Nikolay Galkov
+1. Nikolay Galkov, [email](mailto:ngalkov@gmail.com), [GitHub](https://github.com/ngalkov), [LinkedIn](https://www.linkedin.com/in/nikolay-galkov-4b660656)
 1. Anton Semenistyy, [email](mailto:anton.semenistyy@gmail.com)
 [LinkedIn](https://www.linkedin.com/in/anton-semenistyy-3b10b2169/)
 1. Yurii Liashchuk
 1. Maria Bezouglova, [email](mailto:m_bezouglova@mail.ru), [LinkedIn](https://www.linkedin.com/in/maria-bezouglova-41915917b/), [GitHub](https://github.com/sibmaria)
-1. Denys Shylov
+1. Denys Shylov, [email](shylovdenys@gmail.com), [GitHub](https://github.com/shlvd)
 1. Ivan Chernov, [GitHub](https://github.com/vanya-black), [LinkedIn](https://www.linkedin.com/in/iche/), [email](mailto:ivan.chernov.92@bk.ru)
 1. Cameron McGarry, [GitHub](http://github.com/mcgarc/)
 1. Eduard Agekyan, [GitHub](https://github.com/psheshke/), [email](mailto:eaagekyan@mail.ru) 
@@ -102,7 +102,7 @@ According to the [final rating](https://bit.ly/2mbv5FF). The session took place 
 1. Angelina Kovalenko
 1. Satu Inkinen
 1. Carlos Domínguez García, [GitHub](https://github.com/carlosdg), [LinkedIn](https://www.linkedin.com/in/carlos-dominguez-garcia/)
-1. Aleksandr Shoyko
+1. Aleksandr Shoyko, [email](mailto:aleksandr.shoyko@gmail.com), [LinkedIn](https://www.linkedin.com/in/aleksandr-shoyko-413988b6/)
 1. Alexandr Ositsyn
 1. Juuso Ketola
 1. Evgeniy Vorsin
