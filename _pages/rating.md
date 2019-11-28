@@ -118,7 +118,7 @@ According to the [final rating](https://bit.ly/2mbv5FF). The session took place 
 1. Natalia Spichekova, [LinkedIn](https://www.linkedin.com/in/natalia-spichekova-46921888/) [email](n.spichekova@gmail.com)
 1. Thomas Pasenchenko, [GitHub](https://github.com/pasenchenko), [LinkedIn](https://www.linkedin.com/in/thomas-pasenchenko/), [email](mailto:thomas.pasenchenko@gmail.com)
 1. Maksym Velychko
-1. Ruslan Khabibrakhmanov
+1. Ruslan Khabibrakhmanov, [LinkedIn](www.linkedin.com/in/ruslan-khab)
 1. Giancarlo Camilo, [GitHub](https://github.com/giancamilo), [LinkedIn](https://www.linkedin.com/in/giancamilo), [email](mailto:gianfis@gmail.com)
 1. Konstantin Sukharev, [GitHub](https://github.com/k-sukharev), [LinkedIn](https://www.linkedin.com/in/sukharev/)
 1. Quan Dai
