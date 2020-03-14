@@ -15,10 +15,10 @@
   excerpt       : "Python, math, and software"
   image         :  teaser-prereq.jpg
 
-#- title         : "Roadmap"
-#  url           : /roadmap
-#  excerpt       : "All activities accounted for in rating"
-#  image         :  teaser-roadmap.png
+- title         : "Roadmap"
+  url           : /roadmap
+  excerpt       : "Guides through the self-paced course"
+  image         :  teaser-roadmap.png
 
 - title         : "Assignments"
   url           : /assignments
