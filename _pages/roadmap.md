@@ -37,7 +37,7 @@ The role of visual data analysis is hard to overestimate, this is how new insigh
  - ["Overview of Seaborn, Matplotlib and Plotly libraries"](https://mlcourse.ai/articles/topic2-part2-seaborn-plotly/) (same as a [Kaggle Notebook](https://www.kaggle.com/kashnitsky/topic-2-part-2-seaborn-and-plotly))
 
 2. (opt.) watch a [video lecture](https://youtu.be/fwWCw_cE5aI)
-3. Complete [assignment 2](https://www.kaggle.com/kashnitsky/assignment-1-pandas-and-uci-adult-dataset) where you'll be analyzing cardiovascular disease data, and (opt.) check out the [solution](https://www.kaggle.com/kashnitsky/a1-demo-pandas-and-uci-adult-dataset-solution) 
+3. Complete [assignment 2](https://www.kaggle.com/kashnitsky/a2-demo-analyzing-cardiovascular-data) where you'll be analyzing cardiovascular disease data, and (opt.) check out the [solution](https://www.kaggle.com/kashnitsky/a2-demo-analyzing-cardiovascular-data-solution) 
 
 #### Week 3. Classification, Decision Trees and k Nearest Neighbors
 
@@ -128,7 +128,7 @@ Here we turn to the vast topic of unsupervised learning, it's about the cases wh
 2. (opt.) watch a video lecture coming in 2 parts:
  - ["Stochastic Gradient Descent"](https://youtu.be/EUSXbdzaQE8)
  - ["Vowpal Wabbit"](https://www.youtube.com/watch?v=gyCjancgR9U)
-3. Complete [assignment 8](https://www.kaggle.com/kashnitsky/assignment-8-implementing-online-regressor) "Implementing online regressor" which walks you through an implementation from scratch, very good for intuitive understanding of the algorithm. Optionally, check out the [solution](https://www.kaggle.com/kashnitsky/topic-8-online-learning-and-vowpal-wabbit) 
+3. Complete [assignment 8](https://www.kaggle.com/kashnitsky/assignment-8-implementing-online-regressor) "Implementing online regressor" which walks you through an implementation from scratch, very good for intuitive understanding of the algorithm. Optionally, check out the [solution](https://www.kaggle.com/kashnitsky/a8-demo-implementing-online-regressor-solution) 
 
 #### Week 9. Time Series Analysis with Python
 
