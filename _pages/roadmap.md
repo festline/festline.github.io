@@ -20,7 +20,7 @@ This roadmap guides you through self-paced mlcourse.ai. First, take a look at [c
 
 You definitely want to immediately start with Machine Learning and see math in action. But 70-80% of the time working on a real project is fussing with data, and here Pandas is very good, I use it in my work almost every day. This article describes the basic Pandas methods for preliminary data analysis. Then we analyze the data set on the churn of telecom customers and try to predict the churn without any training, simply relying on common sense. By no means should you underestimate such an approach.
 
-1. Read the [artcile](https://mlcourse.ai/articles/topic1-exploratory-data-analysis-with-pandas/) (same in a form of a [Kaggle Notebook](https://www.kaggle.com/kashnitsky/topic-1-exploratory-data-analysis-with-pandas))
+1. Read the [article](https://mlcourse.ai/articles/topic1-exploratory-data-analysis-with-pandas/) (same in a form of a [Kaggle Notebook](https://www.kaggle.com/kashnitsky/topic-1-exploratory-data-analysis-with-pandas))
 2. (opt.) watch a [video lecture](https://youtu.be/fwWCw_cE5aI)
 3. Complete [assignment 1](https://www.kaggle.com/kashnitsky/assignment-1-pandas-and-uci-adult-dataset) where you'll be exploring demographic data (UCI "Adult"), and (opt.) check out the [solution](https://www.kaggle.com/kashnitsky/a1-demo-pandas-and-uci-adult-dataset-solution) 
 
@@ -37,7 +37,7 @@ The role of visual data analysis is hard to overestimate, this is how new insigh
  - ["Overview of Seaborn, Matplotlib and Plotly libraries"](https://mlcourse.ai/articles/topic2-part2-seaborn-plotly/) (same as a [Kaggle Notebook](https://www.kaggle.com/kashnitsky/topic-2-part-2-seaborn-and-plotly))
 
 2. (opt.) watch a [video lecture](https://youtu.be/fwWCw_cE5aI)
-3. Complete [assignment 2](https://www.kaggle.com/kashnitsky/assignment-1-pandas-and-uci-adult-dataset) where you'll be analyzing cardiovascular disease data, and (opt.) check out the [solution](https://www.kaggle.com/kashnitsky/a1-demo-pandas-and-uci-adult-dataset-solution) 
+3. Complete [assignment 2](https://www.kaggle.com/kashnitsky/a2-demo-analyzing-cardiovascular-data) where you'll be analyzing cardiovascular disease data, and (opt.) check out the [solution](https://www.kaggle.com/kashnitsky/a2-demo-analyzing-cardiovascular-data-solution) 
 
 #### Week 3. Classification, Decision Trees and k Nearest Neighbors
 
@@ -45,7 +45,7 @@ The role of visual data analysis is hard to overestimate, this is how new insigh
 
 Here we delve into machine learning and discuss two simple approaches to solving the classification problem. In a real project, you'd better start with something simple, and often you'd try out decision trees or nearest neighbors (as well as linear models, the next topic) right after even simpler heuristics. We discuss pros and cons of trees and nearest neighbors. Also we touch upon the important topic of assessing quality of model predictions and performing cross-validation. The article is long, but decision trees in particular deserve it - they make a foundation for Random Forest and Gradient Boosting, two algorithms that you'll be likely using in practice most often.  
 
-1. Read the [artcile](https://mlcourse.ai/articles/topic3-dt-knn/) (same as a [Kaggle Notebook](https://www.kaggle.com/kashnitsky/topic-3-decision-trees-and-knn))
+1. Read the [article](https://mlcourse.ai/articles/topic3-dt-knn/) (same as a [Kaggle Notebook](https://www.kaggle.com/kashnitsky/topic-3-decision-trees-and-knn))
 2. (opt.) watch a video lecture coming in 2 parts:
  - [theory](https://youtu.be/H4XlBTPv5rQ) behind decision trees, an intuitive explanation
  - [practice](https://youtu.be/RrVYO6Td9Js) with Sklearn decision trees
@@ -98,7 +98,7 @@ Yet again, both theory and practice are exciting. We discuss why "wisdom of a cr
 Feature engineering is one of the most interesting processes in the whole of ML. It's art or at least craft and is therefore not yet well-automated. The article describes the ways of working with heterogeneous features in various ML tasks with texts, images, geodata etc. Practice with the ["Alice" competition](https://www.kaggle.com/c/catch-me-if-you-can-intruder-detection-through-webpage-session-tracking2) is going to convince you how powerful feature engineering can be. And that it's a lot of fun as well!
 
 
-1. Read the [artcile](https://mlcourse.ai/articles/topic6-features/) (same in a form of a [Kaggle Notebook](https://www.kaggle.com/kashnitsky/topic-6-feature-engineering-and-feature-selection))
+1. Read the [article](https://mlcourse.ai/articles/topic6-features/) (same in a form of a [Kaggle Notebook](https://www.kaggle.com/kashnitsky/topic-6-feature-engineering-and-feature-selection))
 2. **Kaggle:** Now that you've beaten simple baselines in the ["Alice" competition](https://www.kaggle.com/c/catch-me-if-you-can-intruder-detection-through-webpage-session-tracking2) (see Topic 4), check out a bit more advanced Notebooks:
  - ["Correct time-aware cross-validation scheme"](https://www.kaggle.com/kashnitsky/correct-time-aware-cross-validation-scheme)
  - ["Model validation in a competition"](https://www.kaggle.com/kashnitsky/model-validation-in-a-competition)
@@ -112,7 +112,7 @@ Feature engineering is one of the most interesting processes in the whole of ML.
 Here we turn to the vast topic of unsupervised learning, it's about the cases when we have data but it is unlabeled, no target feature to predict like in classification/regression tasks. Actually, most of the data out there is unlabeled, and we need to be able to make use of it. We discuss only 2 types of unsupervised learning tasks - clustering and dimensionality reduction. 
 
 
-1. Read the [artcile](https://mlcourse.ai/articles/topic7-unsupervised/) (same in a form of a [Kaggle Notebook](https://www.kaggle.com/kashnitsky/topic-7-unsupervised-learning-pca-and-clustering))
+1. Read the [article](https://mlcourse.ai/articles/topic7-unsupervised/) (same in a form of a [Kaggle Notebook](https://www.kaggle.com/kashnitsky/topic-7-unsupervised-learning-pca-and-clustering))
 2. (opt.) watch a video lecture coming in 2 parts:
  - ["Principal Component Analysis"](https://youtu.be/-AswHf7h0I4)
  - ["Clustering"](https://youtu.be/eVplCo-w4XE)
@@ -124,11 +124,11 @@ Here we turn to the vast topic of unsupervised learning, it's about the cases wh
 
  The theoretical part here covert the analysis of Stochastic Gradient Descent, it was this optimization method that made it possible to successfully train both neural networks and linear models on really large training sets. Here we also discuss what can be done in cases of millions of features in a supervised learning task ("hashing trick") and move on to Vowpal Wabbit, a utility which allows you to train a model with gigabytes of data in a matter of minutes, and sometimes of acceptable quality. We consider several cases including StackOverflow questions tagging with a training set of several gigabytes. 
 
-1. Read the [artcile](https://mlcourse.ai/articles/topic8-sgd-vw/) (same in a form of a [Kaggle Notebook](https://www.kaggle.com/kashnitsky/topic-7-unsupervised-learning-pca-and-clustering))
+1. Read the [article](https://mlcourse.ai/articles/topic8-sgd-vw/) (same in a form of a [Kaggle Notebook](https://www.kaggle.com/kashnitsky/topic-7-unsupervised-learning-pca-and-clustering))
 2. (opt.) watch a video lecture coming in 2 parts:
  - ["Stochastic Gradient Descent"](https://youtu.be/EUSXbdzaQE8)
  - ["Vowpal Wabbit"](https://www.youtube.com/watch?v=gyCjancgR9U)
-3. Complete [assignment 8](https://www.kaggle.com/kashnitsky/assignment-8-implementing-online-regressor) "Implementing online regressor" which walks you through an implementation from scratch, very good for intuitive understanding of the algorithm. Optionally, check out the [solution](https://www.kaggle.com/kashnitsky/topic-8-online-learning-and-vowpal-wabbit) 
+3. Complete [assignment 8](https://www.kaggle.com/kashnitsky/assignment-8-implementing-online-regressor) "Implementing online regressor" which walks you through an implementation from scratch, very good for intuitive understanding of the algorithm. Optionally, check out the [solution](https://www.kaggle.com/kashnitsky/a8-demo-implementing-online-regressor-solution) 
 
 #### Week 9. Time Series Analysis with Python
 
@@ -148,7 +148,7 @@ Here we discuss various approaches to work with time series: what data preparati
 
 Gradient boosting is one of the most prominent Machine Learning algorithms, it founds a lot of industrial applications. For instance, Yandex search engine is a big and complex system with gradient boosting (MatrixNet) somewhere deep inside. Many recommender systems are also built on boosting. It is a very versatile approach applicable to classification, regression and ranking. Therefore, here we cover both theoretical basics of gradient boosting and specifics of most wide-spread implementations - Xgboost, LightGBM, and Catboost.
 
-1. Read the [artcile](https://mlcourse.ai/articles/topic10-boosting/) (same in a form of a [Kaggle Notebook](https://www.kaggle.com/kashnitsky/topic-10-gradient-boosting))
+1. Read the [article](https://mlcourse.ai/articles/topic10-boosting/) (same in a form of a [Kaggle Notebook](https://www.kaggle.com/kashnitsky/topic-10-gradient-boosting))
 2. (opt.) watch a video lecture coming in 2 parts:
  - [part 1](https://youtu.be/g0ZOtzZqdqk), key ideas behind major implementations: Xgboost, LightGBM, and CatBoost
  - [part 2](https://youtu.be/V5158Oug4W8), practice
