@@ -36,7 +36,7 @@ The role of visual data analysis is hard to overestimate, this is how new insigh
  - ["Visual data analysis in Python"](https://mlcourse.ai/articles/topic2-visual-data-analysis-in-python/) (same as a [Kaggle Notebook](https://www.kaggle.com/kashnitsky/topic-2-visual-data-analysis-in-python))
  - ["Overview of Seaborn, Matplotlib and Plotly libraries"](https://mlcourse.ai/articles/topic2-part2-seaborn-plotly/) (same as a [Kaggle Notebook](https://www.kaggle.com/kashnitsky/topic-2-part-2-seaborn-and-plotly))
 
-2. (opt.) watch a [video lecture](https://youtu.be/fwWCw_cE5aI)
+2. (opt.) watch a [video lecture](https://www.youtube.com/watch?v=WNoQTNOME5g)
 3. Complete [assignment 2](https://www.kaggle.com/kashnitsky/a2-demo-analyzing-cardiovascular-data) where you'll be analyzing cardiovascular disease data, and (opt.) check out the [solution](https://www.kaggle.com/kashnitsky/a2-demo-analyzing-cardiovascular-data-solution) 
 
 #### Week 3. Classification, Decision Trees and k Nearest Neighbors
