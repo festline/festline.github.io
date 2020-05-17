@@ -90,7 +90,7 @@ Few useful commands:
 - `docker stop $(docker ps -a -q)` – stop all containers
 - `docker rm $(docker ps -a -q)` – remove all containers
 - `docker images` - list all docker images
-- `docker rmi \<image_id\>` – remove a docker image
+- `docker rmi <image_id>` – remove a docker image
 
 
 #### Jupyter
