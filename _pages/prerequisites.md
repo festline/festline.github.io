@@ -86,11 +86,11 @@ In the browser, you should see the directory tree from your mlcourse.ai folder. 
 
 Few useful commands:
 
-- *docker ps* – list all containers
-- *docker stop $(docker ps -a -q)* – stop all containers
-- *docker rm $(docker ps -a -q)* – remove all containers
-- *docker images* - list all docker images
-- *docker rmi \<image_id\>* – remove a docker image
+- `docker ps` – list all containers
+- `docker stop $(docker ps -a -q)` – stop all containers
+- `docker rm $(docker ps -a -q)` – remove all containers
+- `docker images` - list all docker images
+- `docker rmi \<image_id\>` – remove a docker image
 
 
 #### Jupyter
