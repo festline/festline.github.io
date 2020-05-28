@@ -88,7 +88,7 @@ Yet again, both theory and practice are exciting. We discuss why "wisdom of a cr
 2. Watch a video lecture coming in 3 parts:
  - [part 1](https://www.youtube.com/watch?v=neXJL-AqI_c) on Random Forest
  - [part 2](https://www.youtube.com/watch?v=aBOMYqGUlWQ) on classification metrics
- - [business case](https://youtu.be/B8yIaIEMyIc), where we discuss a real classification task - predicting customer payment
+ - [business case](https://www.youtube.com/watch?v=FmKU-1LZGoE&feature=youtu.be), where we discuss a real classification task - predicting customer payment
 3. Complete [assignment 5](https://www.kaggle.com/kashnitsky/assignment-5-logit-and-rf-for-credit-scoring) where you compare logistic regression and Random Forest in the credit scoring problem, and (opt.) check out the [solution](https://www.kaggle.com/kashnitsky/a5-demo-logit-and-rf-for-credit-scoring-sol) 
 
 #### Week 6. Feature Engineering and Feature Selection
