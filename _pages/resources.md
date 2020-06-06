@@ -11,7 +11,7 @@ image:
 <img src='../images/teaser-resources.png'>
 
 Here is the list of all resources constituting the course:
- - [OpenDataScience](http://ods.ai/en). All discussions are held in the **#mlcourse_ai** channel;
+ - [OpenDataScience](http://ods.ai). All discussions are held in the **#mlcourse_ai** channel;
  - [Youtube](https://www.youtube.com/watch?v=QKTuw4PNOsU&list=PLVlY_7IJCMJeRfZ68eVfEcu-UcN9BbwiX) playlist with lectures in English. Also, [lectures](https://www.youtube.com/playlist?list=PLVlY_7IJCMJdgcCtQfzj5j8OVB_Y0GJCl) in Russian and interviews with cool DS folks;
 - [Kaggle Dataset](https://www.kaggle.com/kashnitsky/mlcourse). You can pass the whole course just in a browser;
  - [Medium articles](https://medium.com/open-machine-learning-course). Main content in English, not necessary if you work with notebooks;
