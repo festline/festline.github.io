@@ -83,7 +83,7 @@ Yet again, both theory and practice are exciting. We discuss why "wisdom of a cr
 
 1. Read 3 articles: 
  - ["Bagging"](https://mlcourse.ai/articles/topic5-part1-bagging/) (same as a [Kaggle Notebook](https://www.kaggle.com/kashnitsky/topic-5-ensembles-part-1-bagging))
- - ["Random Forest"](https://mlcourse.ai/articles/topic5-part1-bagging/) (same as a [Kaggle Notebook](https://www.kaggle.com/kashnitsky/topic-5-ensembles-part-2-random-forest)) 
+ - ["Random Forest"](https://mlcourse.ai/articles/topic5-part2-rf/) (same as a [Kaggle Notebook](https://www.kaggle.com/kashnitsky/topic-5-ensembles-part-2-random-forest)) 
  - ["Feature Importance"](https://mlcourse.ai/articles/topic5-part3-feature-importance/) (same as a [Kaggle Notebook](https://www.kaggle.com/kashnitsky/topic-5-ensembles-part-3-feature-importance))
 2. Watch a video lecture coming in 3 parts:
  - [part 1](https://www.youtube.com/watch?v=neXJL-AqI_c) on Random Forest
