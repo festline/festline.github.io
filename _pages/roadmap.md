@@ -150,8 +150,8 @@ Gradient boosting is one of the most prominent Machine Learning algorithms, it f
 
 1. Read the [article](https://mlcourse.ai/articles/topic10-boosting/) (same in a form of a [Kaggle Notebook](https://www.kaggle.com/kashnitsky/topic-10-gradient-boosting))
 2. (opt.) watch a video lecture coming in 2 parts:
- - [part 1](https://youtu.be/g0ZOtzZqdqk), key ideas behind major implementations: Xgboost, LightGBM, and CatBoost
- - [part 2](https://youtu.be/V5158Oug4W8), practice
+ - [part 1](https://youtu.be/g0ZOtzZqdqk), fundamental ideas behind gradient boosting
+ - [part 2](https://youtu.be/V5158Oug4W8), key ideas behind major implementations: Xgboost, LightGBM, and CatBoost
 3. **Kaggle:** Take a look at the "Flight delays" [competition](https://www.kaggle.com/c/flight-delays-fall-2018) and a starter with [CatBoost](https://www.kaggle.com/kashnitsky/mlcourse-ai-fall-2019-catboost-starter-with-gpu). Start analyzing data and building features to improve your solution. Try to improve the best publicly shared solution by at least 0.5%. But still, **please do not share high-performing solutions**, it ruins the competitive spirit.
 
 
