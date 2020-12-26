@@ -26,6 +26,8 @@ comments: false
  - [FAQ](faq) - Frequently Asked Questions
  - [contacts](contacts) - how to reach the course team
  - [contrib](contrib) - how you can help 
+
+*Note: all [mlcourse.ai](https://mlcourse.ai) are distributed under the [Creative Commons CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license. Free use is permitted for any non-commercial purpose provided that you mention the licensor (i.e. [mlcourse.ai](https://mlcourse.ai)).*
  
  **Articles**
  <br>
@@ -35,6 +37,3 @@ comments: false
 	{% include post-grid.html %}
 {% endfor %}
 </div><!-- /.tiles -->
-
-
-*Note: all [mlcourse.ai](https://mlcourse.ai) are distributed under the [Creative Commons CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license. Free use is permitted for any non-commercial purpose provided that you mention the licensor (i.e. [mlcourse.ai](https://mlcourse.ai))*
