@@ -12,7 +12,6 @@ comments: false
 
 [mlcourse.ai](https://mlcourse.ai) is an open Machine Learning course by [OpenDataScience](https://ods.ai/), lead by [Yury Kashnitsky (yorko)](https://yorko.github.io/). The course is designed to perfectly balance theory and practice. You can take part in several Kaggle Inclass competitions held during the course. From spring 2017 to fall 2019, 6 sessions of mlcourse.ai took place - 26k participants applied, 10k converted to passing the first assignment, about 1500 participants finished the course. Currently, the course is in a self-paced mode. Check out a thorough [Roadmap](roadmap) guiding you through the self-paced mlcourse.ai.
 
-
  
  **Navigating this site:**
  
@@ -36,3 +35,6 @@ comments: false
 	{% include post-grid.html %}
 {% endfor %}
 </div><!-- /.tiles -->
+
+
+*Note: all [mlcourse.ai](https://mlcourse.ai) are distributed under the [Creative Commons CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) license. Free use is permitted for any non-commercial purpose provided that you mention the licensor (i.e. [mlcourse.ai](https://mlcourse.ai))*
